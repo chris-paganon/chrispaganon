@@ -3,7 +3,7 @@
     <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
     <div :class="`portfolio-intro-wrapper ${viewMoreClass}`">
       <div v-if="!viewMoreOn" class="view-more-overlay"></div>
-      <ContentRenderer :content="portfolioIntro">
+      <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
         <ContentRendererMarkdown :value="portfolioIntro" />
       </ContentRenderer>
     </div>
@@ -20,6 +20,7 @@
     <h3 class="portfolio-sub-heading">
       {{ $t('PortfolioProjects.sub-heading') }}
     </h3>
+    <PortfolioGrid />
   </section>
 </template>
 
@@ -33,7 +34,6 @@ const viewMoreClass = computed(() =>
 const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne()
 );
-console.log('🚀 ~ portfolioIntro:', portfolioIntro);
 </script>
 
 <style scoped>
