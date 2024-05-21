@@ -17,9 +17,11 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 const nuxtApp = useNuxtApp();
 const { data: portfolio } = await useAsyncData('portfolio', () =>
-  queryContent(nuxtApp.$i18n.locale.value, 'project').find()
+  queryContent(nuxtApp.$i18n.locale.value, 'project').sort({ id: 1 }).find()
 );
 
 const portfolioCards = ref(null);
