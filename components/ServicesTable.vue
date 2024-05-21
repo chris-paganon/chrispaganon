@@ -34,8 +34,11 @@
 </template>
 
 <script setup lang="ts">
+const nuxtApp = useNuxtApp();
+const localePath = useLocalePath();
+
 const { data: services } = await useAsyncData('en-services', () =>
-  queryContent('en', 'services').find()
+  queryContent(nuxtApp.$i18n.locale.value, 'services').find()
 );
 </script>
 
