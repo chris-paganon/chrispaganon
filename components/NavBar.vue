@@ -17,13 +17,13 @@
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink :to="localePath({ path: '/#portfolio' })">{{
+        <NuxtLink :to="localePath({ path: '/', hash: '#portfolio' })">{{
           $t('NavBar.portfolio')
         }}</NuxtLink>
       </li>
       <li>
         <NuxtLink
-          :to="localePath({ path: '/#contact-me' })"
+          :to="localePath({ path: '/', hash: '#contact-me' })"
           class="contact-me-btn button"
         >
           {{ $t('NavBar.contact-me') }}

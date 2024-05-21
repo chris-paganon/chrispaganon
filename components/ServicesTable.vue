@@ -25,7 +25,7 @@
       <em>{{ $t('ServicesTable.note') }}</em>
     </p>
     <NuxtLink
-      :to="localePath({ path: '/#contact-me' })"
+      :to="localePath({ path: '/', hash: '#contact-me' })"
       class="contact-me-btn button"
     >
       {{ $t('NavBar.contact-me') }}
