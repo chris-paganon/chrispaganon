@@ -37,7 +37,7 @@
 const nuxtApp = useNuxtApp();
 const localePath = useLocalePath();
 
-const { data: services } = await useAsyncData('en-services', () =>
+const { data: services } = await useAsyncData('services', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'services').find()
 );
 </script>

@@ -10,6 +10,9 @@
       </section>
       <hr class="separator" />
       <ServicesTable />
+      <div class="background-section-wrapper portfolio-section-background">
+        <PortfolioProjects />
+      </div>
     </div>
   </main>
 </template>
