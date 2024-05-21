@@ -1,0 +1,50 @@
+{
+  "homepage": {
+    "heading1" : "Développeur Web Freelance & Entrepreuner Montréalais",
+    "intro": "Après 2 ans de développement sur notre platforme de commerce en ligne chez Panier Québécois, j'aide maintenant les PME et les OBNL à construire et améliorer leur site Web"
+  },
+  "NavBar": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "contact-me": "Contactez-moi"
+  },
+  "ServicesTable": {
+    "heading": "Quels services pour vous aider?",
+    "sub-heading": {
+      "part1": "Je développe votre",
+      "bold": "Site Web Wordpress",
+      "part2": "mais je peux également vous aider dans votre stratégie de marketing!"
+    }, 
+    "note": "J'ai l'esprit pratique et je m'assure de vous facilter la vie à chaque étape du développement. Je construis des outils utiles qui apportent des résultats mesurables."
+  },
+  "PortfolioProjects": {
+    "heading": "Mon Portfolio",
+    "sub-heading": "Apprenez en plus sur plusieurs de mes projets ci-dessous:"
+  },
+  "ContactMe": {
+    "heading": "Contactez-moi",
+    "form-sub-heading": "Remplissez le formulaire",
+    "contact-sub-heading": "Ou contactez-moi ici",
+    "email-address": "Par courriel:",
+    "phone-number": "Au téléphone:",
+    "form": {
+      "name": "Nom:",
+      "email": "Courriel:",
+      "description": "Donnez-moi plus de précisions à propos de votre projet:",
+      "description-placeholder": "Par exemple \"Je voudrais ajouter notre feed instagram à notre site web existant...\"",
+      "button": "Envoyer",
+      "response": {
+        "name": "SVP entrez votre nom",
+        "email": "SVP entrez votre courriel",
+        "description": "SVP entrez une descrption",
+        "success": "Merci de m'avoir contacté, je vous reviens pas courriel très rapidement",
+        "failure": "Il y a eu une erreur en envoyant le formulaire, contactez-moi par courriel ou au téléphone directement."
+      }
+    }
+  },
+  "ProjectPage": {
+    "date-from": "Depuis:",
+    "date-to": "Jusqu'à:",
+    "visit": "Visitez le site Web"
+  }
+}

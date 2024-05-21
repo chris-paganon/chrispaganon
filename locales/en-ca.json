@@ -1,0 +1,50 @@
+{
+  "homepage": {
+    "heading1": "Freelance Web Developer & Business Owner from Montréal",
+    "intro": "After 2 years building our e-commerce platform at Panier Québécois, I now help SMBs and non profits build or improve their Website."
+  },
+  "NavBar": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact-me": "Let's Talk"
+  },
+  "ServicesTable": {
+    "heading": "What can I do for you?",
+    "sub-heading": {
+      "part1": "I specialize in",
+      "bold": "Wordpress Web Development",
+      "part2": "but I can also help you with your marketing startegy!"
+    },
+    "note": "No fuss & worry-free, I make your life as easy as possible at every step. I build useful tools to get mesurable results."
+  },
+  "PortfolioProjects": {
+    "heading": "My Portfolio",
+    "sub-heading": "Find out more about a few of my projects below:"
+  },
+  "ContactMe": {
+    "heading": "Contact Me",
+    "form-sub-heading": "Fill up the form",
+    "contact-sub-heading": "Or contact me here",
+    "email-address": "By e-mail here:",
+    "phone-number": "By phone here:",
+    "form": {
+      "name": "Name:",
+      "email": "E-mail:",
+      "description": "Tell me about your project:",
+      "description-placeholder": "Something like \"I would like to add pictures from my Instagram to my existing website...\"",
+      "button": "Send",
+      "response": {
+        "name": "Please enter your name",
+        "email": "Please enter your e-mail",
+        "description": "Please enter a descrption",
+        "success": "Thank you for contacting me, I will get back to you by e-mail very soon.",
+        "failure": "There was an error while submitting the form, please contact me by e-mail or phone directly."
+      }
+    }
+  },
+  "ProjectPage": {
+    "date-from": "From:",
+    "date-to": "Until:",
+    "visit": "Visit the website"
+  }
+}
