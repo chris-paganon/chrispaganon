@@ -13,6 +13,7 @@
       <div class="background-section-wrapper portfolio-section-background">
         <PortfolioProjects />
       </div>
+      <ContactMe />
     </div>
   </main>
 </template>
