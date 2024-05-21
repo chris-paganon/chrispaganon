@@ -2,8 +2,8 @@
   <nav>
     <ul>
       <li>
-        <NuxtLink :to="localePath({ name: 'index' })"
-          ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <NuxtLink :to="localePath({ name: 'index' })">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g data-name="31.Home">
               <path
                 d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z"
@@ -14,8 +14,7 @@
               <path d="M17 18H7v-8h2v6h6v-6h2v8z" />
             </g>
           </svg>
-          ></NuxtLink
-        >
+        </NuxtLink>
       </li>
       <li>
         <NuxtLink :to="localePath({ path: '/#portfolio' })">{{
