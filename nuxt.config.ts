@@ -2,6 +2,20 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint'],
+  app: {
+    head: {
+      title: 'Chris Paganon',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Ubuntu',
+        },
+      ],
+    },
+  },
   i18n: {
     locales: [
       {
