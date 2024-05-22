@@ -34,4 +34,7 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: './locales/',
   },
+  runtimeConfig: {
+    sendgridApiKey: 'SG.asas',
+  },
 });
