@@ -17,7 +17,7 @@ export default eventHandler(async (event) => {
       message: 'Email is required',
     });
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!/\S+@\S+\.\S+/.test(email)) {
     throw createError({
       statusCode: 400,
       message: 'Email is invalid',
