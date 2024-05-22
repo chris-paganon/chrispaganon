@@ -35,6 +35,6 @@ export default defineNuxtConfig({
     langDir: './locales/',
   },
   runtimeConfig: {
-    sendgridApiKey: 'SG.asas',
+    sendgridApiKey: 'SG.ab12',
   },
 });
