@@ -4,27 +4,29 @@
     <div class="contact-me-wrapper">
       <div class="contact-me-form-wrapper contact-me-col">
         <h3>{{ $t('ContactMe.form-sub-heading') }}</h3>
-        <form
-          name="contact-me-form"
-          method="post"
-          netlify
-          @submit.prevent="handleSubmit"
-        >
-          <input type="hidden" name="form-name" value="contact-me-form" />
+        <form name="contact-me-form" @submit.prevent="handleSubmit">
           <label for="fullName">{{ $t('ContactMe.form.name') }}</label>
           <input
             id="fullName"
-            v-model="form.fullName"
+            v-model="name"
             type="text"
-            name="fullName"
+            name="name"
+            required
           />
           <label for="name">{{ $t('ContactMe.form.email') }}</label>
-          <input id="email" v-model="form.email" type="email" name="email" />
+          <input
+            id="email"
+            v-model="email"
+            type="email"
+            name="email"
+            required
+          />
           <label for="name">{{ $t('ContactMe.form.description') }}</label>
           <textarea
             id="description"
-            v-model="form.description"
+            v-model="description"
             name="description"
+            required
             rows="4"
             :placeholder="$t('ContactMe.form.description-placeholder')"
           ></textarea>
@@ -50,11 +52,31 @@
 </template>
 
 <script setup lang="ts">
-const form = ref({});
+const name = ref('');
+const email = ref('');
+const description = ref('');
 const formResponse = ref('');
 
-function handleSubmit() {
-  console.log('form', form);
+async function handleSubmit() {
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: {
+        name: name.value,
+        email: email.value,
+        description: description.value,
+      },
+    });
+    formResponse.value = 'Your message has been sent. Thank you!';
+  } catch (error) {
+    formResponse.value = 'An error occurred. Please try again later.';
+    return;
+  } finally {
+    name.value = '';
+    email.value = '';
+    description.value = '';
+  }
 }
 </script>
 
