@@ -9,14 +9,11 @@
     "portfolio": "Portfolio",
     "contact-me": "Let's Talk"
   },
-  "ServicesTable": {
-    "heading": "What can I do for you?",
-    "sub-heading": {
-      "part1": "I specialize in",
-      "bold": "Wordpress Web Development",
-      "part2": "but I can also help you with your marketing startegy!"
-    },
-    "note": "No fuss & worry-free, I make your life as easy as possible at every step. I build useful tools to get mesurable results."
+  "TechStack": {
+    "heading": "Technologies I know",
+    "favorites": "My favorites:",
+    "others": "I am also experienced with:",
+    "note": "VueJS & Nuxt are very similar to React & NextJS. Although I haven't worked with them in production, I know the basics and will easily adapt. I would love to learn the technologies through some challenging projets."
   },
   "PortfolioProjects": {
     "heading": "My Portfolio",

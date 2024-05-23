@@ -10,7 +10,7 @@
         <p>{{ $t('homepage.intro2') }}</p>
       </section>
       <hr class="separator" />
-      <ServicesTable />
+      <TechStack />
       <div class="background-section-wrapper portfolio-section-background">
         <PortfolioProjects />
       </div>

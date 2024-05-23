@@ -9,14 +9,11 @@
     "portfolio": "Portfolio",
     "contact-me": "Contactez-moi"
   },
-  "ServicesTable": {
-    "heading": "Quels services pour vous aider?",
-    "sub-heading": {
-      "part1": "Je développe votre",
-      "bold": "Site Web Wordpress",
-      "part2": "mais je peux également vous aider dans votre stratégie de marketing!"
-    },
-    "note": "J'ai l'esprit pratique et je m'assure de vous facilter la vie à chaque étape du développement. Je construis des outils utiles qui apportent des résultats mesurables."
+  "TechStack": {
+    "heading": "Les technologies que je connais",
+    "favorites": "Mes préférés:",
+    "others": "Mais aussi:",
+    "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je connais les bases et je m'adapterai facilement. J'aimerais beaucoup apprendre ces technologies à travers des projets stimulants."
   },
   "PortfolioProjects": {
     "heading": "Mon Portfolio",
