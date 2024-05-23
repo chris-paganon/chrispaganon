@@ -5,8 +5,9 @@
     </section>
     <div class="home-content-wrapper">
       <section class="introduction content-section">
-        <p>{{ $t('homepage.intro') }}</p>
         <img src="/images/me.jpg" alt="me" />
+        <p>{{ $t('homepage.intro') }}</p>
+        <p>{{ $t('homepage.intro2') }}</p>
       </section>
       <hr class="separator" />
       <ServicesTable />
@@ -36,6 +37,9 @@
 .introduction p {
   font-size: 2em;
   margin-right: 170px;
+  margin-bottom: 1em;
+}
+.introduction p:last-child {
   margin-bottom: 0;
 }
 img {

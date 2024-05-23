@@ -1,7 +1,8 @@
 {
   "homepage": {
-    "heading1" : "Développeur Web Freelance & Entrepreuner Montréalais",
-    "intro": "Après 2 ans de développement sur notre platforme de commerce en ligne chez Panier Québécois, j'aide maintenant les PME et les OBNL à construire et améliorer leur site Web"
+    "heading1": "Développeur Web Full-stack Javascript/PHP de France & Canada",
+    "intro": "J'aime apprendre en travaillant sur des projets stimulants. J'écris du code concis, lisible et maintenable.",
+    "intro2": "Je suis disponible pour travailler en remote à 32h+ par semaine."
   },
   "NavBar": {
     "home": "Accueil",
@@ -14,7 +15,7 @@
       "part1": "Je développe votre",
       "bold": "Site Web Wordpress",
       "part2": "mais je peux également vous aider dans votre stratégie de marketing!"
-    }, 
+    },
     "note": "J'ai l'esprit pratique et je m'assure de vous facilter la vie à chaque étape du développement. Je construis des outils utiles qui apportent des résultats mesurables."
   },
   "PortfolioProjects": {
