@@ -28,8 +28,8 @@
     "form": {
       "name": "Nom:",
       "email": "Courriel:",
-      "description": "Donnez-moi plus de précisions à propos de votre projet:",
-      "description-placeholder": "Par exemple \"Je voudrais ajouter notre feed instagram à notre site web existant...\"",
+      "description": "Parlez-moi de vous:",
+      "description-placeholder": "Nous cherchons un développeur web avec 5ans d'expérience...",
       "button": "Envoyer",
       "response": {
         "name": "SVP entrez votre nom",

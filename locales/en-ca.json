@@ -7,7 +7,7 @@
   "NavBar": {
     "home": "Home",
     "portfolio": "Portfolio",
-    "contact-me": "Let's Talk"
+    "contact-me": "Hire Me"
   },
   "TechStack": {
     "heading": "Technologies I know",
@@ -20,16 +20,16 @@
     "sub-heading": "Find out more about a few of my projects below:"
   },
   "ContactMe": {
-    "heading": "Contact Me",
+    "heading": "Hire Me",
     "form-sub-heading": "Fill up the form",
     "contact-sub-heading": "Or contact me here",
-    "email-address": "By e-mail here:",
-    "phone-number": "By phone here:",
+    "email-address": "By e-mail:",
+    "phone-number": "By phone:",
     "form": {
       "name": "Name:",
       "email": "E-mail:",
-      "description": "Tell me about your project:",
-      "description-placeholder": "Something like \"I would like to add pictures from my Instagram to my existing website...\"",
+      "description": "Tell me about you:",
+      "description-placeholder": "We are a looking for a full-stack web developer with 5y of experience...",
       "button": "Send",
       "response": {
         "name": "Please enter your name",
