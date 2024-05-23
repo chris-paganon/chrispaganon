@@ -3,8 +3,8 @@ Title: Portoflio intro
 Description: A quick history of my web developper journey
 ---
 
-**I built my first website in 2016** for a 3D printing University project. Since then I built and managed **several websites** for local and international projects: a B2B massage therapy and ostheopathie service, a pancakes catering project, a local bowling in Colombia and a local plastic recycling community in Montréal.
+**A self-taught web developer since 2016**, I built my 1st project for a 3D printing university project. I have developed and managed several websites and **worked in a web development agency** based in Montréal for 2 years. My expertise spans **frontend and backend** development: VueJS single page apps, wordpress sites, PHP backends, SQL databses, GitHub/GitLab DevOps...
 
-In 2020, **I co-founded the first online farmer's market in Montréal**: [Panier Québécois](https://panierquebecois.ca). I have been developping, improving and maintaining our website ever since (along managing our business' startegy, marketing and operations with my lovely co-founders).
+Since October 2022, I have been working as a **full-stack web developer** at the web agency [Progexia](https://www.progexia.com/). I also did freelance work for [Batimatech](https://www.batimatech.com/) until March 2023 while working part-time at Progexia. Additionally, I develop [VueAI.tools](https://vueai.tools/) as a side project for fun.
 
-As our business doesn't require a full-time developper anymore, I am now putting my experience in web development, entrepreneurship and marketing to good use: **helping you build your online presence!**
+From 2020 until April 2023, **I co-founded the first online farmer's market in Montréal**: [Panier Québécois](https://panierquebecois.ca). I focused on developing and maintaining our website while managing business strategy, marketing, and operations with my co-founders. This role enhanced my **teamwork, and communication skills**, with a strong emphasis on PHP/Wordpress in my web development work.
