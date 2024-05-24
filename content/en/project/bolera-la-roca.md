@@ -5,7 +5,7 @@ id: 4
 slug: bolera-la-roca
 url: https://boleralaroca.com/
 startDate: 'November 2020'
-endDate: now
+endDate: 'March 2023'
 image: /images/portfolio/bolera-la-roca-thumbnail.jpg
 imageAlt: thumbnail Bowling La Roca
 color: ffe492
