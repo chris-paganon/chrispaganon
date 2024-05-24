@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build-nuxt:
+    uses: ./.github/workflows/deploy-nuxt-app.yml
+    with:
+      app_name: chrispaganon
+      app_env: production
+    secrets:
+      DROPLET_USERNAME: ${{ secrets.DROPLET_USERNAME }}
+      DROPLET_HOST: ${{ secrets.DROPLET_HOST }}
+      DROPLET_KEY: ${{ secrets.DROPLET_KEY }}
