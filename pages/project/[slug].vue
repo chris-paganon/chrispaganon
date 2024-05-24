@@ -31,7 +31,6 @@
 <script setup lang="ts">
 const nuxtApp = useNuxtApp();
 const route = useRoute();
-console.log('route.params', route.params);
 
 const { data: projectContent } = await useAsyncData('services', () =>
   queryContent(
