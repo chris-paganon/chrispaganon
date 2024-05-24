@@ -6,7 +6,7 @@ slug: vue-ai-tools
 url: https://vueai.tools/
 startDate: 'Novembre 2020'
 endDate: maintenant
-image: /images/portfolio/vue-ai-tools-thumbnail.png
+image: /images/portfolio/vue-ai-tools-thumbnail.jpg
 imageAlt: thumbnail VueAI.tools
 color: 5fbb65d1
 ---
