@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main v-if="projectContent">
     <section
       class="hero-banner"
       :style="{ backgroundColor: `#${projectContent.color}` }"
@@ -36,7 +36,6 @@ const { data: projectContent } = await useAsyncData('services', () =>
     `project/${route.params.slug}`
   ).findOne()
 );
-console.log('🚀 ~ projectContent:', projectContent);
 </script>
 
 <style scoped>
