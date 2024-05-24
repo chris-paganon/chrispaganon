@@ -28,13 +28,6 @@
         <li>
           <img src="/images/logos/docker.png" alt="Docker" class="icon" />
         </li>
-        <li>
-          <img
-            src="/images/logos/tailwind.png "
-            alt="Tailwind CSS"
-            class="icon"
-          />
-        </li>
       </ul>
     </div>
     <div class="tech-stack-wrapper">
@@ -49,6 +42,13 @@
           <img
             src="/images/logos/expressjs.png"
             alt="Express.js"
+            class="icon"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/logos/tailwind.png "
+            alt="Tailwind CSS"
             class="icon"
           />
         </li>
