@@ -19,7 +19,7 @@ L'expérience que j'ai acquis en tant que co-fondateur me donne **une meilleure 
 
 ![thumbnail Panier Québécois](/images/portfolio/panier-quebecois-thumbnail.jpg)
 
-Voici une liste non-exhaustive des fonctionalités que j'ai développé:
+Panier Québécois était une platforme de e-commerce. Voici une liste non-exhaustive des fonctionalités que j'ai développé:
 
 - Un **système d'export des commandes complètement sur-mesure** afin de:
   - Envoyer nos commandes automatiquement à nos fournisseurs par courriel ou SMS
@@ -32,3 +32,5 @@ Voici une liste non-exhaustive des fonctionalités que j'ai développé:
 - ...
 
 _Toutes les fonctionalités étaient développées en PHP dans un plugin fait sur-mesure_
+
+_(Panier Québécois est maintenant principalement un service B2B sans besoin de vitrine ou de la pluspart des fonctionnalités énumérées ci-dessus. C'est pourquoi le site Web actuel ne les affiche pas.)_

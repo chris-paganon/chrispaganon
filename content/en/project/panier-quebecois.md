@@ -19,7 +19,7 @@ The first hand experience I gained through running a business gives me **a bette
 
 ![thumbnail Panier Québécois](/images/portfolio/panier-quebecois-thumbnail.jpg)
 
-Here is a non-exhaustive list of features I have developed over the last few years.
+Panier Québécois was an e-commerce platform. Here is a non-exhaustive list of features I have developed:
 
 - A **fully custom orders export** system to:
   - Send orders automatically to our suppliers by e-mail & SMS
@@ -32,3 +32,5 @@ Here is a non-exhaustive list of features I have developed over the last few yea
 - ...
 
 _All features were developed in PHP in a custom plugin_
+
+_(Panier Québécois is now mostly a B2B service without the need for a storefront or most of the features listed above. Hence why the current website doesn't show them.)_
