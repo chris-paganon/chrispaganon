@@ -1,7 +1,7 @@
 ---
 Title: Pure Santé
 Description: Un service d'Ostéopathie et massage B2B
-id: 3
+id: 40
 slug: pure-sante
 url: http://puresante-clinique.ca/
 startDate: 'Avril 2019'
