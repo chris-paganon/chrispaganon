@@ -15,6 +15,13 @@
             class="icon"
           />
         </li>
+        <li>
+          <img
+            src="/images/logos/typescript.png"
+            alt="TypeScript"
+            class="icon"
+          />
+        </li>
         <li><img src="/images/logos/vuejs.png" alt="Vue.js" class="icon" /></li>
         <li><img src="/images/logos/nuxt.svg" alt="Nuxt.js" class="icon" /></li>
         <li><img src="/images/logos/sql.png" alt="SQL" class="icon" /></li>
