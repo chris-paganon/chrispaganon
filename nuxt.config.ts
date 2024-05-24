@@ -34,6 +34,11 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: './locales/',
   },
+  content: {
+    markdown: {
+      anchorLinks: false,
+    },
+  },
   runtimeConfig: {
     sendgridApiKey: 'SG.ab12',
   },
