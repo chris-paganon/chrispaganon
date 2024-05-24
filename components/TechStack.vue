@@ -1,6 +1,7 @@
 <template>
-  <section class="services-section content-section">
+  <section class="tech-stack-section content-section">
     <h2>{{ $t('TechStack.heading') }}</h2>
+    <p class="tech-stack-intro">{{ $t('TechStack.intro') }}</p>
     <div class="tech-stack-wrapper">
       <p>
         <strong>{{ $t('TechStack.favorites') }}</strong>
@@ -84,6 +85,13 @@ const localePath = useLocalePath();
 </script>
 
 <style scoped>
+.tech-stack-section {
+  text-align: center;
+}
+h2 {
+  margin-bottom: 0.5em;
+}
+.tech-stack-intro,
 .tech-stack-wrapper {
   margin-bottom: 2.5em;
 }

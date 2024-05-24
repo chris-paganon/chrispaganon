@@ -59,9 +59,6 @@ img:hover {
   border-top: 2px solid gray;
   max-width: 66%;
 }
-.services-section {
-  text-align: center;
-}
 
 @media (max-width: 925px) {
   .introduction {

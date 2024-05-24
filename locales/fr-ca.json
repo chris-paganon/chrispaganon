@@ -11,6 +11,7 @@
   },
   "TechStack": {
     "heading": "Les technologies que je connais",
+    "intro": "Mon environnement \"bas niveau\" préféré consiste à utiliser TypeScript et Tailwind CSS dans un conteneur Docker.",
     "favorites": "Mes préférés:",
     "others": "Mais aussi:",
     "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je connais les bases et je m'adapterai facilement. J'aimerais beaucoup apprendre ces technologies à travers des projets stimulants."
