@@ -19,7 +19,10 @@
         </li>
       </ul>
       <ContentRenderer :content="projectContent">
-        <ContentRendererMarkdown :value="projectContent" />
+        <ContentRendererMarkdown
+          :value="projectContent"
+          class="project-content"
+        />
       </ContentRenderer>
     </article>
   </main>
@@ -75,7 +78,7 @@ ul.project-info {
   width: 600px;
   max-width: 100%;
 }
-:deep(.nuxt-content ul) {
+:deep(.project-content ul) {
   list-style: disc;
   padding-left: 40px;
 }
