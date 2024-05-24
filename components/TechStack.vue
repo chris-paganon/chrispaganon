@@ -26,6 +26,9 @@
         <li><img src="/images/logos/nuxt.svg" alt="Nuxt.js" class="icon" /></li>
         <li><img src="/images/logos/sql.png" alt="SQL" class="icon" /></li>
         <li>
+          <img src="/images/logos/docker.png" alt="Docker" class="icon" />
+        </li>
+        <li>
           <img
             src="/images/logos/tailwind.png "
             alt="Tailwind CSS"
