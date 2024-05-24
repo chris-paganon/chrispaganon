@@ -1,10 +1,10 @@
 ---
 Title: Bowling La Roca
 Description: Un bowling local à Bogota
-id: 3
+id: 4
 slug: bolera-la-roca
 url: https://boleralaroca.com/
-startDate: "Novembre 2020"
+startDate: 'Novembre 2020'
 endDate: maintenant
 image: /images/portfolio/bolera-la-roca-thumbnail.jpg
 imageAlt: thumbnail Bowling La Roca

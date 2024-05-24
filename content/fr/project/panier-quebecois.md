@@ -1,10 +1,10 @@
 ---
 Title: Panier Québécois
 Description: Le 1er marché fermier en ligne à Montréal
-id: 1
+id: 2
 slug: panier-quebecois
 url: https://panierquebecois.ca
-startDate: "Avril 2020"
+startDate: 'Avril 2020'
 endDate: maintenant
 image: /images/portfolio/panier-quebecois-thumbnail.jpg
 imageAlt: thumbnail Panier Québécois
@@ -20,6 +20,7 @@ L'expérience que j'ai acquis en tant que co-fondateur me donne **une meilleure 
 ![thumbnail Panier Québécois](/images/portfolio/panier-quebecois-thumbnail.jpg)
 
 Voici une liste non-exhaustive des fonctionalités que j'ai développé:
+
 - Un **système d'export des commandes complètement sur-mesure** afin de:
   - Envoyer nos commandes automatiquement à nos fournisseurs par courriel ou SMS
   - Exporter chaque commande au format pDF optimiser pour nos opérations
@@ -30,4 +31,4 @@ Voici une liste non-exhaustive des fonctionalités que j'ai développé:
 - Un système de produits favoris pour les clients
 - ...
 
-*Toutes les fonctionalités étaient développées en PHP dans un plugin fait sur-mesure*
+_Toutes les fonctionalités étaient développées en PHP dans un plugin fait sur-mesure_
