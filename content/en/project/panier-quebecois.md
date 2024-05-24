@@ -5,17 +5,17 @@ id: 2
 slug: panier-quebecois
 url: https://panierquebecois.ca
 startDate: 'April 2020'
-endDate: now
+endDate: 'March 2023'
 image: /images/portfolio/panier-quebecois-thumbnail.jpg
 imageAlt: thumbnail Panier Québécois
 color: 5fbb65d1
 ---
 
-Panier Québécois is the **first online farmer's market in Montréal**. It's also been my full time occupation since April 2020. We started the project with my 3 co-founders to **help local farmers markets** when COVID started. It quickly grew into a business with over **800 orders every month**.
+Panier Québécois is the **first online farmer's market in Montréal**. It was also my full time occupation between April 2020 and October 2022. We started the project with my 3 co-founders to **help local farmers markets** when COVID started. It quickly grew into a business with over **800 orders every month**.
 
 As a business owner, I have been **involved in most aspects of the project**, not just web development. I managed our marketing strategy, built and integrated software tools for analytics and marketing, managed customer service, prepared and delivered orders, built tools to optimize operations and purchasing...
 
-The first hand experience I gained through running a business gives me **a better understanding of your needs** as an entrepreneur. I understand what truly matters to you and I can help you achieve your goals more efficiently.
+The first hand experience I gained through running a business gives me **a better understanding of companies' needs**.
 
 ![thumbnail Panier Québécois](/images/portfolio/panier-quebecois-thumbnail.jpg)
 
