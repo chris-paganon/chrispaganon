@@ -1,6 +1,6 @@
 ---
 Title: Web dev agency Progexia
-Description: Mostly frontend employee (VueJS & Wordpress)
+Description: Full-stack employee (VueJS & Wordpress)
 id: 20
 slug: progexia
 url: https://www.progexia.com/
