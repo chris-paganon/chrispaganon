@@ -41,5 +41,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     sendgridApiKey: 'SG.ab12',
+    public: {
+      environment: 'development',
+    },
   },
 });
