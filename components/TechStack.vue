@@ -3,54 +3,74 @@
     <h2>{{ $t('TechStack.heading') }}</h2>
     <div class="tech-stack-wrapper">
       <h3>{{ $t('TechStack.favorites') }}</h3>
-      <ul
-        class="tech-logos interactive"
-        :class="{
-          'vertical-icons-on': verticalIconsOn,
-          'showing-details': showingDetails,
-          'showing-details-wrapper': showingDetailsWrapper,
-          'hiding-details-wrapper': hidingDetailsWrapper,
-        }"
-        @click="toggleInteractiveStack"
-      >
-        <li v-for="(mainTech, index) in mainTechList" :key="index + mainTech">
-          <img
-            :src="`/images/logos/${mainTech}.png`"
-            :alt="mainTech"
-            class="icon"
-          />
-          <div v-if="showingDetailsWrapper">
-            <TechStackDetails :tech="mainTech" />
-          </div>
-        </li>
-      </ul>
+      <div class="tech-logos-wrapper">
+        <div
+          class="tech-logos-overlay"
+          :class="{
+            'vertical-icons-on': verticalIconsOn,
+            'showing-details': showingDetails,
+          }"
+          @click="toggleInteractiveStack"
+        ></div>
+        <ul
+          class="tech-logos"
+          :class="{
+            'vertical-icons-on': verticalIconsOn,
+            'showing-details': showingDetails,
+            'showing-details-wrapper': showingDetailsWrapper,
+            'hiding-details-wrapper': hidingDetailsWrapper,
+          }"
+        >
+          <li v-for="(mainTech, index) in mainTechList" :key="index + mainTech">
+            <img
+              :src="`/images/logos/${mainTech}.png`"
+              :alt="mainTech"
+              class="icon"
+            />
+            <div v-if="showingDetailsWrapper">
+              <TechStackDetails :tech="mainTech" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+
     <div class="tech-stack-wrapper">
       <h3>{{ $t('TechStack.others') }}</h3>
-      <ul
-        class="tech-logos interactive"
-        :class="{
-          'vertical-icons-on': verticalIconsOn,
-          'showing-details': showingDetails,
-          'showing-details-wrapper': showingDetailsWrapper,
-          'hiding-details-wrapper': hidingDetailsWrapper,
-        }"
-        @click="toggleInteractiveStack"
-      >
-        <li
-          v-for="(otherTech, index) in otherTechList"
-          :key="index + otherTech"
+      <div class="tech-logos-wrapper">
+        <div
+          class="tech-logos-overlay"
+          :class="{
+            'vertical-icons-on': verticalIconsOn,
+            'showing-details': showingDetails,
+          }"
+          @click="toggleInteractiveStack"
+        ></div>
+        <ul
+          class="tech-logos interactive"
+          :class="{
+            'vertical-icons-on': verticalIconsOn,
+            'showing-details': showingDetails,
+            'showing-details-wrapper': showingDetailsWrapper,
+            'hiding-details-wrapper': hidingDetailsWrapper,
+          }"
+          @click="toggleInteractiveStack"
         >
-          <img
-            :src="`/images/logos/${otherTech}.png`"
-            :alt="otherTech"
-            class="icon"
-          />
-          <div v-if="showingDetailsWrapper">
-            <TechStackDetails :tech="otherTech" />
-          </div>
-        </li>
-      </ul>
+          <li
+            v-for="(otherTech, index) in otherTechList"
+            :key="index + otherTech"
+          >
+            <img
+              :src="`/images/logos/${otherTech}.png`"
+              :alt="otherTech"
+              class="icon"
+            />
+            <div v-if="showingDetailsWrapper">
+              <TechStackDetails :tech="otherTech" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="tech-stack-wrapper">
       <p>
@@ -134,20 +154,81 @@ const otherTechList = [
 .tech-stack-section {
   text-align: center;
 }
-h2 {
+h2,
+h3 {
   margin-bottom: 0.5em;
 }
 .tech-stack-intro,
 .tech-stack-wrapper {
   margin-bottom: 2.5em;
 }
-.tech-logos.interactive {
-  cursor: pointer;
+
+.tech-logos-wrapper {
+  position: relative;
+  padding: 20px 0px;
 }
+.tech-logos-overlay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  height: 100%;
+  width: calc(100% + 100px);
+  transition: all 0.5s;
+}
+.tech-logos-overlay:not(.vertical-icons-on):hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.tech-logos-overlay:not(.vertical-icons-on):hover::after {
+  content: '+';
+  padding: 0px 10px 2px;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 800;
+  border: 2px solid black;
+  border-radius: 1000px;
+}
+.tech-logos-overlay.showing-details:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 80%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+}
+.tech-logos-overlay.showing-details:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  70% {
+    transform: rotate(45deg) translate(8px, -8px);
+  }
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+
 ul {
   width: 100%;
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: flex;
   gap: 1em;
   justify-content: center;
