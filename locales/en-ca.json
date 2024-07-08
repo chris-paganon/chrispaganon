@@ -59,6 +59,41 @@
         "name": "Linux",
         "time": "2 years",
         "description": "I have been using Linux for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "nodejs": {
+        "name": "NodeJS",
+        "time": "2 years",
+        "description": "I have been using NodeJS for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "expressjs": {
+        "name": "ExpressJS",
+        "time": "2 years",
+        "description": "I have been using ExpressJS for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "python": {
+        "name": "Python",
+        "time": "1 year",
+        "description": "I have been using Python for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "llamaindex": {
+        "name": "LlamaIndex",
+        "time": "1 year",
+        "description": "I have been using LlamaIndex for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "wordpress": {
+        "name": "Wordpress",
+        "time": "1 year",
+        "description": "I have been using Wordpress for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "tailwind": {
+        "name": "Tailwind",
+        "time": "1 year",
+        "description": "I have been using Tailwind for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+      },
+      "bootstrap": {
+        "name": "Bootstrap",
+        "time": "1 year",
+        "description": "I have been using Bootstrap for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
       }
     }
   },
