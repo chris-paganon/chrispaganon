@@ -1,16 +1,17 @@
 <template>
   <section class="tech-stack-section content-section">
     <h2>{{ $t('TechStack.heading') }}</h2>
-    <div class="tech-stack-wrapper interactive" @click="toggleInteractiveStack">
+    <div class="tech-stack-wrapper">
       <h3>{{ $t('TechStack.favorites') }}</h3>
       <ul
-        class="tech-logos"
+        class="tech-logos interactive"
         :class="{
           'vertical-icons-on': verticalIconsOn,
           'showing-details': showingDetails,
           'showing-details-wrapper': showingDetailsWrapper,
           'hiding-details-wrapper': hidingDetailsWrapper,
         }"
+        @click="toggleInteractiveStack"
       >
         <li v-for="(mainTech, index) in mainTechList" :key="index + mainTech">
           <img
@@ -24,16 +25,17 @@
         </li>
       </ul>
     </div>
-    <div class="tech-stack-wrapper interactive" @click="toggleInteractiveStack">
+    <div class="tech-stack-wrapper">
       <h3>{{ $t('TechStack.others') }}</h3>
       <ul
-        class="tech-logos"
+        class="tech-logos interactive"
         :class="{
           'vertical-icons-on': verticalIconsOn,
           'showing-details': showingDetails,
           'showing-details-wrapper': showingDetailsWrapper,
           'hiding-details-wrapper': hidingDetailsWrapper,
         }"
+        @click="toggleInteractiveStack"
       >
         <li
           v-for="(otherTech, index) in otherTechList"
@@ -139,7 +141,7 @@ h2 {
 .tech-stack-wrapper {
   margin-bottom: 2.5em;
 }
-.tech-stack-wrapper.interactive {
+.tech-logos.interactive {
   cursor: pointer;
 }
 ul {
