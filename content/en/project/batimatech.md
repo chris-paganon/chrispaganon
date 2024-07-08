@@ -4,6 +4,7 @@ Description: Freelance for a construction non-for-profit
 id: 25
 slug: batimatech
 url: https://jebatimatech.com/
+githubUrl: https://github.com/chris-paganon/jebatimatech
 startDate: 'October 2022'
 endDate: 'April 2023'
 image: /images/portfolio/batimatech/batimatech-thumbnail.jpg

@@ -4,6 +4,7 @@ Description: GPT-Powered Assistant for VueJS Documentation
 id: 1
 slug: vue-ai-tools
 url: https://vueai.tools/
+githubUrl: https://github.com/chris-paganon/vue-ai-tools
 startDate: 'November 2020'
 endDate: now
 image: /images/portfolio/vue-ai-tools-thumbnail.jpg

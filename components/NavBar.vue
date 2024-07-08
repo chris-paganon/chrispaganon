@@ -2,6 +2,20 @@
   <nav>
     <ul>
       <li>
+        <NuxtLink
+          id="github-link"
+          to="https://github.com/chris-paganon"
+          target="_blank"
+        >
+          <img
+            src="/images/logos/github.png"
+            alt="GitHub"
+            class="icon"
+            width="24px"
+          />
+        </NuxtLink>
+      </li>
+      <li>
         <NuxtLink :to="localePath({ name: 'index' })">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g data-name="31.Home">
@@ -65,6 +79,13 @@ a:not(.contact-me-btn) {
 }
 a:not(.contact-me-btn):hover {
   letter-spacing: 2.5px;
+}
+#github-link img {
+  transition: width 250ms ease-out;
+  margin-top: 2px;
+}
+#github-link img:hover {
+  width: 27px;
 }
 
 svg {

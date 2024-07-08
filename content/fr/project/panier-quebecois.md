@@ -4,6 +4,7 @@ Description: Le 1er marché fermier en ligne à Montréal
 id: 30
 slug: panier-quebecois
 url: https://panierquebecois.ca
+githubUrl: https://github.com/chris-paganon/panier-quebecois
 startDate: 'Avril 2020'
 endDate: 'Mars 2023'
 image: /images/portfolio/panier-quebecois-thumbnail.jpg

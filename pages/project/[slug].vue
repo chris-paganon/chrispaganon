@@ -17,6 +17,21 @@
             $t('ProjectPage.visit')
           }}</a>
         </li>
+        <li v-if="projectContent.githubUrl">
+          <NuxtLink
+            id="github-link"
+            :to="projectContent.githubUrl"
+            target="_blank"
+          >
+            <img
+              id="github-logo"
+              src="/images/logos/github.png"
+              alt="GitHub"
+              class="icon"
+              width="24px"
+            />
+          </NuxtLink>
+        </li>
       </ul>
       <ContentRenderer :content="projectContent">
         <ContentRendererMarkdown
@@ -70,12 +85,18 @@ ul.project-info {
   margin-bottom: 15px;
 }
 
-:deep(img) {
+:deep(img:not(#github-logo)) {
   max-width: 800px;
   display: block;
   margin: 60px auto;
   width: 600px;
   max-width: 100%;
+}
+#github-logo {
+  transition: transform 250ms ease-out;
+}
+#github-logo:hover {
+  transform: scale(1.25);
 }
 :deep(.project-content ul) {
   list-style: disc;
