@@ -1,12 +1,20 @@
 <template>
   <section class="tech-stack-section content-section">
     <h2>{{ $t('TechStack.heading') }}</h2>
-    <div class="tech-stack-wrapper">
+    <div class="tech-stack-wrapper interactive" @click="toggleInteractiveStack">
       <p>
         <strong>{{ $t('TechStack.favorites') }}</strong>
       </p>
-      <ul class="tech-logos">
-        <li><img src="/images/logos/html.png" alt="HTML5" class="icon" /></li>
+      <ul
+        class="tech-logos"
+        :class="{
+          'show-details': showDetails,
+          'animation-done': isAnimationDone,
+        }"
+      >
+        <li>
+          <img src="/images/logos/html.png" alt="HTML5" class="icon" />
+        </li>
         <li><img src="/images/logos/css.png" alt="CSS3" class="icon" /></li>
         <li>
           <img
@@ -34,11 +42,17 @@
         </li>
       </ul>
     </div>
-    <div class="tech-stack-wrapper">
+    <div class="tech-stack-wrapper interactive" @click="toggleInteractiveStack">
       <p>
         <strong>{{ $t('TechStack.others') }}</strong>
       </p>
-      <ul class="tech-logos">
+      <ul
+        class="tech-logos"
+        :class="{
+          'show-details': showDetails,
+          'animation-done': isAnimationDone,
+        }"
+      >
         <li>
           <img src="/images/logos/nodejs.png" alt="Node.js" class="icon" />
         </li>
@@ -99,6 +113,17 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
+
+const showDetails = ref(false);
+const isAnimationDone = ref(true);
+
+function toggleInteractiveStack() {
+  isAnimationDone.value = false;
+  showDetails.value = !showDetails.value;
+  setTimeout(() => {
+    isAnimationDone.value = true;
+  }, 1050);
+}
 </script>
 
 <style scoped>
@@ -112,7 +137,12 @@ h2 {
 .tech-stack-wrapper {
   margin-bottom: 2.5em;
 }
+.tech-stack-wrapper.interactive {
+  cursor: pointer;
+}
 ul {
+  width: 1024px;
+  max-width: 100%;
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -120,11 +150,20 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transition: width 1000ms cubic-bezier(0, 1, 0.25, 0.85);
 }
+ul.show-details {
+  width: 50px;
+  /* justify-content: flex-start; */
+}
+ul.show-details.animation-done {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 li img {
   max-height: 60px;
 }
-
 .button {
   margin: 40px auto 20px auto;
   font-size: 20px;
