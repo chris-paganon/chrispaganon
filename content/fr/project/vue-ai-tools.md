@@ -1,6 +1,6 @@
 ---
 Title: VueAI.tools
-Description: Un assistant GPT pour la documentation VueJS
+Description: Un assistant AI entièrement open-source pour la documentation VueJS
 id: 1
 slug: vue-ai-tools
 url: https://vueai.tools/
