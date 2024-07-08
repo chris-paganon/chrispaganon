@@ -165,11 +165,18 @@ const showDetails = ref(false);
 const isDetailsReady = ref(false);
 
 function toggleInteractiveStack() {
-  isDetailsReady.value = false;
-  showDetails.value = !showDetails.value;
+  // I use 2 animations running sequentially. So they need to be ran in the inverse order on reset.
+  if (showDetails.value) {
+    isDetailsReady.value = false;
+    setTimeout(() => {
+      showDetails.value = false;
+    }, 800);
+    return;
+  }
+  showDetails.value = true;
   setTimeout(() => {
     isDetailsReady.value = true;
-  }, 950);
+  }, 1000);
 }
 </script>
 
@@ -188,8 +195,7 @@ h2 {
   cursor: pointer;
 }
 ul {
-  width: 1024px;
-  max-width: 100%;
+  width: 100%;
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -197,27 +203,16 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transition: width 1s linear;
+  /* cubic-bezier(0, 1, 0.25, 0.85) */
 }
 ul.show-details {
-  animation-name: showDetails;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  /* animation-timing-function: cubic-bezier(0, 1, 0.25, 0.85); */
+  width: 0;
 }
 ul.show-details.details-ready {
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
-}
-@keyframes showDetails {
-  0% {
-    width: 100%;
-  }
-  50% {
-    width: 50px;
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 li {
@@ -235,12 +230,15 @@ li div {
   max-height: 60px;
   overflow: hidden;
   transition:
-    width 1s linear,
-    max-height 0.25s linear 0.75s;
+    width 1s linear 0.25s,
+    max-height 0.25s linear;
 }
 ul.show-details.details-ready li div {
   width: 100%;
-  max-height: 400px;
+  max-height: 200px;
+  transition:
+    width 1s linear,
+    max-height 0.25s linear 1s;
 }
 .button {
   margin: 40px auto 20px auto;
