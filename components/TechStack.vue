@@ -25,6 +25,7 @@
         </li>
         <li><img src="/images/logos/vuejs.png" alt="Vue.js" class="icon" /></li>
         <li><img src="/images/logos/nuxt.svg" alt="Nuxt.js" class="icon" /></li>
+        <li><img src="/images/logos/php.png" alt="PHP" class="icon" /></li>
         <li><img src="/images/logos/sql.png" alt="SQL" class="icon" /></li>
         <li>
           <img src="/images/logos/docker.png" alt="Docker" class="icon" />
@@ -45,6 +46,12 @@
             alt="Express.js"
             class="icon"
           />
+        </li>
+        <li>
+          <img src="/images/logos/python.png" alt="Python" class="icon" />
+        </li>
+        <li>
+          <img src="/images/logos/wordpress.png" alt="WordPress" class="icon" />
         </li>
         <li>
           <img
