@@ -1,7 +1,10 @@
 <template>
   <section id="portfolio" class="portfolio-section-wrapper content-section">
     <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
-    <div :class="`portfolio-intro-wrapper ${viewMoreClass}`">
+    <div
+      :class="`portfolio-intro-wrapper ${viewMoreClass}`"
+      @click="viewMoreOn = !viewMoreOn"
+    >
       <div v-if="!viewMoreOn" class="view-more-overlay"></div>
       <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
         <ContentRendererMarkdown :value="portfolioIntro" />
@@ -37,29 +40,43 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 </script>
 
 <style scoped>
+.portfolio-intro-wrapper {
+  cursor: pointer;
+}
 .arrow {
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 30px 30px 30px;
+  margin: auto;
+}
+.arrow::after {
+  content: '';
+  display: block;
   width: 15px;
   height: 15px;
   border-right: 4px solid black;
   border-bottom: 4px solid black;
   margin: 20px auto 0 auto;
-  cursor: pointer;
 }
 .arrow-down {
-  animation: bounce 2s infinite;
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.portfolio-intro-wrapper:hover + .arrow-down,
+.arrow-down:hover {
+  animation: bounce 1.25s infinite;
 }
 .arrow-up {
   transform: rotate(-135deg);
 }
 @keyframes bounce {
   0% {
-    transform: rotate(45deg) translate(0, 0);
-  }
-  70% {
     transform: rotate(45deg) translate(-8px, -8px);
   }
-  100% {
+  30% {
     transform: rotate(45deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }
 
