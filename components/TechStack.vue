@@ -51,6 +51,14 @@
           <img src="/images/logos/python.png" alt="Python" class="icon" />
         </li>
         <li>
+          <img
+            src="/images/logos/llamaindex.svg"
+            height="60px"
+            alt="LlamaIndex"
+            class="icon"
+          />
+        </li>
+        <li>
           <img src="/images/logos/wordpress.png" alt="WordPress" class="icon" />
         </li>
         <li>
