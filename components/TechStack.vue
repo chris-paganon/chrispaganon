@@ -30,6 +30,9 @@
         <li>
           <img src="/images/logos/docker.png" alt="Docker" class="icon" />
         </li>
+        <li>
+          <img src="/images/logos/linux.png" alt="Linux" class="icon" />
+        </li>
       </ul>
     </div>
     <div class="tech-stack-wrapper">
