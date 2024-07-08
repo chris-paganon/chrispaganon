@@ -10,62 +10,14 @@
           'details-ready': isDetailsReady,
         }"
       >
-        <li>
-          <img src="/images/logos/html.png" alt="HTML5" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="html" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/css.png" alt="CSS3" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="css" />
-          </div>
-        </li>
-        <li>
+        <li v-for="(mainTech, index) in mainTechList" :key="index + mainTech">
           <img
-            src="/images/logos/typescript.png"
-            alt="TypeScript"
+            :src="`/images/logos/${mainTech}.png`"
+            :alt="mainTech"
             class="icon"
           />
           <div v-if="showDetails">
-            <TechStackDetails tech="typescript" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/vuejs.png" alt="Vue.js" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="vuejs" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/nuxt.svg" alt="Nuxt.js" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="nuxt" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/php.png" alt="PHP" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="php" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/sql.png" alt="SQL" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="sql" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/docker.png" alt="Docker" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="docker" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/linux.png" alt="Linux" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="linux" />
+            <TechStackDetails :tech="mainTech" />
           </div>
         </li>
       </ul>
@@ -79,59 +31,17 @@
           'details-ready': isDetailsReady,
         }"
       >
-        <li>
-          <img src="/images/logos/nodejs.png" alt="Node.js" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="nodejs" />
-          </div>
-        </li>
-        <li>
+        <li
+          v-for="(otherTech, index) in otherTechList"
+          :key="index + otherTech"
+        >
           <img
-            src="/images/logos/expressjs.png"
-            alt="Express.js"
+            :src="`/images/logos/${otherTech}.png`"
+            :alt="otherTech"
             class="icon"
           />
           <div v-if="showDetails">
-            <TechStackDetails tech="expressjs" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/python.png" alt="Python" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="python" />
-          </div>
-        </li>
-        <li>
-          <img
-            src="/images/logos/llamaindex.svg"
-            height="60px"
-            alt="LlamaIndex"
-            class="icon"
-          />
-          <div v-if="showDetails">
-            <TechStackDetails tech="llamaindex" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/wordpress.png" alt="WordPress" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="wordpress" />
-          </div>
-        </li>
-        <li>
-          <img
-            src="/images/logos/tailwind.png "
-            alt="Tailwind CSS"
-            class="icon"
-          />
-          <div v-if="showDetails">
-            <TechStackDetails tech="tailwind" />
-          </div>
-        </li>
-        <li>
-          <img src="/images/logos/bootstrap.png" alt="Bootstrap" class="icon" />
-          <div v-if="showDetails">
-            <TechStackDetails tech="bootstrap" />
+            <TechStackDetails :tech="otherTech" />
           </div>
         </li>
       </ul>
@@ -178,6 +88,27 @@ function toggleInteractiveStack() {
     isDetailsReady.value = true;
   }, 1000);
 }
+
+const mainTechList = [
+  'html',
+  'css',
+  'typescript',
+  'vuejs',
+  'nuxt',
+  'php',
+  'sql',
+  'docker',
+  'linux',
+];
+const otherTechList = [
+  'nodejs',
+  'expressjs',
+  'python',
+  'llamaindex',
+  'wordpress',
+  'tailwind',
+  'bootstrap',
+];
 </script>
 
 <style scoped>
