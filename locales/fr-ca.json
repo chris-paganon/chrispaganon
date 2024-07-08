@@ -13,7 +13,19 @@
     "heading": "Les technologies que je connais",
     "favorites": "Mes préférés:",
     "others": "Mais aussi:",
-    "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je suis très familier avec ces technologies et je m'adapterai facilement. J'aimerais beaucoup en apprendre plus à travers des projets stimulants."
+    "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je suis très familier avec ces technologies et je m'adapterai facilement. J'aimerais beaucoup en apprendre plus à travers des projets stimulants.",
+    "details": {
+      "html": {
+        "name": "HTML",
+        "time": "5 years",
+        "description": "I am very comfortable with it and I know how to use it to create responsive and accessible websites. I am also familiar with the latest HTML5 features. I am also familiar with the latest HTML5 features."
+      },
+      "css": {
+        "name": "CSS",
+        "time": "5 years",
+        "description": "I am very comfortable with it and I know how to use it to create responsive and accessible websites."
+      }
+    }
   },
   "PortfolioProjects": {
     "heading": "Mon Portfolio",
