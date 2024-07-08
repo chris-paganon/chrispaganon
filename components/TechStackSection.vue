@@ -85,9 +85,9 @@ h3 {
   cursor: pointer;
   position: absolute;
   top: 0;
-  left: -50px;
+  left: -100px;
   height: 100%;
-  width: calc(100% + 100px);
+  width: calc(100% + 200px);
   transition: all 0.5s;
 }
 .tech-logos-overlay:not(.vertical-icons-on):hover {

@@ -11,6 +11,7 @@
   },
   "TechStack": {
     "heading": "Les technologies que je connais",
+    "subHeading": "(Cliquez les logos pour voir les détails)",
     "favorites": "Mes préférés:",
     "others": "Mais aussi:",
     "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je suis très familier avec ces technologies et je m'adapterai facilement. J'aimerais beaucoup en apprendre plus à travers des projets stimulants.",
