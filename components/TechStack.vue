@@ -6,8 +6,10 @@
       <ul
         class="tech-logos"
         :class="{
-          'show-details': showDetails,
-          'details-ready': isDetailsReady,
+          'vertical-icons-on': verticalIconsOn,
+          'showing-details': showingDetails,
+          'showing-details-wrapper': showingDetailsWrapper,
+          'hiding-details-wrapper': hidingDetailsWrapper,
         }"
       >
         <li v-for="(mainTech, index) in mainTechList" :key="index + mainTech">
@@ -16,7 +18,7 @@
             :alt="mainTech"
             class="icon"
           />
-          <div v-if="showDetails">
+          <div v-if="showingDetailsWrapper">
             <TechStackDetails :tech="mainTech" />
           </div>
         </li>
@@ -27,8 +29,10 @@
       <ul
         class="tech-logos"
         :class="{
-          'show-details': showDetails,
-          'details-ready': isDetailsReady,
+          'vertical-icons-on': verticalIconsOn,
+          'showing-details': showingDetails,
+          'showing-details-wrapper': showingDetailsWrapper,
+          'hiding-details-wrapper': hidingDetailsWrapper,
         }"
       >
         <li
@@ -40,7 +44,7 @@
             :alt="otherTech"
             class="icon"
           />
-          <div v-if="showDetails">
+          <div v-if="showingDetailsWrapper">
             <TechStackDetails :tech="otherTech" />
           </div>
         </li>
@@ -71,21 +75,34 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 
-const showDetails = ref(false);
-const isDetailsReady = ref(false);
+const verticalIconsOn = ref(false);
+const showingDetails = ref(false);
+const showingDetailsWrapper = ref(false);
+const hidingDetailsWrapper = ref(false);
 
 function toggleInteractiveStack() {
+  hidingDetailsWrapper.value = false;
   // I use 2 animations running sequentially. So they need to be ran in the inverse order on reset.
-  if (showDetails.value) {
-    isDetailsReady.value = false;
+  // Turn off to hide
+  if (showingDetails.value) {
+    showingDetails.value = false;
+    hidingDetailsWrapper.value = true;
     setTimeout(() => {
-      showDetails.value = false;
-    }, 800);
+      showingDetailsWrapper.value = false;
+      setTimeout(() => {
+        verticalIconsOn.value = false;
+      }, 50);
+    }, 1100);
     return;
   }
-  showDetails.value = true;
+
+  // Turn on to show
+  verticalIconsOn.value = true;
   setTimeout(() => {
-    isDetailsReady.value = true;
+    showingDetailsWrapper.value = true;
+    setTimeout(() => {
+      showingDetails.value = true;
+    }, 100);
   }, 1000);
 }
 
@@ -134,18 +151,21 @@ ul {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transition: width 1s linear;
-  /* cubic-bezier(0, 1, 0.25, 0.85) */
+  transition: width 1s cubic-bezier(1, 0, 0.85, 0.25);
 }
-ul.show-details {
-  width: 0;
+ul.vertical-icons-on {
+  width: 50px;
+  transition: width 1s cubic-bezier(0.1, 0.75, 0.25, 0.85);
 }
-ul.show-details.details-ready {
+ul.vertical-icons-on.showing-details-wrapper {
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
 }
-
+/* This overwrites the transition on width when removing showing-details-wrapper */
+ul.vertical-icons-on.hiding-details-wrapper {
+  transition: none;
+}
 li {
   display: flex;
   align-items: center;
@@ -161,15 +181,15 @@ li div {
   max-height: 60px;
   overflow: hidden;
   transition:
-    width 1s linear 0.25s,
-    max-height 0.25s linear;
+    width 1s ease-in-out 0.15s,
+    max-height 0.5s linear;
 }
-ul.show-details.details-ready li div {
+ul.showing-details li div {
   width: 100%;
   max-height: 200px;
   transition:
-    width 1s linear,
-    max-height 0.25s linear 1s;
+    width 1s ease-out,
+    max-height 0.5s linear 0.7s;
 }
 .button {
   margin: 40px auto 20px auto;
