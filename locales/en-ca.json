@@ -11,7 +11,6 @@
   },
   "TechStack": {
     "heading": "Technologies I know",
-    "intro": "My prefered \"low level\" environment is running Typescript and Tailwind CSS on a Docker container.",
     "favorites": "My favorites:",
     "others": "I am also experienced with:",
     "note": "VueJS & Nuxt are very similar to React & NextJS. Although I haven't worked with them directly in production, I am very familliar with the technologies and will easily adapt. I would love to learn more through some challenging projets."

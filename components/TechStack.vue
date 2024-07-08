@@ -1,7 +1,6 @@
 <template>
   <section class="tech-stack-section content-section">
     <h2>{{ $t('TechStack.heading') }}</h2>
-    <p class="tech-stack-intro">{{ $t('TechStack.intro') }}</p>
     <div class="tech-stack-wrapper">
       <p>
         <strong>{{ $t('TechStack.favorites') }}</strong>
