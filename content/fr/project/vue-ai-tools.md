@@ -5,7 +5,7 @@ id: 1
 slug: vue-ai-tools
 url: https://vueai.tools/
 githubUrl: https://github.com/chris-paganon/vue-ai-tools
-startDate: 'Novembre 2020'
+startDate: 'Août 2023'
 endDate: maintenant
 image: /images/portfolio/vue-ai-tools-thumbnail.jpg
 imageAlt: thumbnail VueAI.tools
