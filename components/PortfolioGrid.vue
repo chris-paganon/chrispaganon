@@ -24,10 +24,12 @@ const { data: portfolio } = await useAsyncData('portfolio', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'project').sort({ id: 1 }).find()
 );
 
-const portfolioCards = ref(null);
+const portfolioCards = ref([]);
 onMounted(() => {
   window.addEventListener('scroll', function () {
+    if (!portfolioCards.value || portfolioCards.value.length === 0) return;
     portfolioCards.value.forEach(function (portfolioCard) {
+      // @ts-expect-error - $el is not in the types, probably a bug in VueJS
       const position = portfolioCard.$el.getBoundingClientRect();
       const centerBoxHeight =
         Math.min(2 * position.height, window.innerHeight) - 5;
@@ -37,8 +39,10 @@ onMounted(() => {
         position.top > distToCenterBox &&
         position.bottom < window.innerHeight - distToCenterBox
       ) {
+        // @ts-expect-error - $el is not in the types, probably a bug in VueJS
         portfolioCard.$el.classList.add('viewportVisible');
       } else {
+        // @ts-expect-error - $el is not in the types, probably a bug in VueJS
         portfolioCard.$el.classList.remove('viewportVisible');
       }
     });
