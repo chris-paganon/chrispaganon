@@ -18,83 +18,73 @@
     "details": {
       "html": {
         "name": "HTML",
-        "time": "5 years",
-        "description": "I am very comfortable with it and I know how to use it to create responsive and accessible websites. I am also familiar with the latest HTML5 features. I am also familiar with the latest HTML5 features. I am also familiar with the latest HTML5 features. I am also familiar with the latest HTML5 features."
+        "time": "8 ans",
+        "description": "Création de sites web en HTML pur ou dans le cadre de modèles PHP ou VueJS. Bases solides et suivi des best-practices sémantiques."
       },
       "css": {
         "name": "CSS",
-        "time": "5 years",
-        "description": "I am very comfortable with it and I know how to use it to create responsive and accessible websites."
+        "time": "8 ans",
+        "description": "Création de sites web suivant les best-practices CSS pour garder les feuilles de style lisibles et maintenables."
       },
       "typescript": {
-        "name": "Typescript",
-        "time": "2 years",
-        "description": "I have been using Typescript for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "name": "Typescript & Javascript",
+        "time": "5 ans, 1200+ heures",
+        "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript lorsque c'est possible car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
       },
       "vuejs": {
         "name": "VueJS",
-        "time": "1 year",
-        "description": "I have been using VueJS for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "3 ans, 1200+ heures",
+        "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec."
       },
       "nuxt": {
         "name": "Nuxt",
-        "time": "1 year",
-        "description": "I have been using Nuxt for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "3 ans, 500+ heures",
+        "description": "J'ai créé tous mes projets personnels récents avec Nuxt, que ce soit pour le SEO ou pour une intégration plus facile de Typescript entre le frontend et le backend. Mon projet le plus récent (VueAI.tools) comprend une authentification self-hosted, une base de données, un ORM, un modèle d'IA RAG et plus encore. J'ai également construit un ensemble d'outils principalement basé sur Docker pour déployer facilement plusieurs applications Nuxt sur un VPS unique, avec reverse-proxy, DevOps et web analytics intégrés."
       },
       "php": {
         "name": "PHP",
-        "time": "2 years",
-        "description": "I have been using PHP for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "5 ans, 2000+ heures",
+        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "sql": {
         "name": "SQL",
-        "time": "2 years",
-        "description": "I have been using SQL for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "5 ans",
+        "description": "J'ai travaillé avec MySQL, SQLite et PostgreSQL soit via PHP, des fonctions Wordpress, ExpressJS, Drizzle ORM ou directement dans une interface visuelle SQL. J'ai de l'expérience dans la structuration de bases de données, l'écriture de queries, les transactions, la gestion des migrations et des backups."
       },
       "docker": {
         "name": "Docker",
-        "time": "1 year",
-        "description": "I have been using Docker for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "3 ans",
+        "description": "Docker est mon outil de prédilection pour déployer des applications et créer des environnements de développement reproductibles. J'ai construit des applications et des pipelines devOps avec docker-compose et des Dockerfiles personnalisés."
       },
       "linux": {
         "name": "Linux",
-        "time": "2 years",
-        "description": "I have been using Linux for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "3 ans",
+        "description": "Utilisation de Linux pour déployer des applications et récemment, j'ai fait la transition vers Linux en tant que système d'exploitation principal. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de packages et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux."
       },
       "nodejs": {
         "name": "NodeJS",
-        "time": "2 years",
-        "description": "I have been using NodeJS for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
-      },
-      "expressjs": {
-        "name": "ExpressJS",
-        "time": "2 years",
-        "description": "I have been using ExpressJS for 2 years now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "3 ans",
+        "description": "Utilisation de NodeJS pour les applications VueJS, Nuxt et Express. Expérience avec npm et le déploiement de node dans des conteneurs docker."
       },
       "python": {
         "name": "Python",
-        "time": "1 year",
-        "description": "I have been using Python for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "1 an, 80 heures",
+        "description": "Utilisation de Python principalement pour mon projet d'IA. J'ai commencé avec un simple chatbot en CLI basé sur GPT. J'ai ensuite construit un constructeur d'index qui prend plusieurs sources de documentation GitHub pour créer un index vectoriel dans Qdrant en utilisant des embeddings Cohere avec LlamaIndex."
       },
       "llamaindex": {
         "name": "LlamaIndex",
-        "time": "1 year",
-        "description": "I have been using LlamaIndex for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "1 an",
+        "description": "LlamaIndex est une bibliothèque TS & Python pour construire des modèles RAG (Retrieval Augmented Generation) d'IA pour répondre aux questions en interrogeant une base de données de documents afin de fournir des réponses plus précises et pertinentes. Mon modèle d'IA pour VueAI.tools est principalement basé sur LlamaIndex."
       },
       "wordpress": {
         "name": "Wordpress",
-        "time": "1 year",
-        "description": "I have been using Wordpress for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "5 ans, 2000+ heures",
+        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "tailwind": {
         "name": "Tailwind",
-        "time": "1 year",
-        "description": "I have been using Tailwind for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
-      },
-      "bootstrap": {
-        "name": "Bootstrap",
-        "time": "1 year",
-        "description": "I have been using Bootstrap for a year now and I am very comfortable with it. I know how to use it to create scalable and maintainable applications."
+        "time": "2 ans, 400+ heures",
+        "description": "Expérience avec Tailwind et des frameworks CSS similaires avec utility-classes comme PrimeFlex et Bootstrap. J'ai créé plusieurs projets professionnels et personnels. Ma façon préférée d'écrire du CSS car je trouve généralement plus facile de revenir sur un projet et de comprendre les styles sans avoir à faire des allers-retours entre les fichiers HTML et CSS."
       }
     }
   },

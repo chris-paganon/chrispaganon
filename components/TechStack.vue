@@ -49,7 +49,6 @@ const otherTechList = [
   'llamaindex',
   'wordpress',
   'tailwind',
-  'bootstrap',
 ];
 </script>
 
