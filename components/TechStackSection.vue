@@ -3,6 +3,7 @@
     <h3>{{ $t(`TechStack.${title}`) }}</h3>
     <div class="tech-logos-wrapper">
       <div
+        ref="techLogosOverlay"
         class="tech-logos-overlay"
         :class="{
           'vertical-icons-on': verticalIconsOn,
@@ -66,6 +67,31 @@ function toggleInteractiveStack() {
     }, 100);
   }, 900);
 }
+
+const techLogosOverlay = ref<HTMLDivElement | null>(null);
+onMounted(() => {
+  window.addEventListener('scroll', function () {
+    if (!techLogosOverlay.value) return;
+    const position = techLogosOverlay.value.getBoundingClientRect();
+    console.log('🚀 ~ position:', position);
+    console.log('🚀 ~ window.innerHeight:', window.innerHeight);
+    const centerBoxHeight =
+      Math.min(2 * position.height, window.innerHeight) - 5;
+    const distToCenterBox = (window.innerHeight - centerBoxHeight) / 2;
+    const is_coarse = matchMedia('(pointer:coarse)').matches;
+
+    if (
+      (is_coarse &&
+        position.top > distToCenterBox &&
+        position.bottom < window.innerHeight - distToCenterBox) ||
+      position.height > window.innerHeight
+    ) {
+      techLogosOverlay.value.classList.add('showOverlay');
+    } else {
+      techLogosOverlay.value.classList.remove('showOverlay');
+    }
+  });
+});
 </script>
 
 <style scoped>
@@ -90,10 +116,12 @@ h3 {
   width: calc(100% + 200px);
   transition: all 0.5s;
 }
-.tech-logos-overlay:not(.vertical-icons-on):hover {
+.tech-logos-overlay:not(.vertical-icons-on):hover,
+.tech-logos-overlay:not(.vertical-icons-on).showOverlay {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.tech-logos-overlay:not(.vertical-icons-on):hover::after {
+.tech-logos-overlay:not(.vertical-icons-on):hover::after,
+.tech-logos-overlay:not(.vertical-icons-on).showOverlay::after {
   content: '+';
   padding: 0px 10px 2px;
   line-height: 1em;
@@ -106,14 +134,16 @@ h3 {
   border: 2px solid black;
   border-radius: 1000px;
 }
-.tech-logos-overlay.showing-details:hover {
+.tech-logos-overlay.showing-details:hover,
+.tech-logos-overlay.showing-details.showOverlay {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 80%,
     rgba(255, 255, 255, 0.8) 100%
   );
 }
-.tech-logos-overlay.showing-details:hover::after {
+.tech-logos-overlay.showing-details:hover::after,
+.tech-logos-overlay.showing-details.showOverlay::after {
   content: '';
   display: block;
   position: absolute;
