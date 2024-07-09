@@ -45,7 +45,6 @@ const mainTechList = [
 ];
 const otherTechList = [
   'nodejs',
-  'expressjs',
   'python',
   'llamaindex',
   'wordpress',
