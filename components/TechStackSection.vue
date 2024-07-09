@@ -118,7 +118,7 @@ h3 {
   display: block;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 100px;
   width: 15px;
   height: 15px;
   border-left: 4px solid black;
