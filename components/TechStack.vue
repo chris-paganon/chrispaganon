@@ -65,7 +65,7 @@ h2 {
   width: 100%;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-bottom: 0;
   display: flex;
   gap: 1em;
   justify-content: center;

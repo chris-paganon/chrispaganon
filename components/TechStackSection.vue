@@ -179,4 +179,23 @@ ul.showing-details li div {
     width 1s ease-out,
     max-height 0.5s linear 0.7s;
 }
+
+@media (max-width: 767px) {
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  li {
+    flex-direction: column;
+    gap: 1em;
+  }
+  li div {
+    width: 100%;
+    max-height: 0px;
+    transition: max-height 1s linear;
+  }
+  ul.showing-details li div {
+    transition: max-height 1s linear;
+  }
+}
 </style>
