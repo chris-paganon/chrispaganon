@@ -7,6 +7,10 @@
 
 <style>
 html,
+body {
+  font-size: 16px;
+}
+html,
 body,
 div,
 form,
@@ -44,7 +48,7 @@ input,
 textarea {
   font-family: 'Ubuntu', Serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -131,7 +135,9 @@ p a:hover {
   font-weight: 600;
   margin: auto;
   width: fit-content;
-  transition: background-color 250ms ease-out, transform 250ms ease-out;
+  transition:
+    background-color 250ms ease-out,
+    transform 250ms ease-out;
 }
 .button:hover {
   background-color: rgb(44, 44, 44);
