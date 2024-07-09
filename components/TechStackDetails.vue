@@ -20,6 +20,8 @@ defineProps<{
 .details-meta {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 0.5em;
 }
 p {

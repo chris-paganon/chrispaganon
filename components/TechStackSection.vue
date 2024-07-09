@@ -204,7 +204,7 @@ li div {
 }
 ul.showing-details li div {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   transition:
     width 1s ease-out,
     max-height 0.5s linear 0.7s;
@@ -224,7 +224,11 @@ ul.showing-details li div {
     max-height: 0px;
     transition: max-height 1s linear;
   }
+  ul.showing-details-wrapper {
+    gap: 2em;
+  }
   ul.showing-details li div {
+    max-height: 400px;
     transition: max-height 1s linear;
   }
 }
