@@ -64,7 +64,7 @@ function toggleInteractiveStack() {
     setTimeout(() => {
       showingDetails.value = true;
     }, 100);
-  }, 1000);
+  }, 900);
 }
 </script>
 
@@ -143,7 +143,7 @@ ul {
 }
 ul.vertical-icons-on {
   width: 50px;
-  transition: width 1s cubic-bezier(0.1, 0.75, 0.25, 0.85);
+  transition: width 1s cubic-bezier(0.7, 0.17, 0.44, 0.85);
 }
 ul.vertical-icons-on.showing-details-wrapper {
   width: 100%;
