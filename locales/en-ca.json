@@ -28,22 +28,22 @@
       },
       "typescript": {
         "name": "Typescript & Javascript",
-        "time": "5 years, 1200+ hours",
+        "time": "5 years, 3000+ hours",
         "description": "Typescript is my go-to language for building interactive experiences on the web. I also have experience with vanilla JS and jQuery. I prefer Typescript when possible as it makes code more maintainable, more robust, easier to debug, understand and cooperate on."
       },
       "vuejs": {
         "name": "VueJS",
-        "time": "3 years, 1200+ hours",
+        "time": "3 years, 3000+ hours",
         "description": "Built VueJS applications for professional & personal projects. I am also building an open source AI chatbot to answer VueJS questions. I know the framework inside out and love working with it."
       },
       "nuxt": {
         "name": "Nuxt",
-        "time": "3 years, 500+ hours",
+        "time": "3 years, 800+ hours",
         "description": "Built all my recent personal projects with Nuxt, eiher for SEO or for the easier Typescript integration between frontend & backend. My most recent project (VueAI.tools) features self-hosted authentication, database, ORM, AI RAG and more. I also built a toolset mostly based on Docker to easily deploy several Nuxt apps on a single VPS, with reverse-proxy, DevOps & web analytics integrated."
       },
       "php": {
         "name": "PHP",
-        "time": "5 years, 2000+ hours",
+        "time": "5 years, 5000+ hours",
         "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
       },
       "sql": {
@@ -53,7 +53,7 @@
       },
       "docker": {
         "name": "Docker",
-        "time": "3 years",
+        "time": "3 years, 500+ hours",
         "description": "Docker is my go-to tool for deploying applications and building reproducible development environments. I have built applications and devOps pipelines with docker-compose and custom Dockerfiles."
       },
       "linux": {
@@ -78,7 +78,7 @@
       },
       "wordpress": {
         "name": "Wordpress",
-        "time": "5 years, 2000+ hours",
+        "time": "5 years, 5000+ hours",
         "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
       },
       "tailwind": {

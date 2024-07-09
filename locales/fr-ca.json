@@ -28,22 +28,22 @@
       },
       "typescript": {
         "name": "Typescript & Javascript",
-        "time": "5 ans, 1200+ heures",
+        "time": "5 ans, 3000+ heures",
         "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript lorsque c'est possible car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
       },
       "vuejs": {
         "name": "VueJS",
-        "time": "3 ans, 1200+ heures",
+        "time": "3 ans, 3000+ heures",
         "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec."
       },
       "nuxt": {
         "name": "Nuxt",
-        "time": "3 ans, 500+ heures",
+        "time": "3 ans, 800+ heures",
         "description": "J'ai créé tous mes projets personnels récents avec Nuxt, que ce soit pour le SEO ou pour une intégration plus facile de Typescript entre le frontend et le backend. Mon projet le plus récent (VueAI.tools) comprend une authentification self-hosted, une base de données, un ORM, un modèle d'IA RAG et plus encore. J'ai également construit un ensemble d'outils principalement basé sur Docker pour déployer facilement plusieurs applications Nuxt sur un VPS unique, avec reverse-proxy, DevOps et web analytics intégrés."
       },
       "php": {
         "name": "PHP",
-        "time": "5 ans, 2000+ heures",
+        "time": "5 ans, 5000+ heures",
         "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "sql": {
@@ -53,7 +53,7 @@
       },
       "docker": {
         "name": "Docker",
-        "time": "3 ans",
+        "time": "3 ans, 500+ heures",
         "description": "Docker est mon outil de prédilection pour déployer des applications et créer des environnements de développement reproductibles. J'ai construit des applications et des pipelines devOps avec docker-compose et des Dockerfiles personnalisés."
       },
       "linux": {
@@ -78,7 +78,7 @@
       },
       "wordpress": {
         "name": "Wordpress",
-        "time": "5 ans, 2000+ heures",
+        "time": "5 ans, 5000+ heures",
         "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "tailwind": {
