@@ -72,13 +72,11 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
 }
-:deep(li) {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
 :deep(li img) {
+  object-fit: contain;
   height: 60px;
+  width: 80px;
+  transition: width 0.75s;
 }
 .button {
   margin: 40px auto 20px auto;

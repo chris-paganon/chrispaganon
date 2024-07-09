@@ -154,6 +154,14 @@ ul.vertical-icons-on.showing-details-wrapper {
 ul.vertical-icons-on.hiding-details-wrapper {
   transition: none;
 }
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+ul.showing-details-wrapper li img {
+  width: 150px;
+}
 li div {
   display: flex;
   flex-direction: column;
