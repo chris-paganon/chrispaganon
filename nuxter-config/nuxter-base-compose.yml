@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nuxt-app:
     container_name: ${COMPOSE_PROJECT_NAME}-nuxt-app
@@ -12,9 +10,15 @@ services:
     env_file: nuxter-config/nuxt-app.${APP_ENV}.env
     restart: unless-stopped
     networks:
-      - caddy_nuxt_app
+      - reverse_proxy
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.chrispaganon-${APP_ENV}-router.rule=Host(`${APP_HOST}`)'
+      - 'traefik.http.routers.chrispaganon-${APP_ENV}-router.entrypoints=websecure'
+      - 'traefik.http.routers.chrispaganon-${APP_ENV}-router.tls=true'
+      - 'traefik.http.routers.chrispaganon-${APP_ENV}-router.tls.certresolver=nuxter'
 
 networks:
-  caddy_nuxt_app:
-    name: ${COMPOSE_PROJECT_NAME}_caddy_nuxt_app
+  reverse_proxy:
+    name: reverse_proxy
     external: true
