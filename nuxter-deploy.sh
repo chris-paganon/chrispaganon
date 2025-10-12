@@ -1,6 +1,6 @@
 #!/bin/bash
 
 rsync -avzre 'ssh' docker-compose.yml Dockerfile nuxter-start.sh \
-  production.env staging.env \
+  .env.production .env.staging \
   .output.production .output.staging \
-  chrispaganon@77.37.87.199:~/nuxter/chrispaganon
+  nuxter@77.37.87.199:~/nuxter/chrispaganon
