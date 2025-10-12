@@ -19,8 +19,6 @@ logs
 .fleet
 .idea
 
-*compose.override.yml
-
 # Local env files
 .env
 .env.*
