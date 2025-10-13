@@ -3,6 +3,7 @@
 PROJECT_NAME="chrispaganon"
 REMOTE_PATH="~/nuxter/chrispaganon"
 REMOTE_SSH="nuxter@77.37.87.199"
+
 MAIN_FILES="docker-compose.yml Dockerfile nuxter-start.sh"
 
 deploy_environment() {
@@ -42,6 +43,28 @@ if [[ "$*" == *"--staging"* ]]; then
   exit 0
 fi
 
-echo "Deploying production and staging environments..."
-deploy_environment "production"
-deploy_environment "staging"
+# Display comprehensive usage information
+echo "============================================================================="
+echo "NUXTER DEPLOYMENT SCRIPT - USAGE INFORMATION"
+echo "============================================================================="
+echo "APPLICATION: ${PROJECT_NAME}"
+echo 
+echo "REMOTE SERVER:"
+echo "  - Host: ${REMOTE_SSH}"
+echo "  - Path: ${REMOTE_PATH}"
+echo ""
+echo "This script automates deployment of the application"
+echo "to remote servers with support for staging and production environments."
+echo ""
+echo "USAGE:"
+echo "  ./nuxter-deploy.sh --staging     Deploy to staging environment"
+echo "  ./nuxter-deploy.sh --production  Deploy to production environment"
+echo ""
+echo "DEPLOYMENT PROCESS:"
+echo "  1. Builds Docker images locally"
+echo "  2. Saves images as tar files locally"
+echo "  3. Transfers files to remote server via rsync"
+echo "  4. Executes remote deployment script"
+echo ""
+echo "============================================================================="
+
