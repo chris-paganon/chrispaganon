@@ -1,0 +1,50 @@
+import {
+  TransactionalEmailsApi,
+  TransactionalEmailsApiApiKeys,
+  SendSmtpEmail,
+  type SendSmtpEmailReplyTo,
+  type SendSmtpEmailSender,
+} from '@getbrevo/brevo';
+
+export interface SendEmailOptions {
+  sender?: SendSmtpEmailSender;
+  replyTo?: SendSmtpEmailReplyTo;
+  toName?: string;
+}
+
+export async function sendEmail(
+  email: string,
+  subject: string,
+  html: string,
+  options?: SendEmailOptions,
+) {
+  const {
+    sender = {
+      name: 'Chris Paganon',
+      email: 'info@email.chrispaganon.com',
+    },
+    replyTo = {
+      name: 'Chris Paganon',
+      email: 'info@chrispaganon.com',
+    },
+    toName,
+  } = options || {};
+
+  const emailAPI = new TransactionalEmailsApi();
+  emailAPI.setApiKey(
+    TransactionalEmailsApiApiKeys.apiKey,
+    useRuntimeConfig().brevoApiKey,
+  );
+
+  const message = new SendSmtpEmail();
+  message.subject = subject;
+  message.htmlContent = html;
+  message.replyTo = replyTo;
+  message.sender = sender;
+  message.to = [{ email }];
+  if (toName) {
+    message.to[0].name = toName;
+  }
+
+  await emailAPI.sendTransacEmail(message);
+}

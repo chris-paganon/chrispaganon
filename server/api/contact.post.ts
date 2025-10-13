@@ -1,5 +1,3 @@
-import sgMail from '@sendgrid/mail';
-
 export default eventHandler(async (event) => {
   const body = await readBody(event);
 
@@ -52,20 +50,16 @@ export default eventHandler(async (event) => {
 export async function sendContactEmail(
   email: string,
   name: string,
-  description: string
+  description: string,
 ) {
-  const sendgridApiKey = useRuntimeConfig().sendgridApiKey;
-  sgMail.setApiKey(sendgridApiKey);
-  const msg = {
-    to: 'info@chrispaganon.com', // Change to your recipient
-    from: 'info@email.chrispaganon.com', // Change to your verified sender
-    subject: 'Nouveau message de contact',
-    html: `
-      <h1>Un nouveau message a été reçus</h1>
-      <p>De: ${name}</p>
-      <p>Email: ${email}</p>
-      <p>${description}</p>
-    `,
-  };
-  await sgMail.send(msg);
+  await sendEmail(
+    'info@chrispaganon.com',
+    'Nouveau message de contact',
+    `
+    <h1>Un nouveau message a été reçus</h1>
+    <p>De: ${name}</p>
+    <p>Email: ${email}</p>
+    <p>${description}</p>
+  `,
+  );
 }
