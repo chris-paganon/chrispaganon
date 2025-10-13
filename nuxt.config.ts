@@ -31,7 +31,6 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: 'en',
-    lazy: true,
     langDir: './locales/',
   },
   content: {
@@ -40,7 +39,7 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    sendgridApiKey: 'SG.ab12',
+    brevoApiKey: 'ab12',
     public: {
       environment: 'development',
     },
