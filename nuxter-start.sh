@@ -2,57 +2,64 @@
 
 PROJECT_NAME="chrispaganon"
 
-PROJECT_NAME_PRODUCTION="$PROJECT_NAME-production"
-PROJECT_NAME_STAGING="$PROJECT_NAME-staging"
+start_environment() {
+  local env=$1
+  local project_name="${PROJECT_NAME}-${env}"
+  local env_file=".env.${env}"
+  local images_dir="docker-images-${env}"
+  
+  echo "Starting ${env} environment..."
+  
+  echo "Loading images from ${images_dir} directory..."
+  ls ${images_dir} | while read -r image; do
+      echo "Loading $image..."
+      docker load --input "${images_dir}/$image"
+  done
 
-function start_production() {
-    echo "Loading images from docker-images directory..."
-    ls docker-images-production | while read -r image; do
-        echo "Loading $image..."
-        docker load --input "docker-images-production/$image"
-    done
-
-    docker compose -f ./docker-compose.yml \
-        --env-file ./.env.production -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ \
-        up --no-build --remove-orphans -d
+  docker compose -f ./docker-compose.yml \
+    --env-file ./${env_file} -p ${project_name} --project-directory ./ \
+    up --no-build --remove-orphans -d
 }
 
-function start_staging() {
-    echo "Loading images from docker-images directory..."
-    ls docker-images-staging | while read -r image; do
-        echo "Loading $image..."
-        docker load --input "docker-images-staging/$image"
-    done
-
-    docker compose -f ./docker-compose.yml \
-        --env-file ./.env.staging -p ${PROJECT_NAME_STAGING} --project-directory ./ \
-        up --no-build --remove-orphans -d
+start_local() {
+  echo "Starting in local development mode..."
+  docker compose up
 }
 
-if [[ "$*" == *"--local"* ]]; then
-    echo "Starting in local mode..."
-    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml \
-        --env-file ./.env.staging -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ \
-        up --remove-orphans -d
-
-    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml \
-        --env-file ./.env.production -p ${PROJECT_NAME_STAGING} --project-directory ./ \
-        up --remove-orphans -d
-    exit 0
-fi
 
 if [[ "$*" == *"--production"* ]]; then
-    echo "Starting production environment..."
-    start_production
-    exit 0
+  start_environment "production"
+  exit 0
 fi
 
 if [[ "$*" == *"--staging"* ]]; then
-    echo "Starting staging environment..."
-    start_staging
-    exit 0
+  start_environment "staging"
+  exit 0
 fi
 
-echo "Starting production and staging environments..."
-start_production
-start_staging
+# Display comprehensive usage information
+echo "============================================================================="
+echo "NUXTER START SCRIPT - USAGE INFORMATION"
+echo "============================================================================="
+echo "APPLICATION: ${PROJECT_NAME}"
+echo ""
+echo "This script starts the application in different environments"
+echo "using pre-built Docker images."
+echo ""
+echo "USAGE:"
+echo "  ./nuxter-start.sh --local       Start in local development mode"
+echo "  ./nuxter-start.sh --staging     Start staging environment"
+echo "  ./nuxter-start.sh --production  Start production environment"
+echo ""
+echo "ENVIRONMENTS:"
+echo "  --local      Development mode with docker override files (doesn't use pre-built images)"
+echo "  --staging    Staging environment using pre-built images"
+echo "  --production Production environment using pre-built images"
+echo ""
+echo "STARTUP PROCESS:"
+echo "  1. Loads pre-built Docker images from docker-images-{env} directory"
+echo "  2. Starts containers using docker-compose with environment-specific config"
+echo "  3. Uses --no-build flag to ensure pre-built images are used (except for local development)"
+echo "  4. Removes orphaned containers for clean startup"
+echo ""
+echo "============================================================================="
