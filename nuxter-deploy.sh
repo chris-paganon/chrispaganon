@@ -4,7 +4,8 @@ PROJECT_NAME="chrispaganon"
 REMOTE_PATH="~/nuxter/chrispaganon"
 REMOTE_SSH="nuxter@77.37.87.199"
 
-MAIN_FILES="docker-compose.yml Dockerfile nuxter-start.sh"
+MAIN_DOCKER_COMPOSE_FILE="docker-compose.yml"
+MAIN_FILES="${MAIN_DOCKER_COMPOSE_FILE} Dockerfile nuxter-start.sh"
 
 deploy_environment() {
   local env=$1
@@ -13,7 +14,7 @@ deploy_environment() {
   local images_dir="docker-images-${env}"
   
   echo "Building ${env} images..."
-  docker compose -f ./docker-compose.yml \
+  docker compose -f ./${MAIN_DOCKER_COMPOSE_FILE} \
     --env-file ./${env_file} -p ${project_name} --project-directory ./ \
     build
 

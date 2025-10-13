@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PROJECT_NAME="chrispaganon"
+MAIN_DOCKER_COMPOSE_FILE="docker-compose.yml"
 
 start_environment() {
   local env=$1
@@ -16,7 +17,7 @@ start_environment() {
       docker load --input "${images_dir}/$image"
   done
 
-  docker compose -f ./docker-compose.yml \
+  docker compose -f ./${MAIN_DOCKER_COMPOSE_FILE} \
     --env-file ./${env_file} -p ${project_name} --project-directory ./ \
     up --no-build --remove-orphans -d
 }
