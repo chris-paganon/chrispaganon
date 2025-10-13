@@ -7,7 +7,8 @@ export default defineNuxtPlugin(() => {
       {
         async: true,
         src: 'https://umami.chrispaganon.com/script.js',
-        'data-website-id': 'b185b424-185d-4bda-a23f-3e3bbf0cd54f"',
+        'data-website-id': 'b185b424-185d-4bda-a23f-3e3bbf0cd54f',
+        'data-do-not-track': true,
       },
     ],
   });
