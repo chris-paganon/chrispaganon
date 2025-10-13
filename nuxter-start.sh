@@ -23,7 +23,7 @@ start_environment() {
 
 start_local() {
   echo "Starting in local development mode..."
-  docker compose up
+  docker compose --env-file .env.local up
 }
 
 

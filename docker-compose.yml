@@ -3,6 +3,8 @@ services:
     container_name: ${COMPOSE_PROJECT_NAME}-nuxt-app
     build:
       context: .
+    env_file:
+      - .env.${APP_ENV}
     restart: unless-stopped
     networks:
       - reverse_proxy
