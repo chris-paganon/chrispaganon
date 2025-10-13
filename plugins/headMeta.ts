@@ -6,8 +6,8 @@ export default defineNuxtPlugin(() => {
     script: [
       {
         async: true,
-        src: 'https://umami.vueai.tools/script.js',
-        'data-website-id': '3e9c545c-5596-4859-a9f5-821b47c2e9cd',
+        src: 'https://umami.chrispaganon.com/script.js',
+        'data-website-id': 'b185b424-185d-4bda-a23f-3e3bbf0cd54f"',
       },
     ],
   });
