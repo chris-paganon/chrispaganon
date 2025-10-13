@@ -6,17 +6,38 @@ PROJECT_NAME_PRODUCTION="$PROJECT_NAME-production"
 PROJECT_NAME_STAGING="$PROJECT_NAME-staging"
 
 function start_production() {
-    docker compose -f ./docker-compose.yml --env-file ./.env.production -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ up --build --remove-orphans -d
+    echo "Loading images from docker-images directory..."
+    ls docker-images-production | while read -r image; do
+        echo "Loading $image..."
+        docker load --input "docker-images-production/$image"
+    done
+
+    docker compose -f ./docker-compose.yml \
+        --env-file ./.env.production -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ \
+        up --no-build --remove-orphans -d
 }
 
 function start_staging() {
-    docker compose -f ./docker-compose.yml --env-file ./.env.staging -p ${PROJECT_NAME_STAGING} --project-directory ./ up --build --remove-orphans -d
+    echo "Loading images from docker-images directory..."
+    ls docker-images-staging | while read -r image; do
+        echo "Loading $image..."
+        docker load --input "docker-images-staging/$image"
+    done
+
+    docker compose -f ./docker-compose.yml \
+        --env-file ./.env.staging -p ${PROJECT_NAME_STAGING} --project-directory ./ \
+        up --no-build --remove-orphans -d
 }
 
 if [[ "$*" == *"--local"* ]]; then
     echo "Starting in local mode..."
-    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml --env-file ./.env.staging -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ up --build --remove-orphans -d
-    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml --env-file ./.env.production -p ${PROJECT_NAME_STAGING} --project-directory ./ up --build --remove-orphans -d
+    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml \
+        --env-file ./.env.staging -p ${PROJECT_NAME_PRODUCTION} --project-directory ./ \
+        up --remove-orphans -d
+
+    docker compose -f ./docker-compose.yml -f ./docker-compose.override.yml \
+        --env-file ./.env.production -p ${PROJECT_NAME_STAGING} --project-directory ./ \
+        up --remove-orphans -d
     exit 0
 fi
 

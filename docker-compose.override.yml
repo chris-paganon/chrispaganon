@@ -1,5 +1,6 @@
 services:
   nuxt-app:
+    restart: 'no'
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.chrispaganon-${APP_ENV}-router.rule=Host(`${APP_HOST}`)'
