@@ -41,10 +41,6 @@
             {{ $t('ContactMe.email-address') }}
             <a href="mailto:info@chrispaganon.com">info@chrispaganon.com</a>
           </li>
-          <li class="contact-info">
-            {{ $t('ContactMe.phone-number') }}
-            <a href="tel:+15144316333">+1&nbsp;(514)&nbsp;431&nbsp;6333</a>
-          </li>
         </ul>
       </div>
     </div>
