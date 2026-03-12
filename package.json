@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "typecheck": "nuxt typecheck",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -21,6 +22,8 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
     "eslint-config-prettier": "^9.1.2",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.5"
   }
 }
