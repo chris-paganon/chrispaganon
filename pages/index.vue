@@ -35,13 +35,11 @@
 }
 
 .work-section-background {
-  background:
-    linear-gradient(180deg, rgb(255, 251, 246), rgb(255, 245, 235));
+  background: linear-gradient(180deg, rgb(255, 251, 246), rgb(255, 245, 235));
 }
 
 .portfolio-section-background {
-  background:
-    linear-gradient(180deg, rgb(255, 251, 246), rgb(244, 248, 252));
+  background: linear-gradient(180deg, rgb(255, 251, 246), rgb(244, 248, 252));
 }
 
 .introduction {
@@ -50,18 +48,8 @@
   isolation: isolate;
   padding: 135px 46px 90px 46px;
   border: 1px solid rgba(42, 32, 24, 0.12);
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   background: #fffaf3;
-}
-
-.introduction::before {
-  content: '';
-  position: absolute;
-  inset: 16px -16px -16px 16px;
-  border-radius: 10px;
-  background: #ffd8b8;
-  opacity: 0.55;
-  z-index: -1;
 }
 
 .introduction p {
@@ -80,7 +68,6 @@ img {
   border-radius: 50%;
   margin: 0;
   border: 8px solid #fffaf3;
-  box-shadow: 10px 10px 0 rgba(202, 224, 244, 0.7);
   transition: transform 500ms ease-out;
   animation: portraitFloat 6s ease-in-out infinite;
 }
