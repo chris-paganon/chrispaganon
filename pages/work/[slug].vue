@@ -28,7 +28,10 @@ const nuxtApp = useNuxtApp();
 const route = useRoute();
 
 const { data: workContent } = await useAsyncData('work', () =>
-  queryContent(nuxtApp.$i18n.locale.value, `work/${route.params.slug}`).findOne()
+  queryContent(
+    nuxtApp.$i18n.locale.value,
+    `work/${route.params.slug}`,
+  ).findOne(),
 );
 </script>
 
@@ -43,15 +46,6 @@ article {
   background: #f8fbff;
 }
 
-article::before {
-  content: '';
-  position: absolute;
-  inset: 16px -16px -16px 16px;
-  border-radius: 10px;
-  background: #cae0f4;
-  opacity: 0.45;
-  z-index: -1;
-}
 .project-info a,
 .project-info li {
   font-size: 22px;

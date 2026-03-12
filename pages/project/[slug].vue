@@ -50,8 +50,8 @@ const route = useRoute();
 const { data: projectContent } = await useAsyncData('services', () =>
   queryContent(
     nuxtApp.$i18n.locale.value,
-    `project/${route.params.slug}`
-  ).findOne()
+    `project/${route.params.slug}`,
+  ).findOne(),
 );
 </script>
 
@@ -66,15 +66,6 @@ article {
   background: #fffaf3;
 }
 
-article::before {
-  content: '';
-  position: absolute;
-  inset: 16px -16px -16px 16px;
-  border-radius: 10px;
-  background: #ffd8b8;
-  opacity: 0.42;
-  z-index: -1;
-}
 .project-info a,
 .project-info li {
   font-size: 22px;
