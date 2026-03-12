@@ -185,6 +185,7 @@ function getEntryTransition(index: number) {
 function getTechLogo(tech: string) {
   const extensions: Record<string, string> = {
     firebase: 'svg',
+    golang: 'svg',
     vite: 'svg',
   };
 

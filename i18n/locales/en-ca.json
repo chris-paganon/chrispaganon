@@ -77,6 +77,11 @@
         "time": "3 years, 200+ hours",
         "description": "Experience building packages and working on bundler configuration with Vite. Comfortable with library mode, dev tooling, plugin-based workflows and adapting build pipelines to different project needs."
       },
+      "golang": {
+        "name": "Golang",
+        "time": "1 year, 50 hours",
+        "description": "Love the language and have been learning more in my free time. I enjoy its simplicity, strong tooling and the way it encourages straightforward, maintainable code."
+      },
       "nodejs": {
         "name": "NodeJS",
         "time": "5 years",
@@ -84,8 +89,8 @@
       },
       "python": {
         "name": "Python",
-        "time": "3 years, 80 hours",
-        "description": "Using Python mainly for my AI project. Started with a simple CLI chatbot based on GPT. I have since built an index builder that takes several GitHub documentation sources to build a vector index in Qdrant using Cohere embeddings and LlamaIndex."
+        "time": "2 years, 50 hours",
+        "description": "Used Python for some simple vibe-coded local scripts. Fun to learn a bit and handy when I need to automate small tasks quickly."
       },
       "llamaindex": {
         "name": "LlamaIndex",

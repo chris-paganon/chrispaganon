@@ -33,6 +33,7 @@ const otherTechList = [
   'nextjs',
   'firebase',
   'vite',
+  'golang',
   'nodejs',
   'python',
   'llamaindex',
