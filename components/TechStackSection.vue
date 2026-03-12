@@ -122,13 +122,13 @@ const prefersReducedMotion = useReducedMotion();
 
 const layoutTransition = {
   type: 'spring',
-  stiffness: 240,
-  damping: 24,
-  mass: 0.9,
+  stiffness: 190,
+  damping: 26,
+  mass: 1.05,
 } as const;
 
 const copyTransition = {
-  duration: 0.38,
+  duration: 0.48,
   ease: [0.22, 1, 0.36, 1],
 } as const;
 
@@ -186,12 +186,16 @@ function getEntryAnimation(index: number) {
 }
 
 function getEntryTransition(index: number) {
+  const isOpening = isExpanded.value;
+
   return {
     type: 'spring',
-    stiffness: 250,
-    damping: 22,
-    mass: 0.85,
-    delay: isExpanded.value ? index * 0.035 : (props.techlist.length - index) * 0.02,
+    stiffness: isOpening ? 185 : 240,
+    damping: isOpening ? 24 : 22,
+    mass: isOpening ? 1.02 : 0.88,
+    delay: isOpening
+      ? 0.06 + index * 0.05
+      : (props.techlist.length - index) * 0.02,
   } as const;
 }
 </script>
