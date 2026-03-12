@@ -1,11 +1,11 @@
 <template>
-  <div class="tech-stack-wrapper">
+  <div class="tech-stack-wrapper" :class="`tech-stack-wrapper-${title}`">
     <h3>{{ $t(`TechStack.${title}`) }}</h3>
 
     <motion.div
       layout
       class="tech-stage"
-      :class="{ expanded: isExpanded }"
+      :class="[ `tech-stage-${title}`, { expanded: isExpanded } ]"
       role="button"
       tabindex="0"
       :aria-expanded="isExpanded"
@@ -206,44 +206,91 @@ h3 {
 }
 
 .tech-stack-wrapper {
+  position: relative;
   margin-bottom: 2.5em;
 }
 
 .tech-stage {
-  --stage-bg: #fff7ef;
-  --stage-border: rgba(30, 24, 18, 0.08);
-  --stage-shadow: 0 10px 24px rgba(74, 58, 44, 0.06);
+  --stage-bg: #fffaf4;
+  --stage-border: rgba(42, 32, 24, 0.12);
+  --stage-accent: #ffd9bf;
+  --entry-bg: #fffdf9;
+  --entry-border: rgba(42, 32, 24, 0.1);
+  --copy-bg: rgba(255, 255, 255, 0.6);
   position: relative;
-  padding: 1.25rem;
+  padding: 1.4rem;
   border: 1px solid var(--stage-border);
-  border-radius: 20px;
+  border-radius: 10px;
   background: var(--stage-bg);
-  box-shadow: var(--stage-shadow);
+  box-shadow: none;
   overflow: hidden;
   cursor: pointer;
   outline: none;
   isolation: isolate;
 }
 
+.tech-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0.75rem -0.75rem -0.75rem 0.75rem;
+  border-radius: 10px;
+  background: var(--stage-accent);
+  opacity: 0.65;
+  z-index: -2;
+}
+
+.tech-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 0, rgba(0, 0, 0, 0.045) 1px, transparent 1px, transparent 100%),
+    linear-gradient(var(--stage-bg), var(--stage-bg));
+  background-size:
+    18px 18px,
+    auto;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tech-stage-favorites {
+  --stage-bg: #fffaf3;
+  --stage-border: rgba(92, 62, 32, 0.14);
+  --stage-accent: #ffd8b8;
+  --entry-bg: #fffef9;
+  --entry-border: rgba(92, 62, 32, 0.12);
+  --copy-bg: #fff5eb;
+}
+
+.tech-stage-others {
+  --stage-bg: #f8fbff;
+  --stage-border: rgba(58, 79, 102, 0.14);
+  --stage-accent: #cae0f4;
+  --entry-bg: #fcfeff;
+  --entry-border: rgba(58, 79, 102, 0.12);
+  --copy-bg: #eef6fd;
+}
+
 .tech-stage:focus-visible {
   box-shadow:
-    0 0 0 3px rgba(133, 109, 81, 0.12),
-    0 10px 24px rgba(74, 58, 44, 0.06);
+    0 0 0 3px rgba(42, 32, 24, 0.08);
 }
 
 .tech-stage.expanded {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.6rem;
 }
 
 .tech-stage-glow {
   position: absolute;
-  inset: -25% auto auto 50%;
-  width: min(72vw, 540px);
-  aspect-ratio: 1;
-  transform: translateX(-50%);
+  inset: auto 1.2rem 1rem auto;
+  width: 8rem;
+  height: 8rem;
   background:
-    radial-gradient(circle, rgba(255, 219, 186, 0.2), rgba(255, 219, 186, 0) 58%),
-    radial-gradient(circle at 65% 35%, rgba(202, 224, 244, 0.18), rgba(202, 224, 244, 0) 44%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
   pointer-events: none;
   z-index: -1;
 }
@@ -260,11 +307,11 @@ h3 {
 
 .tech-stage-hint {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #6f6256;
+  color: rgba(52, 42, 34, 0.72);
 }
 
 .tech-stage-badge {
@@ -273,12 +320,12 @@ h3 {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 14px;
+  border-radius: 8px;
   font-size: 1.6rem;
   line-height: 1;
-  color: #3f342b;
-  background: #fffdf8;
-  border: 1px solid rgba(63, 52, 43, 0.08);
+  color: rgba(52, 42, 34, 0.88);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(42, 32, 24, 0.1);
   box-shadow: none;
   flex-shrink: 0;
 }
@@ -288,19 +335,19 @@ h3 {
   z-index: 1;
   width: 100%;
   list-style-type: none;
-  padding: 0.4rem 0 0;
+  padding: 0.6rem 0 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.75rem;
 }
 
 .tech-constellation.expanded {
   flex-direction: column;
   align-items: stretch;
-  gap: 0.85rem;
+  gap: 0.7rem;
 }
 
 .tech-entry {
@@ -314,12 +361,24 @@ h3 {
 .tech-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  min-height: 5.5rem;
+  gap: 0.9rem;
+  min-height: 5rem;
 }
 
 .tech-entry:not(.expanded) .tech-card {
   justify-content: center;
+}
+
+.tech-entry:not(.expanded):nth-child(3n + 1) {
+  transform: rotate(-3deg);
+}
+
+.tech-entry:not(.expanded):nth-child(3n + 2) {
+  transform: rotate(2deg);
+}
+
+.tech-entry:not(.expanded):nth-child(3n + 3) {
+  transform: rotate(-1deg);
 }
 
 .tech-icon-shell {
@@ -328,9 +387,10 @@ h3 {
   justify-content: center;
   width: 5.75rem;
   height: 5.75rem;
-  border-radius: 18px;
-  background: #fffdf8;
-  border: 1px solid rgba(63, 52, 43, 0.08);
+  padding: 0.45rem;
+  border-radius: 8px;
+  background: var(--entry-bg);
+  border: 1px solid var(--entry-border);
   box-shadow: none;
   flex-shrink: 0;
 }
@@ -338,7 +398,7 @@ h3 {
 .tech-entry.expanded .tech-icon-shell {
   width: 5.25rem;
   height: 5.25rem;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .icon {
@@ -356,15 +416,44 @@ h3 {
   flex: 1;
   min-width: 0;
   padding: 1rem 1.05rem;
-  border-radius: 16px;
-  background: #fffaf4;
-  border: 1px solid rgba(63, 52, 43, 0.08);
+  border-radius: 8px;
+  background: var(--copy-bg);
+  border: 1px solid var(--entry-border);
+}
+
+.tech-entry.expanded {
+  position: relative;
+}
+
+.tech-entry.expanded .tech-card {
+  position: relative;
+  padding: 0.85rem;
+  border: 1px solid var(--entry-border);
+  border-radius: 8px;
+  background: var(--entry-bg);
+}
+
+.tech-entry.expanded:nth-child(odd) .tech-card {
+  margin-right: 1rem;
+}
+
+.tech-entry.expanded:nth-child(even) .tech-card {
+  margin-left: 1rem;
 }
 
 @media (max-width: 767px) {
   .tech-stage {
     padding: 1rem;
-    border-radius: 18px;
+    border-radius: 8px;
+  }
+
+  .tech-stage::before {
+    inset: 0.55rem -0.55rem -0.55rem 0.55rem;
+    border-radius: 8px;
+  }
+
+  .tech-stage::after {
+    border-radius: 8px;
   }
 
   .tech-stage-toolbar {
@@ -389,13 +478,15 @@ h3 {
   .tech-entry.expanded .tech-card {
     flex-direction: column;
     gap: 0.8rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .tech-icon-shell,
   .tech-entry.expanded .tech-icon-shell {
     width: 4.9rem;
     height: 4.9rem;
-    border-radius: 15px;
+    border-radius: 8px;
   }
 
   .icon,

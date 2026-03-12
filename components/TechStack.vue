@@ -7,7 +7,7 @@
     <TechStackSection :techlist="mainTechList" title="favorites" />
     <TechStackSection :techlist="otherTechList" title="others" />
 
-    <div class="tech-stack-wrapper">
+    <div class="tech-stack-wrapper tech-stack-note">
       <p>
         <em>{{ $t('TechStack.note') }}</em>
       </p>
@@ -60,6 +60,15 @@ h2 {
   margin-bottom: 0.2em;
 }
 
+.tech-stack-note {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(58, 79, 102, 0.1);
+  border-radius: 10px;
+  background: #f3f8fd;
+}
+
 :deep(ul) {
   width: 100%;
   list-style-type: none;
@@ -77,6 +86,16 @@ h2 {
   width: 80px;
   transition: width 0.75s;
 }
+
+.tech-stack-note :deep(ul) {
+  margin-top: 0.25rem;
+}
+
+.tech-stack-note :deep(li img) {
+  height: 54px;
+  width: 72px;
+}
+
 .button {
   margin: 40px auto 20px auto;
   font-size: 20px;
