@@ -22,12 +22,6 @@
         @keyup.space.prevent="viewMoreOn = !viewMoreOn"
       >
         <div class="portfolio-intro-toolbar">
-          <span class="portfolio-intro-hint">
-            {{ viewMoreOn ? 'Collapse' : 'Read more' }}
-          </span>
-          <span class="sr-only">
-            {{ viewMoreOn ? 'Collapse portfolio intro' : 'Expand portfolio intro' }}
-          </span>
           <motion.span
             class="arrow-shell"
             :animate="prefersReducedMotion ? undefined : arrowAnimation"
@@ -106,11 +100,11 @@ const hoverTransition = {
 } as const;
 
 const shouldNudgeArrow = computed(
-  () => !viewMoreOn.value && (isIntroHovered.value || isIntroCentered.value)
+  () => !viewMoreOn.value && (isIntroHovered.value || isIntroCentered.value),
 );
 
 const arrowAnimation = computed(() =>
-  shouldNudgeArrow.value ? { y: [0, 2, 0] } : { y: 0 }
+  shouldNudgeArrow.value ? { y: [0, 2, 0] } : { y: 0 },
 );
 
 const arrowTransition = computed(() =>
@@ -124,11 +118,11 @@ const arrowTransition = computed(() =>
     : {
         duration: 0.22,
         ease: smoothEase,
-      }
+      },
 );
 
 const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
-  queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne()
+  queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne(),
 );
 
 useIntersectionObserver(
@@ -139,7 +133,7 @@ useIntersectionObserver(
   {
     rootMargin: '-40% 0px -40% 0px',
     threshold: 0,
-  }
+  },
 );
 </script>
 
@@ -163,7 +157,7 @@ useIntersectionObserver(
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   gap: 1rem;
   margin-bottom: 0.85rem;
 }
@@ -197,7 +191,11 @@ useIntersectionObserver(
 .view-more-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.98),
+    rgba(255, 255, 255, 0)
+  );
   z-index: 2;
   pointer-events: none;
 }

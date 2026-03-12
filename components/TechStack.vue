@@ -1,9 +1,6 @@
 <template>
   <section class="tech-stack-section content-section">
     <h2>{{ $t('TechStack.heading') }}</h2>
-    <p>
-      <em>{{ $t('TechStack.subHeading') }}</em>
-    </p>
     <TechStackSection :techlist="mainTechList" title="favorites" />
     <TechStackSection :techlist="otherTechList" title="others" />
     <NuxtLink
@@ -46,7 +43,7 @@ const otherTechList = [
   text-align: center;
 }
 h2 {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.8em;
 }
 
 .tech-stack-section > p {
