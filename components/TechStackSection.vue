@@ -25,18 +25,6 @@
       @keyup.enter.prevent="toggleInteractiveStack"
       @keyup.space.prevent="toggleInteractiveStack"
     >
-      <motion.div
-        class="tech-stage-glow"
-        :animate="
-          prefersReducedMotion
-            ? undefined
-            : isExpanded
-              ? { opacity: 1, scale: 1 }
-              : { opacity: 0.8, scale: 0.94 }
-        "
-        :transition="glowTransition"
-      />
-
       <div class="tech-stage-toolbar">
         <motion.p layout class="tech-stage-hint">
           {{ $t(isExpanded ? 'TechStack.collapse' : 'TechStack.expand') }}
@@ -129,11 +117,6 @@ const layoutTransition = {
 
 const copyTransition = {
   duration: 0.48,
-  ease: [0.22, 1, 0.36, 1],
-} as const;
-
-const glowTransition = {
-  duration: 0.55,
   ease: [0.22, 1, 0.36, 1],
 } as const;
 
@@ -280,19 +263,6 @@ h3 {
 
 .tech-stage.expanded {
   padding-bottom: 1.6rem;
-}
-
-.tech-stage-glow {
-  position: absolute;
-  inset: auto 1.2rem 1rem auto;
-  width: 8rem;
-  height: 8rem;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 999px;
-  pointer-events: none;
-  z-index: -1;
 }
 
 .tech-stage-toolbar {
