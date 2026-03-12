@@ -7,9 +7,9 @@
       :viewport="{ once: true, amount: 0.15 }"
       :transition="introTransition"
     >
+      <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
       <div class="portfolio-intro-stage">
         <div class="portfolio-intro-toolbar">
-          <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
           <motion.button
             class="portfolio-intro-toggle"
             type="button"
@@ -126,42 +126,11 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 }
 
 .portfolio-intro-stage {
-  --stage-bg: #f8fbff;
-  --stage-border: rgba(58, 79, 102, 0.14);
-  --stage-accent: #cae0f4;
   position: relative;
-  padding: 1.4rem;
-  border: 1px solid var(--stage-border);
+  padding: 1.1rem;
+  border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 10px;
-  background: var(--stage-bg);
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.portfolio-intro-stage::before {
-  content: '';
-  position: absolute;
-  inset: 0.75rem -0.75rem -0.75rem 0.75rem;
-  border-radius: 10px;
-  background: var(--stage-accent);
-  opacity: 0.65;
-  z-index: -2;
-}
-
-.portfolio-intro-stage::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 10px;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 0, rgba(0, 0, 0, 0.045) 1px, transparent 1px, transparent 100%),
-    linear-gradient(var(--stage-bg), var(--stage-bg));
-  background-size:
-    18px 18px,
-    auto;
-  opacity: 0.35;
-  pointer-events: none;
-  z-index: -1;
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .portfolio-intro-toolbar {
@@ -175,7 +144,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 }
 
 .portfolio-heading {
-  margin: 0;
+  margin: 0 0 1rem;
   text-align: left;
 }
 
@@ -186,7 +155,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   min-height: 11.5rem;
   border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .portfolio-intro-copy {
@@ -203,7 +172,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 .view-more-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(248, 251, 255, 0.98), rgba(248, 251, 255, 0));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0));
   z-index: 2;
   pointer-events: none;
 }
@@ -217,7 +186,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   padding: 0;
   border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.82);
   cursor: pointer;
   flex-shrink: 0;
 }
