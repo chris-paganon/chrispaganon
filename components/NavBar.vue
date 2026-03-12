@@ -44,10 +44,10 @@
         </NuxtLink>
       </li>
       <li v-if="$i18n.locale !== 'en'">
-        <NuxtLink :to="switchLocalePath('en')">EN</NuxtLink>
+        <NuxtLink :to="switchLocalePathWithoutHash('en')">EN</NuxtLink>
       </li>
       <li v-if="$i18n.locale !== 'fr'">
-        <NuxtLink :to="switchLocalePath('fr')">FR</NuxtLink>
+        <NuxtLink :to="switchLocalePathWithoutHash('fr')">FR</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -56,6 +56,12 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
+
+function switchLocalePathWithoutHash(locale: 'en' | 'fr') {
+  const path = switchLocalePath(locale);
+
+  return path ? path.split('#')[0] : '/';
+}
 </script>
 
 <style scoped>
