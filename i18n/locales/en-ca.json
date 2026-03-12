@@ -105,7 +105,8 @@
   },
   "PortfolioProjects": {
     "heading": "My Portfolio",
-    "sub-heading": "Find out more about a few of my projects below:"
+    "sub-heading": "Find out more about a few of my projects below:",
+    "project-label": "Selected project"
   },
   "WorkExperience": {
     "heading": "Work Experience",
