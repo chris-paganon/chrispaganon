@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxt/eslint', 'motion-v/nuxt'],
   app: {
     head: {
       title: 'Chris Paganon',
