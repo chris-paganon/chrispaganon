@@ -210,13 +210,13 @@ h3 {
 }
 
 .tech-stage {
-  --stage-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(241, 244, 249, 0.92));
-  --stage-border: rgba(15, 23, 42, 0.12);
-  --stage-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  --stage-bg: #fff7ef;
+  --stage-border: rgba(30, 24, 18, 0.08);
+  --stage-shadow: 0 10px 24px rgba(74, 58, 44, 0.06);
   position: relative;
   padding: 1.25rem;
   border: 1px solid var(--stage-border);
-  border-radius: 32px;
+  border-radius: 20px;
   background: var(--stage-bg);
   box-shadow: var(--stage-shadow);
   overflow: hidden;
@@ -227,8 +227,8 @@ h3 {
 
 .tech-stage:focus-visible {
   box-shadow:
-    0 0 0 3px rgba(15, 23, 42, 0.14),
-    0 24px 70px rgba(15, 23, 42, 0.12);
+    0 0 0 3px rgba(133, 109, 81, 0.12),
+    0 10px 24px rgba(74, 58, 44, 0.06);
 }
 
 .tech-stage.expanded {
@@ -242,8 +242,8 @@ h3 {
   aspect-ratio: 1;
   transform: translateX(-50%);
   background:
-    radial-gradient(circle, rgba(116, 208, 255, 0.32), rgba(116, 208, 255, 0) 56%),
-    radial-gradient(circle at 65% 35%, rgba(255, 194, 102, 0.28), rgba(255, 194, 102, 0) 42%);
+    radial-gradient(circle, rgba(255, 219, 186, 0.2), rgba(255, 219, 186, 0) 58%),
+    radial-gradient(circle at 65% 35%, rgba(202, 224, 244, 0.18), rgba(202, 224, 244, 0) 44%);
   pointer-events: none;
   z-index: -1;
 }
@@ -264,7 +264,7 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #4a5565;
+  color: #6f6256;
 }
 
 .tech-stage-badge {
@@ -273,13 +273,13 @@ h3 {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 999px;
+  border-radius: 14px;
   font-size: 1.6rem;
   line-height: 1;
-  color: #132238;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(19, 34, 56, 0.1);
-  box-shadow: 0 8px 24px rgba(19, 34, 56, 0.1);
+  color: #3f342b;
+  background: #fffdf8;
+  border: 1px solid rgba(63, 52, 43, 0.08);
+  box-shadow: none;
   flex-shrink: 0;
 }
 
@@ -328,20 +328,17 @@ h3 {
   justify-content: center;
   width: 5.75rem;
   height: 5.75rem;
-  border-radius: 1.6rem;
-  background:
-    linear-gradient(150deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 252, 0.82));
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.8),
-    0 14px 34px rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background: #fffdf8;
+  border: 1px solid rgba(63, 52, 43, 0.08);
+  box-shadow: none;
   flex-shrink: 0;
 }
 
 .tech-entry.expanded .tech-icon-shell {
   width: 5.25rem;
   height: 5.25rem;
-  border-radius: 1.35rem;
+  border-radius: 16px;
 }
 
 .icon {
@@ -359,17 +356,15 @@ h3 {
   flex: 1;
   min-width: 0;
   padding: 1rem 1.05rem;
-  border-radius: 1.35rem;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(15, 23, 42, 0.07);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  background: #fffaf4;
+  border: 1px solid rgba(63, 52, 43, 0.08);
 }
 
 @media (max-width: 767px) {
   .tech-stage {
     padding: 1rem;
-    border-radius: 28px;
+    border-radius: 18px;
   }
 
   .tech-stage-toolbar {
@@ -400,7 +395,7 @@ h3 {
   .tech-entry.expanded .tech-icon-shell {
     width: 4.9rem;
     height: 4.9rem;
-    border-radius: 1.25rem;
+    border-radius: 15px;
   }
 
   .icon,
