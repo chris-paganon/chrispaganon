@@ -98,23 +98,6 @@ async function handleSubmit() {
   background: #fffaf3;
 }
 
-.contact-me-col::before {
-  content: '';
-  position: absolute;
-  inset: 14px -14px -14px 14px;
-  border-radius: 10px;
-  opacity: 0.45;
-  z-index: -1;
-}
-
-.contact-me-form-wrapper::before {
-  background: #ffd8b8;
-}
-
-.contact-me-details::before {
-  background: #cae0f4;
-}
-
 form {
   display: flex;
   flex-direction: column;
