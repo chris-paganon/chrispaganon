@@ -7,24 +7,50 @@
       :viewport="{ once: true, amount: 0.15 }"
       :transition="introTransition"
     >
-      <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
-      <div
-        :class="`portfolio-intro-wrapper ${viewMoreClass}`"
-        @click="viewMoreOn = !viewMoreOn"
-      >
-        <div v-if="!viewMoreOn" class="view-more-overlay"></div>
-        <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
-          <ContentRendererMarkdown :value="portfolioIntro" />
-        </ContentRenderer>
+      <div class="portfolio-intro-stage">
+        <div class="portfolio-intro-toolbar">
+          <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
+          <motion.button
+            class="portfolio-intro-toggle"
+            type="button"
+            :aria-expanded="viewMoreOn"
+            :while-hover="prefersReducedMotion ? undefined : { y: -2 }"
+            :while-focus="prefersReducedMotion ? undefined : { y: -2 }"
+            :transition="hoverTransition"
+            @click="viewMoreOn = !viewMoreOn"
+          >
+            <span class="sr-only">
+              {{ viewMoreOn ? 'Collapse portfolio intro' : 'Expand portfolio intro' }}
+            </span>
+            <motion.span
+              class="arrow-shell"
+              :animate="prefersReducedMotion ? undefined : arrowAnimation"
+              :transition="arrowTransition"
+            >
+              <span class="arrow"></span>
+            </motion.span>
+          </motion.button>
+        </div>
+
+        <motion.div
+          class="portfolio-intro-wrapper"
+          :animate="
+            prefersReducedMotion
+              ? undefined
+              : viewMoreOn
+                ? { height: 'auto' }
+                : { height: `${collapsedHeight}px` }
+          "
+          :transition="panelTransition"
+        >
+          <div class="portfolio-intro-copy" :class="{ collapsed: !viewMoreOn }">
+            <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
+              <ContentRendererMarkdown :value="portfolioIntro" />
+            </ContentRenderer>
+          </div>
+          <div v-if="!viewMoreOn" class="view-more-overlay"></div>
+        </motion.div>
       </div>
-      <button
-        class="portfolio-intro-toggle"
-        type="button"
-        :aria-expanded="viewMoreOn"
-        @click.stop="viewMoreOn = !viewMoreOn"
-      >
-        <span class="arrow" :class="{ 'arrow-open': viewMoreOn }"></span>
-      </button>
     </motion.div>
     <motion.div
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 36 }"
@@ -45,21 +71,49 @@ import { motion, useReducedMotion } from 'motion-v';
 
 const nuxtApp = useNuxtApp();
 const viewMoreOn = ref(false);
-const viewMoreClass = computed(() =>
-  viewMoreOn.value ? 'view-more-on' : 'view-more-off'
-);
 const prefersReducedMotion = useReducedMotion();
+const collapsedHeight = 184;
+const smoothEase = [0.22, 1, 0.36, 1] as const;
 
 const introTransition = {
   duration: 0.5,
-  ease: [0.22, 1, 0.36, 1],
+  ease: smoothEase,
 } as const;
 
 const gridTransition = {
   duration: 0.55,
   delay: 0.08,
-  ease: [0.22, 1, 0.36, 1],
+  ease: smoothEase,
 } as const;
+
+const panelTransition = {
+  duration: 0.48,
+  ease: smoothEase,
+} as const;
+
+const hoverTransition = {
+  type: 'spring',
+  stiffness: 280,
+  damping: 18,
+} as const;
+
+const arrowAnimation = computed(() =>
+  viewMoreOn.value ? { rotate: 180, y: 0 } : { rotate: 0, y: [0, 3, 0] }
+);
+
+const arrowTransition = computed(() =>
+  viewMoreOn.value
+    ? {
+        duration: 0.28,
+        ease: smoothEase,
+      }
+    : {
+        duration: 1.45,
+        repeat: Infinity,
+        repeatDelay: 0.35,
+        ease: smoothEase,
+      }
+);
 
 const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne()
@@ -71,51 +125,86 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   width: 100%;
 }
 
-.portfolio-heading {
-  text-align: left;
-  margin-bottom: 30px;
+.portfolio-intro-stage {
+  --stage-bg: #f8fbff;
+  --stage-border: rgba(58, 79, 102, 0.14);
+  --stage-accent: #cae0f4;
+  position: relative;
+  padding: 1.4rem;
+  border: 1px solid var(--stage-border);
+  border-radius: 10px;
+  background: var(--stage-bg);
+  isolation: isolate;
+  overflow: hidden;
 }
 
-.portfolio-intro-wrapper {
-  cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 1.4rem 1.5rem;
-  border: 1px solid rgba(58, 79, 102, 0.12);
+.portfolio-intro-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0.75rem -0.75rem -0.75rem 0.75rem;
   border-radius: 10px;
-  background: #f8fbff;
-  transform-origin: top left;
+  background: var(--stage-accent);
+  opacity: 0.65;
+  z-index: -2;
+}
+
+.portfolio-intro-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 0, rgba(0, 0, 0, 0.045) 1px, transparent 1px, transparent 100%),
+    linear-gradient(var(--stage-bg), var(--stage-bg));
+  background-size:
+    18px 18px,
+    auto;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.portfolio-intro-toolbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-heading {
+  margin: 0;
+  text-align: left;
 }
 
 .portfolio-intro-wrapper {
   position: relative;
-  max-height: 560px;
+  z-index: 1;
   overflow: hidden;
-  transition:
-    max-height 420ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 320ms ease-out,
-    background-color 320ms ease-out;
-}
-@media (max-width: 575px) {
-  .portfolio-intro-wrapper {
-    max-height: 800px;
-  }
-}
-.portfolio-intro-wrapper.view-more-off {
-  max-height: 4em;
-  transform: translateY(0);
+  min-height: 11.5rem;
+  border: 1px solid rgba(58, 79, 102, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
 }
 
-.portfolio-intro-wrapper.view-more-on {
-  transform: translateY(2px);
+.portfolio-intro-copy {
+  padding: 1.1rem 1.1rem 1.2rem;
 }
+
+.portfolio-intro-copy.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .view-more-overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #f8fbff, #f8fbff00);
-  z-index: 10;
+  inset: 0;
+  background: linear-gradient(to top, rgba(248, 251, 255, 0.98), rgba(248, 251, 255, 0));
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -123,57 +212,36 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-top: 16px;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
   border: 1px solid rgba(58, 79, 102, 0.12);
-  border-radius: 10px;
-  background: #f8fbff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.55);
   cursor: pointer;
-  transition:
-    transform 220ms ease-out,
-    background-color 220ms ease-out;
+  flex-shrink: 0;
 }
 
-.portfolio-intro-toggle:hover {
-  transform: translateY(-2px);
-  background: #eef6fd;
+.portfolio-intro-toggle:focus-visible {
+  box-shadow: 0 0 0 3px rgba(58, 79, 102, 0.12);
+}
+
+.arrow-shell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .arrow {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  animation: arrowNudge 1.8s ease-in-out infinite;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 2px solid rgba(36, 28, 22, 0.88);
+  border-bottom: 2px solid rgba(36, 28, 22, 0.88);
+  transform: rotate(45deg) translate(-1px, -1px);
 }
 
-.arrow::before,
-.arrow::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  width: 11px;
-  height: 11px;
-  border-right: 3px solid #1f1712;
-  border-bottom: 3px solid #1f1712;
-  transform-origin: center;
-}
-
-.arrow::before {
-  top: 0;
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.arrow::after {
-  top: 6px;
-  transform: translateX(-50%) rotate(45deg);
-  opacity: 0.65;
-}
-
-.arrow-open {
-  animation: none;
-  transform: rotate(180deg);
-}
 .portfolio-intro {
   display: block;
   margin-bottom: 30px;
@@ -184,25 +252,43 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   text-align: center;
 }
 
-@keyframes arrowNudge {
-  0%,
-  100% {
-    transform: translateY(0);
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio-intro-stage {
+    padding: 1rem;
   }
-  35% {
-    transform: translateY(3px);
+
+  .portfolio-intro-toolbar {
+    align-items: center;
   }
-  60% {
-    transform: translateY(0);
+
+  .portfolio-intro-wrapper {
+    min-height: 13.5rem;
+  }
+
+  .portfolio-intro-copy.collapsed {
+    -webkit-line-clamp: 6;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-intro-wrapper,
-  .portfolio-intro-toggle,
-  .arrow {
-    transition: none;
-    animation: none;
+@media (max-width: 450px) {
+  .portfolio-intro-toolbar {
+    gap: 0.75rem;
+  }
+
+  .portfolio-intro-copy {
+    padding: 1rem;
   }
 }
 </style>
