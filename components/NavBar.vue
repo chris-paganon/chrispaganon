@@ -60,7 +60,7 @@ const switchLocalePath = useSwitchLocalePath();
 
 <style scoped>
 nav {
-  padding: 12px 16px;
+  padding: 12px 24px;
   border: 1px solid rgba(42, 32, 24, 0.1);
   border-radius: 10px;
   background: rgba(255, 250, 243, 0.92);
@@ -71,9 +71,10 @@ ul {
   display: flex;
   align-items: center;
   margin-right: 0;
+  margin-bottom: 0;
 }
 li {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 li:first-child {
   margin-left: 0;
