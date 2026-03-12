@@ -104,13 +104,15 @@ const shouldNudgeArrow = computed(
 );
 
 const arrowAnimation = computed(() =>
-  shouldNudgeArrow.value ? { y: [0, 2, 0] } : { y: 0 },
+  shouldNudgeArrow.value
+    ? { y: [0, 3, 0], scale: [1, 1.05, 1] }
+    : { y: 0, scale: 1 },
 );
 
 const arrowTransition = computed(() =>
   shouldNudgeArrow.value
     ? {
-        duration: 1.25,
+        duration: 1.75,
         repeat: Infinity,
         repeatDelay: 0.2,
         ease: smoothEase,
