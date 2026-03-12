@@ -94,6 +94,31 @@
     "heading": "My Portfolio",
     "sub-heading": "Find out more about a few of my projects below:"
   },
+  "WorkExperience": {
+    "heading": "Work Experience",
+    "intro": "A quick overview of the agency work I have been doing in recent years.",
+    "learnMore": "See project details",
+    "jobs": [
+      {
+        "company": "Plutaro",
+        "role": "Full-stack developer",
+        "dates": "August 2024 - now",
+        "description": "Working in an agency focused on AI projects, building products with React and Firebase and contributing to a few internal AI initiatives."
+      },
+      {
+        "company": "Progexia",
+        "role": "Full-stack web developer",
+        "dates": "October 2022 - June 2024",
+        "description": "Worked across agency projects with Vue, Express, PHP and WordPress, including dashboards, long multi-step forms, API integrations and client websites.",
+        "link": {
+          "name": "project-slug",
+          "params": {
+            "slug": "progexia"
+          }
+        }
+      }
+    ]
+  },
   "ContactMe": {
     "heading": "Hire Me",
     "form-sub-heading": "Fill up the form",

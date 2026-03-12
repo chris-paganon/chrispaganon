@@ -1,38 +1,66 @@
 <template>
   <section id="portfolio" class="portfolio-section-wrapper content-section">
-    <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
-    <div
-      :class="`portfolio-intro-wrapper ${viewMoreClass}`"
-      @click="viewMoreOn = !viewMoreOn"
+    <motion.div
+      :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 28 }"
+      :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
+      :viewport="{ once: true, amount: 0.15 }"
+      :transition="introTransition"
     >
-      <div v-if="!viewMoreOn" class="view-more-overlay"></div>
-      <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
-        <ContentRendererMarkdown :value="portfolioIntro" />
-      </ContentRenderer>
-    </div>
-    <div
-      v-if="!viewMoreOn"
-      class="arrow arrow-down"
-      @click="viewMoreOn = true"
-    ></div>
-    <div
-      v-if="viewMoreOn"
-      class="arrow arrow-up"
-      @click="viewMoreOn = false"
-    ></div>
-    <h3 class="portfolio-sub-heading">
-      {{ $t('PortfolioProjects.sub-heading') }}
-    </h3>
-    <PortfolioGrid />
+      <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
+      <div
+        :class="`portfolio-intro-wrapper ${viewMoreClass}`"
+        @click="viewMoreOn = !viewMoreOn"
+      >
+        <div v-if="!viewMoreOn" class="view-more-overlay"></div>
+        <ContentRenderer v-if="portfolioIntro" :content="portfolioIntro">
+          <ContentRendererMarkdown :value="portfolioIntro" />
+        </ContentRenderer>
+      </div>
+      <div
+        v-if="!viewMoreOn"
+        class="arrow arrow-down"
+        @click="viewMoreOn = true"
+      ></div>
+      <div
+        v-if="viewMoreOn"
+        class="arrow arrow-up"
+        @click="viewMoreOn = false"
+      ></div>
+    </motion.div>
+    <motion.div
+      :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 36 }"
+      :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
+      :viewport="{ once: true, amount: 0.1 }"
+      :transition="gridTransition"
+    >
+      <h3 class="portfolio-sub-heading">
+        {{ $t('PortfolioProjects.sub-heading') }}
+      </h3>
+      <PortfolioGrid />
+    </motion.div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { motion, useReducedMotion } from 'motion-v';
+
 const nuxtApp = useNuxtApp();
 const viewMoreOn = ref(false);
 const viewMoreClass = computed(() =>
   viewMoreOn.value ? 'view-more-on' : 'view-more-off'
 );
+const prefersReducedMotion = useReducedMotion();
+
+const introTransition = {
+  duration: 0.5,
+  ease: [0.22, 1, 0.36, 1],
+} as const;
+
+const gridTransition = {
+  duration: 0.55,
+  delay: 0.08,
+  ease: [0.22, 1, 0.36, 1],
+} as const;
 
 const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne()

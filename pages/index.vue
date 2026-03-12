@@ -14,6 +14,9 @@
       <div class="background-section-wrapper portfolio-section-background">
         <PortfolioProjects />
       </div>
+      <div class="background-section-wrapper work-section-background">
+        <WorkExperience />
+      </div>
       <ContactMe />
     </div>
   </main>
@@ -28,6 +31,12 @@
 .background-section-wrapper {
   width: 100%;
   background-color: rgb(255, 251, 246);
+}
+
+.work-section-background {
+  background:
+    radial-gradient(circle at top left, rgba(255, 220, 176, 0.45), transparent 32%),
+    linear-gradient(180deg, rgb(255, 251, 246), rgb(255, 245, 235));
 }
 
 .introduction {

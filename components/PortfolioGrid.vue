@@ -21,7 +21,10 @@ const localePath = useLocalePath();
 
 const nuxtApp = useNuxtApp();
 const { data: portfolio } = await useAsyncData('portfolio', () =>
-  queryContent(nuxtApp.$i18n.locale.value, 'project').sort({ id: 1 }).find()
+  queryContent(nuxtApp.$i18n.locale.value, 'project')
+    .where({ slug: { $ne: 'progexia' } })
+    .sort({ id: 1 })
+    .find()
 );
 
 const portfolioCards = ref([]);

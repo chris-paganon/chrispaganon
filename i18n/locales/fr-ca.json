@@ -94,6 +94,31 @@
     "heading": "Mon Portfolio",
     "sub-heading": "Apprenez en plus sur plusieurs de mes projets ci-dessous:"
   },
+  "WorkExperience": {
+    "heading": "Expérience professionnelle",
+    "intro": "Un aperçu rapide du travail en agence que j'ai réalisé ces dernières années.",
+    "learnMore": "Voir les détails du projet",
+    "jobs": [
+      {
+        "company": "Plutaro",
+        "role": "Développeur full-stack",
+        "dates": "Août 2024 - maintenant",
+        "description": "Travail dans une agence orientée projets IA, avec des produits en React et Firebase ainsi que quelques projets IA internes."
+      },
+      {
+        "company": "Progexia",
+        "role": "Développeur web full-stack",
+        "dates": "Octobre 2022 - Juin 2024",
+        "description": "Travail sur différents projets d'agence en Vue, Express, PHP et WordPress, incluant des tableaux de bord, de longs formulaires multi-étapes, des intégrations API et des sites clients.",
+        "link": {
+          "name": "project-slug",
+          "params": {
+            "slug": "progexia"
+          }
+        }
+      }
+    ]
+  },
   "ContactMe": {
     "heading": "Contactez-moi",
     "form-sub-heading": "Remplissez le formulaire",
