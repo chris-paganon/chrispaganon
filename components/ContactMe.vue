@@ -11,27 +11,32 @@
             v-model="name"
             type="text"
             name="name"
+            autocomplete="name"
             required
           />
-          <label for="name">{{ $t('ContactMe.form.email') }}</label>
+          <label for="email">{{ $t('ContactMe.form.email') }}</label>
           <input
             id="email"
             v-model="email"
             type="email"
             name="email"
+            autocomplete="email"
             required
           />
-          <label for="name">{{ $t('ContactMe.form.description') }}</label>
+          <label for="description">{{ $t('ContactMe.form.description') }}</label>
           <textarea
             id="description"
             v-model="description"
             name="description"
+            autocomplete="off"
             required
             rows="4"
             :placeholder="$t('ContactMe.form.description-placeholder')"
           ></textarea>
           <p>{{ formResponse }}</p>
-          <button class="button">{{ $t('ContactMe.form.button') }}</button>
+          <button class="button" type="submit">
+            {{ $t('ContactMe.form.button') }}
+          </button>
         </form>
       </div>
       <div class="contact-me-details contact-me-col">
