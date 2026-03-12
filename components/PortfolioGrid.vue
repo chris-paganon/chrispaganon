@@ -132,7 +132,10 @@
 import { motion } from 'motion-v';
 
 const localePath = useLocalePath();
-const prefersReducedMotion = usePrefersReducedMotion();
+const reducedMotionPreference = usePreferredReducedMotion();
+const prefersReducedMotion = computed(
+  () => reducedMotionPreference.value === 'reduce',
+);
 const activeProject = ref<string | null>(null);
 
 const nuxtApp = useNuxtApp();

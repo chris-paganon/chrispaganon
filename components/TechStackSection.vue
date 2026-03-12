@@ -106,7 +106,10 @@ const props = defineProps<{
 }>();
 
 const isExpanded = ref(false);
-const prefersReducedMotion = usePrefersReducedMotion();
+const reducedMotionPreference = usePreferredReducedMotion();
+const prefersReducedMotion = computed(
+  () => reducedMotionPreference.value === 'reduce',
+);
 
 const layoutTransition = {
   type: 'spring',

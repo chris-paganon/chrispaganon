@@ -50,7 +50,10 @@ import { motion } from 'motion-v';
 
 const nuxtApp = useNuxtApp();
 const localePath = useLocalePath();
-const prefersReducedMotion = usePrefersReducedMotion();
+const reducedMotionPreference = usePreferredReducedMotion();
+const prefersReducedMotion = computed(
+  () => reducedMotionPreference.value === 'reduce',
+);
 const { data: jobs } = await useAsyncData('work-experience', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'work').sort({ id: 1 }).find()
 );
