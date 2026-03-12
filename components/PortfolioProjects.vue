@@ -1,6 +1,7 @@
 <template>
   <section id="portfolio" class="portfolio-section-wrapper content-section">
     <motion.div
+      class="portfolio-intro-block"
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 28 }"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.15 }"
@@ -16,16 +17,14 @@
           <ContentRendererMarkdown :value="portfolioIntro" />
         </ContentRenderer>
       </div>
-      <div
-        v-if="!viewMoreOn"
-        class="arrow arrow-down"
-        @click="viewMoreOn = true"
-      ></div>
-      <div
-        v-if="viewMoreOn"
-        class="arrow arrow-up"
-        @click="viewMoreOn = false"
-      ></div>
+      <button
+        class="portfolio-intro-toggle"
+        type="button"
+        :aria-expanded="viewMoreOn"
+        @click.stop="viewMoreOn = !viewMoreOn"
+      >
+        <span class="arrow" :class="{ 'arrow-open': viewMoreOn }"></span>
+      </button>
     </motion.div>
     <motion.div
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 36 }"
@@ -68,57 +67,35 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 </script>
 
 <style scoped>
+.portfolio-intro-block {
+  width: 100%;
+}
+
+.portfolio-heading {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
 .portfolio-intro-wrapper {
   cursor: pointer;
-  max-width: 48rem;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   padding: 1.4rem 1.5rem;
   border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 10px;
   background: #f8fbff;
-}
-.arrow {
-  cursor: pointer;
-  width: fit-content;
-  padding: 10px 30px 30px 30px;
-  margin: auto;
-}
-.arrow::after {
-  content: '';
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-right: 4px solid black;
-  border-bottom: 4px solid black;
-  margin: 20px auto 0 auto;
-}
-.arrow-down {
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-.portfolio-intro-wrapper:hover + .arrow-down,
-.arrow-down:hover {
-  animation: bounce 1.25s infinite;
-}
-.arrow-up {
-  transform: rotate(-135deg);
-}
-@keyframes bounce {
-  0% {
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
-  30% {
-    transform: rotate(45deg) translate(0, 0);
-  }
-  100% {
-    transform: rotate(45deg) translate(-8px, -8px);
-  }
+  transform-origin: top left;
 }
 
 .portfolio-intro-wrapper {
   position: relative;
-  max-height: 500px;
+  max-height: 560px;
   overflow: hidden;
-  transition: max-height 500ms ease-out;
+  transition:
+    max-height 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms ease-out,
+    background-color 320ms ease-out;
 }
 @media (max-width: 575px) {
   .portfolio-intro-wrapper {
@@ -127,6 +104,11 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 }
 .portfolio-intro-wrapper.view-more-off {
   max-height: 4em;
+  transform: translateY(0);
+}
+
+.portfolio-intro-wrapper.view-more-on {
+  transform: translateY(2px);
 }
 .view-more-overlay {
   position: absolute;
@@ -134,6 +116,63 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   height: 100%;
   background: linear-gradient(to top, #f8fbff, #f8fbff00);
   z-index: 10;
+  pointer-events: none;
+}
+
+.portfolio-intro-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-top: 16px;
+  border: 1px solid rgba(58, 79, 102, 0.12);
+  border-radius: 10px;
+  background: #f8fbff;
+  cursor: pointer;
+  transition:
+    transform 220ms ease-out,
+    background-color 220ms ease-out;
+}
+
+.portfolio-intro-toggle:hover {
+  transform: translateY(-2px);
+  background: #eef6fd;
+}
+
+.arrow {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  animation: arrowNudge 1.8s ease-in-out infinite;
+}
+
+.arrow::before,
+.arrow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  border-right: 3px solid #1f1712;
+  border-bottom: 3px solid #1f1712;
+  transform-origin: center;
+}
+
+.arrow::before {
+  top: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.arrow::after {
+  top: 6px;
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0.65;
+}
+
+.arrow-open {
+  animation: none;
+  transform: rotate(180deg);
 }
 .portfolio-intro {
   display: block;
@@ -143,5 +182,27 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 .portfolio-sub-heading {
   margin: 60px 0 30px 0;
   text-align: center;
+}
+
+@keyframes arrowNudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(3px);
+  }
+  60% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-intro-wrapper,
+  .portfolio-intro-toggle,
+  .arrow {
+    transition: none;
+    animation: none;
+  }
 }
 </style>

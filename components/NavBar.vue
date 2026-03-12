@@ -60,7 +60,7 @@ const switchLocalePath = useSwitchLocalePath();
 
 <style scoped>
 nav {
-  padding: 14px 16px;
+  padding: 12px 16px;
   border: 1px solid rgba(42, 32, 24, 0.1);
   border-radius: 10px;
   background: rgba(255, 250, 243, 0.92);
@@ -70,10 +70,13 @@ nav {
 ul {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 0;
 }
 li {
   margin-left: 20px;
+}
+li:first-child {
+  margin-left: 0;
 }
 a {
   display: block;
@@ -109,19 +112,25 @@ svg:hover {
 }
 
 @media (max-width: 600px) {
+  nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+  }
+
   ul {
-    margin-right: 0px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 12px;
   }
   li {
-    margin-left: 15px;
+    margin-left: 0;
   }
 }
 @media (max-width: 400px) {
   nav {
-    padding: 12px;
-  }
-  li {
-    margin-left: 10px;
+    padding: 10px 12px;
   }
   a {
     letter-spacing: 0px;

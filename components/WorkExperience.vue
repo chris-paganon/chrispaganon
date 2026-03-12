@@ -101,21 +101,6 @@ function getCardTransition(index: number) {
   border-radius: 10px;
   background: #fffaf3;
   box-shadow: none;
-  position: relative;
-}
-
-.work-card::before {
-  content: '';
-  position: absolute;
-  inset: 14px -14px -14px 14px;
-  border-radius: 10px;
-  background: #ffd8b8;
-  opacity: 0.4;
-  z-index: -1;
-}
-
-.work-card:nth-child(even)::before {
-  background: #cae0f4;
 }
 
 .work-card-header {
