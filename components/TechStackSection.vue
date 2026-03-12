@@ -8,7 +8,7 @@
       :class="{ expanded: isExpanded }"
       role="button"
       tabindex="0"
-      :aria-expanded="String(isExpanded)"
+      :aria-expanded="isExpanded"
       :aria-label="$t(isExpanded ? 'TechStack.collapse' : 'TechStack.expand')"
       :while-hover="
         prefersReducedMotion || isExpanded
@@ -76,7 +76,7 @@
               <img :src="`/images/logos/${tech}.png`" :alt="tech" class="icon" />
             </motion.div>
 
-            <AnimatePresence initial="false" mode="popLayout">
+            <AnimatePresence :initial="false" mode="popLayout">
               <motion.div
                 v-if="isExpanded"
                 :key="`${tech}-details`"
@@ -125,29 +125,29 @@ const layoutTransition = {
   stiffness: 240,
   damping: 24,
   mass: 0.9,
-};
+} as const;
 
 const copyTransition = {
   duration: 0.38,
   ease: [0.22, 1, 0.36, 1],
-};
+} as const;
 
 const glowTransition = {
   duration: 0.55,
   ease: [0.22, 1, 0.36, 1],
-};
+} as const;
 
 const badgeTransition = {
   type: 'spring',
   stiffness: 320,
   damping: 20,
-};
+} as const;
 
 const hoverTransition = {
   type: 'spring',
   stiffness: 280,
   damping: 18,
-};
+} as const;
 
 const closedOffsets = [
   { x: -22, y: 16, rotate: -10 },
@@ -192,7 +192,7 @@ function getEntryTransition(index: number) {
     damping: 22,
     mass: 0.85,
     delay: isExpanded.value ? index * 0.035 : (props.techlist.length - index) * 0.02,
-  };
+  } as const;
 }
 </script>
 
