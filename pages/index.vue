@@ -46,6 +46,8 @@
 
 .introduction {
   position: relative;
+  z-index: 0;
+  isolation: isolate;
   padding: 135px 46px 90px 46px;
   border: 1px solid rgba(42, 32, 24, 0.12);
   border-radius: 10px;
@@ -124,6 +126,9 @@ img:hover {
   }
 }
 @media (max-width: 600px) {
+  .introduction::before {
+    content: none;
+  }
   img {
     width: 170px;
     margin: 0;
