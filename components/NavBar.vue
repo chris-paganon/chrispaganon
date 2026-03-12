@@ -121,7 +121,7 @@ svg:hover {
 
   ul {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px 12px;
   }
