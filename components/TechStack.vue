@@ -48,6 +48,11 @@ h2 {
   margin-bottom: 0.2em;
 }
 
+.tech-stack-section > p {
+  max-width: 38rem;
+  margin: 0 auto 2rem auto;
+}
+
 :deep(ul) {
   width: 100%;
   list-style-type: none;

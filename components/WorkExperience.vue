@@ -97,10 +97,25 @@ function getCardTransition(index: number) {
 
 .work-card {
   padding: 28px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 240, 0.92));
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(42, 32, 24, 0.12);
+  border-radius: 10px;
+  background: #fffaf3;
+  box-shadow: none;
+  position: relative;
+}
+
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border-radius: 10px;
+  background: #ffd8b8;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.work-card:nth-child(even)::before {
+  background: #cae0f4;
 }
 
 .work-card-header {
@@ -117,7 +132,7 @@ function getCardTransition(index: number) {
 
 .work-role,
 .work-dates {
-  color: rgba(0, 0, 0, 0.68);
+  color: rgba(36, 28, 22, 0.68);
   font-weight: 600;
 }
 
@@ -130,6 +145,14 @@ function getCardTransition(index: number) {
   display: inline-block;
   text-decoration: none;
   font-weight: 700;
+  transition:
+    transform 200ms ease-out,
+    opacity 200ms ease-out;
+}
+
+.work-link:hover {
+  transform: translateX(3px);
+  opacity: 0.75;
 }
 
 @media (max-width: 800px) {

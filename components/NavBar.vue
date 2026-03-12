@@ -59,6 +59,14 @@ const switchLocalePath = useSwitchLocalePath();
 </script>
 
 <style scoped>
+nav {
+  padding: 14px 16px;
+  border: 1px solid rgba(42, 32, 24, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 250, 243, 0.92);
+  backdrop-filter: blur(8px);
+}
+
 ul {
   display: flex;
   align-items: center;
@@ -75,26 +83,29 @@ a {
 }
 a:not(.contact-me-btn) {
   color: black;
-  transition: letter-spacing 250ms ease-out;
+  transition:
+    transform 250ms ease-out,
+    opacity 250ms ease-out;
 }
 a:not(.contact-me-btn):hover {
-  letter-spacing: 2.5px;
+  transform: translateY(-1px);
+  opacity: 0.75;
 }
 #github-link img {
-  transition: width 250ms ease-out;
+  transition: transform 250ms ease-out;
   margin-top: 2px;
 }
 #github-link img:hover {
-  width: 27px;
+  transform: translateY(-2px) rotate(-4deg);
 }
 
 svg {
   width: 24px;
   margin-bottom: -5px;
-  transition: width 250ms ease-out;
+  transition: transform 250ms ease-out;
 }
 svg:hover {
-  width: 27px;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 600px) {
@@ -104,11 +115,11 @@ svg:hover {
   li {
     margin-left: 15px;
   }
-  a:not(.contact-me-btn):hover {
-    letter-spacing: 1.5px;
-  }
 }
 @media (max-width: 400px) {
+  nav {
+    padding: 12px;
+  }
   li {
     margin-left: 10px;
   }

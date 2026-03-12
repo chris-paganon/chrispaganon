@@ -70,6 +70,12 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 <style scoped>
 .portfolio-intro-wrapper {
   cursor: pointer;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid rgba(58, 79, 102, 0.12);
+  border-radius: 10px;
+  background: #f8fbff;
 }
 .arrow {
   cursor: pointer;
@@ -126,7 +132,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #fffbf6, #fffbf600);
+  background: linear-gradient(to top, #f8fbff, #f8fbff00);
   z-index: 10;
 }
 .portfolio-intro {

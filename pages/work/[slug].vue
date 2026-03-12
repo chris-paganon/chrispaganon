@@ -34,13 +34,27 @@ const { data: workContent } = await useAsyncData('work', () =>
 
 <style scoped>
 article {
+  position: relative;
   max-width: 1024px;
-  margin: 40px auto;
-  padding: 0px 20px;
+  margin: 48px auto;
+  padding: 28px 24px;
+  border: 1px solid rgba(42, 32, 24, 0.12);
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border-radius: 10px;
+  background: #cae0f4;
+  opacity: 0.45;
+  z-index: -1;
 }
 .project-info a,
 .project-info li {
-  font-size: 25px;
+  font-size: 22px;
 }
 p {
   margin: 20px 0;
@@ -52,14 +66,18 @@ p {
 
 ul.project-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 40px;
   text-align: center;
 }
 .project-info li {
-  padding: 0 15px;
-  margin-bottom: 15px;
+  padding: 10px 14px;
+  margin-bottom: 0;
+  border: 1px solid rgba(58, 79, 102, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
 }
 
 :deep(img) {
@@ -78,7 +96,16 @@ ul.project-info {
 @media (max-width: 600px) {
   .project-info a,
   .project-info li {
-    font-size: 22px;
+    font-size: 19px;
+  }
+
+  article {
+    margin: 36px 20px;
+    padding: 20px 16px;
+  }
+
+  article::before {
+    inset: 12px -12px -12px 12px;
   }
 }
 </style>

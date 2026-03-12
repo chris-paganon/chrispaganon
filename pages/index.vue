@@ -30,19 +30,38 @@
 }
 .background-section-wrapper {
   width: 100%;
+  position: relative;
   background-color: rgb(255, 251, 246);
 }
 
 .work-section-background {
   background:
-    radial-gradient(circle at top left, rgba(255, 220, 176, 0.45), transparent 32%),
     linear-gradient(180deg, rgb(255, 251, 246), rgb(255, 245, 235));
+}
+
+.portfolio-section-background {
+  background:
+    linear-gradient(180deg, rgb(255, 251, 246), rgb(244, 248, 252));
 }
 
 .introduction {
   position: relative;
-  padding: 150px 40px;
+  padding: 135px 46px 90px 46px;
+  border: 1px solid rgba(42, 32, 24, 0.12);
+  border-radius: 10px;
+  background: #fffaf3;
 }
+
+.introduction::before {
+  content: '';
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border-radius: 10px;
+  background: #ffd8b8;
+  opacity: 0.55;
+  z-index: -1;
+}
+
 .introduction p {
   font-size: 2em;
   margin-right: 170px;
@@ -58,25 +77,47 @@ img {
   width: 200px;
   border-radius: 50%;
   margin: 0 10px;
+  border: 8px solid #fffaf3;
+  box-shadow: 10px 10px 0 rgba(202, 224, 244, 0.7);
   transition: transform 500ms ease-out;
+  animation: portraitFloat 6s ease-in-out infinite;
 }
 img:hover {
-  transform: translateY(-10px) scale(1.1, 1.1);
+  transform: translateY(-6px);
 }
 
 .separator {
-  border-top: 2px solid gray;
+  border-top: 1px solid rgba(42, 32, 24, 0.18);
   max-width: 66%;
+}
+
+@keyframes portraitFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img {
+    animation: none;
+  }
 }
 
 @media (max-width: 925px) {
   .introduction {
-    padding: 140px 40px 100px 40px;
+    padding: 140px 40px 90px 40px;
   }
   .introduction p {
     font-size: 1.8em;
     margin-right: 0;
     text-align: center;
+  }
+  .introduction::before {
+    inset: 12px -12px -12px 12px;
   }
   img {
     top: -90px;
@@ -93,6 +134,12 @@ img:hover {
 @media (max-width: 450px) {
   .content-section {
     padding: 50px 20px;
+  }
+  .introduction {
+    padding: 120px 24px 56px 24px;
+  }
+  .introduction::before {
+    inset: 10px -10px -10px 10px;
   }
   .introduction p {
     font-size: 1.5em;

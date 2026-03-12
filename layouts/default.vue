@@ -6,9 +6,21 @@
 </template>
 
 <style>
+:root {
+  --page-bg: #fffdf8;
+  --panel-cream: #fffaf3;
+  --panel-blue: #f4f8fc;
+  --panel-peach: #fff2e5;
+  --panel-border: rgba(42, 32, 24, 0.12);
+  --panel-blue-border: rgba(58, 79, 102, 0.12);
+  --ink-soft: rgba(36, 28, 22, 0.78);
+}
+
 html,
 body {
   font-size: 16px;
+  background: var(--page-bg);
+  color: #1f1712;
 }
 html,
 body,
@@ -116,10 +128,13 @@ textarea {
 p a {
   display: inline-block;
   color: black;
-  transition: transform 150ms ease-out;
+  transition:
+    transform 150ms ease-out,
+    opacity 150ms ease-out;
 }
 p a:hover {
-  transform: skew(-1.5deg, -1.5deg);
+  transform: translateY(-1px);
+  opacity: 0.8;
 }
 
 .button {
@@ -129,7 +144,7 @@ p a:hover {
   color: white;
   text-decoration: none;
   padding: 15px 25px;
-  border-radius: 25px;
+  border-radius: 10px;
   border: 0px;
   font-size: 16px;
   font-weight: 600;
@@ -137,11 +152,13 @@ p a:hover {
   width: fit-content;
   transition:
     background-color 250ms ease-out,
-    transform 250ms ease-out;
+    transform 250ms ease-out,
+    box-shadow 250ms ease-out;
 }
 .button:hover {
   background-color: rgb(44, 44, 44);
-  transform: scale(1.03, 1.03);
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 rgba(31, 23, 18, 0.12);
 }
 
 .hero-banner {

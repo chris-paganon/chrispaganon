@@ -77,12 +77,44 @@ async function handleSubmit() {
 </script>
 
 <style scoped>
+.contact-me-section-wrapper {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
 .contact-me-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
   margin: 40px 0;
 }
+
+.contact-me-col {
+  position: relative;
+  padding: 28px;
+  border: 1px solid rgba(42, 32, 24, 0.12);
+  border-radius: 10px;
+  background: #fffaf3;
+}
+
+.contact-me-col::before {
+  content: '';
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border-radius: 10px;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+.contact-me-form-wrapper::before {
+  background: #ffd8b8;
+}
+
+.contact-me-details::before {
+  background: #cae0f4;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -93,13 +125,13 @@ label {
 input,
 textarea {
   margin: 10px 0 20px 0;
-  border: 1px solid rgb(194, 194, 194);
-  border-radius: 5px;
+  border: 1px solid rgba(42, 32, 24, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
   padding: 15px;
 }
 .button {
   font-size: 20px;
-  border-radius: 30px;
 }
 
 .contact-info {
