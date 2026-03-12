@@ -91,6 +91,7 @@ async function handleSubmit() {
 }
 
 .contact-me-col {
+  min-width: 0;
   position: relative;
   padding: 28px;
   border: 1px solid rgba(42, 32, 24, 0.12);
@@ -107,6 +108,9 @@ label {
 }
 input,
 textarea {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   margin: 10px 0 20px 0;
   border: 1px solid rgba(42, 32, 24, 0.12);
   border-radius: 8px;
