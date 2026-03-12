@@ -98,7 +98,7 @@
 </template>
 
 <script setup lang="ts">
-import { AnimatePresence, motion, useReducedMotion } from 'motion-v';
+import { AnimatePresence, motion } from 'motion-v';
 
 const props = defineProps<{
   title: string;
@@ -106,7 +106,7 @@ const props = defineProps<{
 }>();
 
 const isExpanded = ref(false);
-const prefersReducedMotion = useReducedMotion();
+const prefersReducedMotion = usePrefersReducedMotion();
 
 const layoutTransition = {
   type: 'spring',

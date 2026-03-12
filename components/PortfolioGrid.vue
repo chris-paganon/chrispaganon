@@ -129,10 +129,10 @@
 </template>
 
 <script setup lang="ts">
-import { motion, useReducedMotion } from 'motion-v';
+import { motion } from 'motion-v';
 
 const localePath = useLocalePath();
-const prefersReducedMotion = useReducedMotion();
+const prefersReducedMotion = usePrefersReducedMotion();
 const activeProject = ref<string | null>(null);
 
 const nuxtApp = useNuxtApp();

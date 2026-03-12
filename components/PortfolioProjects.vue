@@ -66,12 +66,12 @@
 </template>
 
 <script setup lang="ts">
-import { motion, useReducedMotion } from 'motion-v';
+import { motion } from 'motion-v';
 
 const nuxtApp = useNuxtApp();
 const introStageRef = useTemplateRef<HTMLElement>('introStageRef');
 const viewMoreOn = ref(false);
-const prefersReducedMotion = useReducedMotion();
+const prefersReducedMotion = usePrefersReducedMotion();
 const collapsedHeight = 184;
 const smoothEase = [0.22, 1, 0.36, 1] as const;
 const isIntroHovered = useElementHover(introStageRef);

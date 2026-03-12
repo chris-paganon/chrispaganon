@@ -46,11 +46,11 @@
 </template>
 
 <script setup lang="ts">
-import { motion, useReducedMotion } from 'motion-v';
+import { motion } from 'motion-v';
 
 const nuxtApp = useNuxtApp();
 const localePath = useLocalePath();
-const prefersReducedMotion = useReducedMotion();
+const prefersReducedMotion = usePrefersReducedMotion();
 const { data: jobs } = await useAsyncData('work-experience', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'work').sort({ id: 1 }).find()
 );
