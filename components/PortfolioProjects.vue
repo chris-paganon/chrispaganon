@@ -8,28 +8,33 @@
       :transition="introTransition"
     >
       <h2 class="portfolio-heading">{{ $t('PortfolioProjects.heading') }}</h2>
-      <div class="portfolio-intro-stage">
+      <motion.div
+        ref="introStageRef"
+        class="portfolio-intro-stage"
+        role="button"
+        tabindex="0"
+        :aria-expanded="viewMoreOn"
+        :while-hover="prefersReducedMotion ? undefined : { y: -2 }"
+        :while-focus="prefersReducedMotion ? undefined : { y: -2 }"
+        :transition="hoverTransition"
+        @click="viewMoreOn = !viewMoreOn"
+        @keyup.enter.prevent="viewMoreOn = !viewMoreOn"
+        @keyup.space.prevent="viewMoreOn = !viewMoreOn"
+      >
         <div class="portfolio-intro-toolbar">
-          <motion.button
-            class="portfolio-intro-toggle"
-            type="button"
-            :aria-expanded="viewMoreOn"
-            :while-hover="prefersReducedMotion ? undefined : { y: -2 }"
-            :while-focus="prefersReducedMotion ? undefined : { y: -2 }"
-            :transition="hoverTransition"
-            @click="viewMoreOn = !viewMoreOn"
+          <span class="portfolio-intro-hint">
+            {{ viewMoreOn ? 'Collapse' : 'Read more' }}
+          </span>
+          <span class="sr-only">
+            {{ viewMoreOn ? 'Collapse portfolio intro' : 'Expand portfolio intro' }}
+          </span>
+          <motion.span
+            class="arrow-shell"
+            :animate="prefersReducedMotion ? undefined : arrowAnimation"
+            :transition="arrowTransition"
           >
-            <span class="sr-only">
-              {{ viewMoreOn ? 'Collapse portfolio intro' : 'Expand portfolio intro' }}
-            </span>
-            <motion.span
-              class="arrow-shell"
-              :animate="prefersReducedMotion ? undefined : arrowAnimation"
-              :transition="arrowTransition"
-            >
-              <span class="arrow"></span>
-            </motion.span>
-          </motion.button>
+            <span class="arrow"></span>
+          </motion.span>
         </div>
 
         <motion.div
@@ -50,7 +55,7 @@
           </div>
           <div v-if="!viewMoreOn" class="view-more-overlay"></div>
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
     <motion.div
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 36 }"
@@ -70,10 +75,13 @@
 import { motion, useReducedMotion } from 'motion-v';
 
 const nuxtApp = useNuxtApp();
+const introStageRef = useTemplateRef<HTMLElement>('introStageRef');
 const viewMoreOn = ref(false);
 const prefersReducedMotion = useReducedMotion();
 const collapsedHeight = 184;
 const smoothEase = [0.22, 1, 0.36, 1] as const;
+const isIntroHovered = useElementHover(introStageRef);
+const isIntroCentered = ref(false);
 
 const introTransition = {
   duration: 0.5,
@@ -97,26 +105,41 @@ const hoverTransition = {
   damping: 18,
 } as const;
 
+const shouldNudgeArrow = computed(
+  () => !viewMoreOn.value && (isIntroHovered.value || isIntroCentered.value)
+);
+
 const arrowAnimation = computed(() =>
-  viewMoreOn.value ? { rotate: 180, y: 0 } : { rotate: 0, y: [0, 3, 0] }
+  shouldNudgeArrow.value ? { y: [0, 2, 0] } : { y: 0 }
 );
 
 const arrowTransition = computed(() =>
-  viewMoreOn.value
+  shouldNudgeArrow.value
     ? {
-        duration: 0.28,
+        duration: 1.25,
+        repeat: Infinity,
+        repeatDelay: 0.2,
         ease: smoothEase,
       }
     : {
-        duration: 1.45,
-        repeat: Infinity,
-        repeatDelay: 0.35,
+        duration: 0.22,
         ease: smoothEase,
       }
 );
 
 const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   queryContent(nuxtApp.$i18n.locale.value, 'portfolio-intro').findOne()
+);
+
+useIntersectionObserver(
+  introStageRef,
+  ([entry]) => {
+    isIntroCentered.value = entry?.isIntersecting ?? false;
+  },
+  {
+    rootMargin: '-40% 0px -40% 0px',
+    threshold: 0,
+  }
 );
 </script>
 
@@ -131,16 +154,18 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  outline: none;
 }
 
 .portfolio-intro-toolbar {
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .portfolio-heading {
@@ -177,22 +202,17 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   pointer-events: none;
 }
 
-.portfolio-intro-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  padding: 0;
-  border: 1px solid rgba(58, 79, 102, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
-  cursor: pointer;
-  flex-shrink: 0;
+.portfolio-intro-stage:focus-visible {
+  box-shadow: 0 0 0 3px rgba(58, 79, 102, 0.12);
 }
 
-.portfolio-intro-toggle:focus-visible {
-  box-shadow: 0 0 0 3px rgba(58, 79, 102, 0.12);
+.portfolio-intro-hint {
+  margin-left: auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(52, 42, 34, 0.6);
 }
 
 .arrow-shell {
@@ -201,6 +221,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   justify-content: center;
   width: 1.25rem;
   height: 1.25rem;
+  flex-shrink: 0;
 }
 
 .arrow {
@@ -239,7 +260,7 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
   }
 
   .portfolio-intro-toolbar {
-    align-items: center;
+    gap: 0.75rem;
   }
 
   .portfolio-intro-wrapper {
@@ -252,8 +273,8 @@ const { data: portfolioIntro } = await useAsyncData('portfolio-intro', () =>
 }
 
 @media (max-width: 450px) {
-  .portfolio-intro-toolbar {
-    gap: 0.75rem;
+  .portfolio-intro-hint {
+    letter-spacing: 0.14em;
   }
 
   .portfolio-intro-copy {
