@@ -78,7 +78,7 @@ img {
   right: 20px;
   width: 200px;
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0;
   border: 8px solid #fffaf3;
   box-shadow: 10px 10px 0 rgba(202, 224, 244, 0.7);
   transition: transform 500ms ease-out;
