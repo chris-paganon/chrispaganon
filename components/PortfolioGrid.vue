@@ -5,11 +5,6 @@
       :key="project.id"
       class="portfolio-entry-shell"
       :class="{ 'is-offset': index % 2 === 1 }"
-      :initial="
-        prefersReducedMotion
-          ? undefined
-          : { opacity: 0, y: 40, clipPath: 'inset(0 0 100% 0)' }
-      "
       :while-in-view="
         prefersReducedMotion
           ? undefined

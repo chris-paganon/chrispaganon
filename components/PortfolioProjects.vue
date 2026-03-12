@@ -185,6 +185,7 @@ useIntersectionObserver(
 
 .portfolio-intro-copy.collapsed {
   display: -webkit-box;
+  line-clamp: 5;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -268,6 +269,7 @@ useIntersectionObserver(
   }
 
   .portfolio-intro-copy.collapsed {
+    line-clamp: 6;
     -webkit-line-clamp: 6;
   }
 }
