@@ -6,20 +6,6 @@
     </p>
     <TechStackSection :techlist="mainTechList" title="favorites" />
     <TechStackSection :techlist="otherTechList" title="others" />
-
-    <div class="tech-stack-wrapper tech-stack-note">
-      <p>
-        <em>{{ $t('TechStack.note') }}</em>
-      </p>
-      <ul>
-        <li>
-          <img src="/images/logos/reactjs.png" alt="React" class="icon" />
-        </li>
-        <li>
-          <img src="/images/logos/nextjs.png" alt="Next.js" class="icon" />
-        </li>
-      </ul>
-    </div>
     <NuxtLink
       :to="localePath({ path: '/', hash: '#contact-me' })"
       class="contact-me-btn button"
@@ -33,22 +19,24 @@
 const localePath = useLocalePath();
 
 const mainTechList = [
-  'html',
-  'css',
+  'reactjs',
   'typescript',
   'vuejs',
   'nuxt',
-  'php',
   'sql',
   'docker',
   'linux',
+  'tailwind',
 ];
 const otherTechList = [
+  'php',
+  'nextjs',
+  'firebase',
+  'vite',
   'nodejs',
   'python',
   'llamaindex',
   'wordpress',
-  'tailwind',
 ];
 </script>
 
@@ -58,15 +46,6 @@ const otherTechList = [
 }
 h2 {
   margin-bottom: 0.2em;
-}
-
-.tech-stack-note {
-  max-width: 34rem;
-  margin: 0 auto;
-  padding: 1rem 1.25rem;
-  border: 1px solid rgba(58, 79, 102, 0.1);
-  border-radius: 10px;
-  background: #f3f8fd;
 }
 
 :deep(ul) {
@@ -85,15 +64,6 @@ h2 {
   height: 60px;
   width: 80px;
   transition: width 0.75s;
-}
-
-.tech-stack-note :deep(ul) {
-  margin-top: 0.25rem;
-}
-
-.tech-stack-note :deep(li img) {
-  height: 54px;
-  width: 72px;
 }
 
 .button {

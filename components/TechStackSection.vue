@@ -61,7 +61,7 @@
         >
           <motion.div layout class="tech-card">
             <motion.div layout class="tech-icon-shell">
-              <img :src="`/images/logos/${tech}.png`" :alt="tech" class="icon" />
+              <img :src="getTechLogo(tech)" :alt="tech" class="icon" />
             </motion.div>
 
             <AnimatePresence :initial="false" mode="popLayout">
@@ -180,6 +180,15 @@ function getEntryTransition(index: number) {
       ? 0.06 + index * 0.05
       : (props.techlist.length - index) * 0.02,
   } as const;
+}
+
+function getTechLogo(tech: string) {
+  const extensions: Record<string, string> = {
+    firebase: 'svg',
+    vite: 'svg',
+  };
+
+  return `/images/logos/${tech}.${extensions[tech] ?? 'png'}`;
 }
 </script>
 

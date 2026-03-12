@@ -16,77 +16,86 @@
     "collapse": "Masquer les détails",
     "favorites": "Mes préférés:",
     "others": "Mais aussi:",
-    "note": "VueJS et Nuxt sont très similaires à React et NextJS. Bien que je n'aie pas encore travaillé avec eux en production, je suis très familier avec ces technologies et je m'adapterai facilement. J'aimerais beaucoup en apprendre plus à travers des projets stimulants.",
     "details": {
-      "html": {
-        "name": "HTML",
-        "time": "8 ans",
-        "description": "Création de sites web en HTML pur ou dans le cadre de modèles PHP ou VueJS. Bases solides et suivi des best-practices sémantiques."
-      },
-      "css": {
-        "name": "CSS",
-        "time": "8 ans",
-        "description": "Création de sites web suivant les best-practices CSS pour garder les feuilles de style lisibles et maintenables."
+      "reactjs": {
+        "name": "React",
+        "time": "3 ans, 3000+ heures",
+        "description": "J'ai développé des applications React dans des contextes d'agence et de produit. Le framework est désormais naturel pour moi, de l'architecture des composants et la gestion d'état jusqu'à l'intégration d'API et la livraison de fonctionnalités en production."
       },
       "typescript": {
         "name": "Typescript & Javascript",
-        "time": "5 ans, 3000+ heures",
+        "time": "7 ans, 3000+ heures",
         "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript lorsque c'est possible car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
       },
       "vuejs": {
         "name": "VueJS",
-        "time": "3 ans, 3000+ heures",
+        "time": "5 ans, 3000+ heures",
         "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec."
       },
       "nuxt": {
         "name": "Nuxt",
-        "time": "3 ans, 800+ heures",
+        "time": "5 ans, 800+ heures",
         "description": "J'ai créé tous mes projets personnels récents avec Nuxt, que ce soit pour le SEO ou pour une intégration plus facile de Typescript entre le frontend et le backend. Mon projet le plus récent (VueAI.tools) comprend une authentification self-hosted, une base de données, un ORM, un modèle d'IA RAG et plus encore. J'ai également construit un ensemble d'outils principalement basé sur Docker pour déployer facilement plusieurs applications Nuxt sur un VPS unique, avec reverse-proxy, DevOps et web analytics intégrés."
-      },
-      "php": {
-        "name": "PHP",
-        "time": "5 ans, 5000+ heures",
-        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "sql": {
         "name": "SQL",
-        "time": "5 ans",
+        "time": "7 ans",
         "description": "J'ai travaillé avec MySQL, SQLite et PostgreSQL soit via PHP, des fonctions Wordpress, ExpressJS, Drizzle ORM ou directement dans une interface visuelle SQL. J'ai de l'expérience dans la structuration de bases de données, l'écriture de queries, les transactions, la gestion des migrations et des backups."
       },
       "docker": {
         "name": "Docker",
-        "time": "3 ans, 500+ heures",
+        "time": "5 ans, 500+ heures",
         "description": "Docker est mon outil de prédilection pour déployer des applications et créer des environnements de développement reproductibles. J'ai construit des applications et des pipelines devOps avec docker-compose et des Dockerfiles personnalisés."
       },
       "linux": {
         "name": "Linux",
-        "time": "3 ans",
-        "description": "Utilisation de Linux pour déployer des applications et récemment, j'ai fait la transition vers Linux en tant que système d'exploitation principal. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de packages et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux."
+        "time": "5 ans",
+        "description": "J'utilise Linux pour déployer des applications, et c'est aussi mon système principal depuis 2 ans avec un environnement de bureau Sway entièrement personnalisé. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de paquets et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux."
+      },
+      "tailwind": {
+        "name": "Tailwind",
+        "time": "4 ans, 400+ heures",
+        "description": "Expérience avec Tailwind et des frameworks CSS similaires avec utility-classes comme PrimeFlex et Bootstrap. J'ai créé plusieurs projets professionnels et personnels. Ma façon préférée d'écrire du CSS car je trouve généralement plus facile de revenir sur un projet et de comprendre les styles sans avoir à faire des allers-retours entre les fichiers HTML et CSS."
+      },
+      "php": {
+        "name": "PHP",
+        "time": "7 ans, 5000+ heures",
+        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
+      },
+      "nextjs": {
+        "name": "Next.js",
+        "time": "3 ans, 100 heures",
+        "description": "Mon expérience avec Nuxt se transfère directement à Next.js pour le routing, les patterns de rendu serveur, le data fetching et la structure d'applications full-stack. Je peux monter rapidement en puissance et travailler confortablement dans l'écosystème React."
+      },
+      "firebase": {
+        "name": "Firebase / Firestore",
+        "time": "2 ans, 300+ heures",
+        "description": "J'ai développé et maintenu des applications utilisant les services Firebase avec Firestore comme base de données principale. Je suis à l'aise avec le modèle de données, l'authentification, les patterns temps réel et leur intégration dans des workflows produit."
+      },
+      "vite": {
+        "name": "ViteJS",
+        "time": "3 ans, 200+ heures",
+        "description": "Expérience dans la création de packages et le travail sur la configuration de bundlers avec Vite. Je suis à l'aise avec le mode librairie, l'outillage de développement, les workflows à base de plugins et l'adaptation de pipelines de build à différents besoins projet."
       },
       "nodejs": {
         "name": "NodeJS",
-        "time": "3 ans",
+        "time": "5 ans",
         "description": "Utilisation de NodeJS pour les applications VueJS, Nuxt et Express. Expérience avec npm et le déploiement de node dans des conteneurs docker."
       },
       "python": {
         "name": "Python",
-        "time": "1 an, 80 heures",
+        "time": "3 ans, 80 heures",
         "description": "Utilisation de Python principalement pour mon projet d'IA. J'ai commencé avec un simple chatbot en CLI basé sur GPT. J'ai ensuite construit un constructeur d'index qui prend plusieurs sources de documentation GitHub pour créer un index vectoriel dans Qdrant en utilisant des embeddings Cohere avec LlamaIndex."
       },
       "llamaindex": {
         "name": "LlamaIndex",
-        "time": "1 an",
+        "time": "3 ans",
         "description": "LlamaIndex est une bibliothèque TS & Python pour construire des modèles RAG (Retrieval Augmented Generation) d'IA pour répondre aux questions en interrogeant une base de données de documents afin de fournir des réponses plus précises et pertinentes. Mon modèle d'IA pour VueAI.tools est principalement basé sur LlamaIndex."
       },
       "wordpress": {
         "name": "Wordpress",
-        "time": "5 ans, 5000+ heures",
+        "time": "7 ans, 5000+ heures",
         "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
-      },
-      "tailwind": {
-        "name": "Tailwind",
-        "time": "2 ans, 400+ heures",
-        "description": "Expérience avec Tailwind et des frameworks CSS similaires avec utility-classes comme PrimeFlex et Bootstrap. J'ai créé plusieurs projets professionnels et personnels. Ma façon préférée d'écrire du CSS car je trouve généralement plus facile de revenir sur un projet et de comprendre les styles sans avoir à faire des allers-retours entre les fichiers HTML et CSS."
       }
     }
   },

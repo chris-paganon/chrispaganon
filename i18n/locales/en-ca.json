@@ -16,77 +16,86 @@
     "collapse": "Hide details",
     "favorites": "My favorites:",
     "others": "I am also experienced with:",
-    "note": "VueJS & Nuxt are very similar to React & NextJS. Although I haven't worked with them directly in production, I am very familliar with the technologies and will easily adapt. I would love to learn more through some challenging projets.",
     "details": {
-      "html": {
-        "name": "HTML",
-        "time": "8 years",
-        "description": "Building websites in plain HTML or as part of PHP or VueJS templates. Strong fundamentals with semantic best practices."
-      },
-      "css": {
-        "name": "CSS",
-        "time": "8 years",
-        "description": "Building websites following CSS best practices to keep stylesheets legible and maintainable."
+      "reactjs": {
+        "name": "React",
+        "time": "3 years, 3000+ hours",
+        "description": "Built React applications in agency and product environments. The framework now feels fully natural to me, from component architecture and state management to integrating APIs and shipping production features."
       },
       "typescript": {
-        "name": "Typescript & Javascript",
-        "time": "5 years, 3000+ hours",
+        "name": "TypeScript & JavaScript",
+        "time": "7 years, 3000+ hours",
         "description": "Typescript is my go-to language for building interactive experiences on the web. I also have experience with vanilla JS and jQuery. I prefer Typescript when possible as it makes code more maintainable, more robust, easier to debug, understand and cooperate on."
       },
       "vuejs": {
         "name": "VueJS",
-        "time": "3 years, 3000+ hours",
+        "time": "5 years, 3000+ hours",
         "description": "Built VueJS applications for professional & personal projects. I am also building an open source AI chatbot to answer VueJS questions. I know the framework inside out and love working with it."
       },
       "nuxt": {
         "name": "Nuxt",
-        "time": "3 years, 800+ hours",
+        "time": "5 years, 800+ hours",
         "description": "Built all my recent personal projects with Nuxt, eiher for SEO or for the easier Typescript integration between frontend & backend. My most recent project (VueAI.tools) features self-hosted authentication, database, ORM, AI RAG and more. I also built a toolset mostly based on Docker to easily deploy several Nuxt apps on a single VPS, with reverse-proxy, DevOps & web analytics integrated."
-      },
-      "php": {
-        "name": "PHP",
-        "time": "5 years, 5000+ hours",
-        "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
       },
       "sql": {
         "name": "SQL",
-        "time": "5 years",
+        "time": "7 years",
         "description": "Worked with MySQL, SQLite and PostgreSQL either through PHP, Wordpress functions, ExpressJS, Drizzle ORM or directly in a SQL GUI. I have experienced structuring databases, writing queries, transactions, managing migrations and backups."
       },
       "docker": {
         "name": "Docker",
-        "time": "3 years, 500+ hours",
+        "time": "5 years, 500+ hours",
         "description": "Docker is my go-to tool for deploying applications and building reproducible development environments. I have built applications and devOps pipelines with docker-compose and custom Dockerfiles."
       },
       "linux": {
         "name": "Linux",
-        "time": "3 years",
-        "description": "Using Linux to deploy applications and recently made the switch to Linux as my main OS. I am comfortable with the command line, bash scripting, package managers and server management. I have experience with Ubuntu, Alpine and Arch Linux."
+        "time": "5 years",
+        "description": "Using Linux to deploy applications, and it has also been my main OS for the last 2 years with a fully custom Sway desktop environment. I am comfortable with the command line, bash scripting, package managers and server management. I have experience with Ubuntu, Alpine and Arch Linux."
+      },
+      "tailwind": {
+        "name": "Tailwind",
+        "time": "4 years, 400+ hours",
+        "description": "Experienced with Tailwind and similar utility-class CSS frameworks like PrimeFlex and Bootstrap. Built several professional & personal projects. My favorite way to write CSS as I usually find it easier to come back to a project and understand the styles without having to go back & forth between the HTML and CSS files."
+      },
+      "php": {
+        "name": "PHP",
+        "time": "7 years, 5000+ hours",
+        "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
+      },
+      "nextjs": {
+        "name": "Next.js",
+        "time": "3 years, 100 hours",
+        "description": "My Nuxt experience transfers directly to Next.js for routing, server rendering patterns, data fetching and full-stack app structure. I can ramp quickly and work comfortably across the React ecosystem."
+      },
+      "firebase": {
+        "name": "Firebase / Firestore",
+        "time": "2 years, 300+ hours",
+        "description": "Built and maintained apps using Firebase services with Firestore as the primary database. Comfortable with the data model, auth flows, realtime patterns and integrating it into product development workflows."
+      },
+      "vite": {
+        "name": "ViteJS",
+        "time": "3 years, 200+ hours",
+        "description": "Experience building packages and working on bundler configuration with Vite. Comfortable with library mode, dev tooling, plugin-based workflows and adapting build pipelines to different project needs."
       },
       "nodejs": {
         "name": "NodeJS",
-        "time": "3 years",
+        "time": "5 years",
         "description": "Using NodeJS for VueJS, Nuxt and Express applications. Experience with npm and deploying node in docker containers."
       },
       "python": {
         "name": "Python",
-        "time": "1 year, 80 hours",
+        "time": "3 years, 80 hours",
         "description": "Using Python mainly for my AI project. Started with a simple CLI chatbot based on GPT. I have since built an index builder that takes several GitHub documentation sources to build a vector index in Qdrant using Cohere embeddings and LlamaIndex."
       },
       "llamaindex": {
         "name": "LlamaIndex",
-        "time": "1 year",
+        "time": "3 years",
         "description": "LlamaIndex is a TS & Python library to build RAG (Retrieval Augmented Generation) AI models to answer questions by querying a database of documents to give more accurate and relevant answers. My VueAI.tools AI model is mostly based on LlamaIndex."
       },
       "wordpress": {
         "name": "Wordpress",
-        "time": "5 years, 5000+ hours",
+        "time": "7 years, 5000+ hours",
         "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
-      },
-      "tailwind": {
-        "name": "Tailwind",
-        "time": "2 years, 400+ hours",
-        "description": "Experienced with Tailwind and similar utility-class CSS frameworks like PrimeFlex and Bootstrap. Built several professional & personal projects. My favorite way to write CSS as I usually find it easier to come back to a project and understand the styles without having to go back & forth between the HTML and CSS files."
       }
     }
   },
