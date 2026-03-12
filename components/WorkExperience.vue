@@ -14,7 +14,7 @@
     <div class="work-grid">
       <motion.article
         v-for="(job, index) in jobs"
-        :key="job.company"
+        :key="job.slug"
         class="work-card"
         :initial="
           prefersReducedMotion ? undefined : { opacity: 0, y: 36, scale: 0.98 }
@@ -27,16 +27,16 @@
       >
         <div class="work-card-header">
           <div>
-            <h3>{{ job.company }}</h3>
+            <h3>{{ job.Title }}</h3>
             <p class="work-role">{{ job.role }}</p>
           </div>
-          <p class="work-dates">{{ job.dates }}</p>
+          <p class="work-dates">{{ job.startDate }} - {{ job.endDate }}</p>
         </div>
-        <p class="work-description">{{ job.description }}</p>
+        <p class="work-description">{{ job.Description }}</p>
         <NuxtLink
-          v-if="job.link"
+          v-if="job.slug"
           class="work-link"
-          :to="localePath(job.link)"
+          :to="localePath({ name: 'work-slug', params: { slug: job.slug } })"
         >
           {{ $t('WorkExperience.learnMore') }}
         </NuxtLink>
@@ -48,25 +48,11 @@
 <script setup lang="ts">
 import { motion, useReducedMotion } from 'motion-v';
 
-const { tm } = useI18n();
+const nuxtApp = useNuxtApp();
 const localePath = useLocalePath();
 const prefersReducedMotion = useReducedMotion();
-
-type WorkJob = {
-  company: string;
-  role: string;
-  dates: string;
-  description: string;
-  link?: {
-    name: string;
-    params: {
-      slug: string;
-    };
-  };
-};
-
-const jobs = computed(
-  () => tm('WorkExperience.jobs') as unknown as WorkJob[]
+const { data: jobs } = await useAsyncData('work-experience', () =>
+  queryContent(nuxtApp.$i18n.locale.value, 'work').sort({ id: 1 }).find()
 );
 
 const sectionTransition = {

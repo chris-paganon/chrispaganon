@@ -1,17 +1,18 @@
 ---
-Title: Agence web Progexia
-Description: Employé full-stack (VueJS & Wordpress)
+Title: Progexia
+Description: Projets d'agence en Vue, Express, PHP et WordPress
 id: 20
 slug: progexia
 url: https://www.progexia.com/
 startDate: 'Octobre 2022'
-endDate: maintenant
+endDate: 'Juin 2024'
+role: Développeur web full-stack
 image: /images/portfolio/progexia/progexia-thumbnail.jpg
 imageAlt: thumbnail Progexia
 color: fbac3b
 ---
 
-Je suis employé à temps plein chez Progexia depuis 2022. En raison d'un manque de contrats à l'agence, je suis maintenant à la recherche d'un nouvel employeur.
+J'ai travaillé à temps plein chez Progexia d'octobre 2022 à juin 2024.
 
 J'ai eu l'opportunité de travailler sur une variété de projets stimulants, en utilisant mes compétences avec VueJS, ExpressJS, PHP et WordPress. Voici quelques-uns des principaux projets auxquels j'ai contribué :
 
@@ -19,14 +20,14 @@ J'ai eu l'opportunité de travailler sur une variété de projets stimulants, en
 
 Pour une société de gestion de portefeuille d'actions, j'ai développé un frontend VueJS pour un tableau de bord personnalisé de gestion de portefeuille. Ce projet a impliqué :
 
-- **Tableaux Dynamiques** : Mise en œuvre de plusieurs tableaux avec des colonnes dynamiques, des presets de colonnes éditables, des filtres et des cellules éditables avec la bibliothèque UI [PrimeVue](https://primevue.org/){:target="\_blank"}. Voir la capture d'écran ci-dessous.
+- **Tableaux Dynamiques** : Mise en oeuvre de plusieurs tableaux avec des colonnes dynamiques, des presets de colonnes éditables, des filtres et des cellules éditables avec la bibliothèque UI [PrimeVue](https://primevue.org/){:target="\_blank"}. Voir la capture d'écran ci-dessous.
 - **Intégration de Données** : Récupération de données financières à partir d'une base de données locale et d'API publiques.
 - **Importation CSV** : Importation de données à partir de fichiers CSV dans une base de données PostgreSQL locale.
 
 De plus, j'ai contribué au backend en utilisant ExpressJS :
 
 - **Opérations sur la Base de Données** : Écriture de code pour récupérer, sauvegarder et charger des données à partir de la base de données.
-- **Contrôle d'Accès Basé sur des Rôles** : Mise en œuvre de l'accès aux données basé sur les rôles des utilisateurs définis par un collègue (implémenté avec [auth0](https://auth0.com/){:target="\_blank"} et une base de données locale).
+- **Contrôle d'Accès Basé sur des Rôles** : Mise en oeuvre de l'accès aux données basé sur les rôles des utilisateurs définis par un collègue (implémenté avec [auth0](https://auth0.com/){:target="\_blank"} et une base de données locale).
 
 ![capture d'écran du tableau de bord financier](/images/portfolio/progexia/dashboard-screenshot.png)
 

@@ -1,17 +1,18 @@
 ---
-Title: Web dev agency Progexia
-Description: Full-stack employee (VueJS & Wordpress)
+Title: Progexia
+Description: Agency projects across Vue, Express, PHP and WordPress
 id: 20
 slug: progexia
 url: https://www.progexia.com/
 startDate: 'October 2022'
-endDate: now
+endDate: 'June 2024'
+role: Full-stack web developer
 image: /images/portfolio/progexia/progexia-thumbnail.jpg
 imageAlt: thumbnail Progexia
 color: fbac3b
 ---
 
-I have been a full-time employee at Progexia since 2022. Due to a lack of contracts at the agency I am now looking for a new employer.
+I worked full-time at Progexia from October 2022 to June 2024.
 
 I had the opportunity to work on a variety of challenging projects, leveraging my skills in VueJS, ExpressJS, PHP, and WordPress. Below are some of the key projects I contributed to:
 
