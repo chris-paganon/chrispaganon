@@ -104,6 +104,7 @@
 
             <motion.span
               class="portfolio-visual-stamp"
+              :class="{ 'is-left': index % 2 === 0 }"
               :animate="
                 prefersReducedMotion
                   ? undefined
@@ -324,6 +325,11 @@ img {
   box-shadow: 0 14px 28px rgba(240, 106, 59, 0.22);
 }
 
+.portfolio-visual-stamp.is-left {
+  right: auto;
+  left: -0.6rem;
+}
+
 @media (max-width: 900px) {
   .portfolio-entry-shell.is-offset .portfolio-entry {
     padding-left: 0;
@@ -383,6 +389,10 @@ img {
     height: 2.6rem;
     right: -0.35rem;
     bottom: -0.45rem;
+  }
+
+  .portfolio-visual-stamp.is-left {
+    left: -0.35rem;
   }
 }
 </style>
