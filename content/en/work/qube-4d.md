@@ -6,7 +6,7 @@ slug: qube-4d
 url: https://www.qube4dventures.com/
 startDate: 'July 2018'
 endDate: 'April 2020'
-role: Mechanical Designer
+role: Mechanical Engineer
 color: 3b82f6
 ---
 
