@@ -1,128 +1,116 @@
 <template>
-  <div class="portfolio-list">
+  <!--
+    V2 — "Expanding Strips"
+    Full-width horizontal bands. Default: compact with number + title.
+    Hover expands to reveal image + description with project-color wash.
+  -->
+  <div ref="stripsContainer" class="v2-strips">
     <motion.article
       v-for="(project, index) in portfolio"
       :key="project.id"
-      class="portfolio-entry-shell"
-      :class="{ 'is-offset': index % 2 === 1 }"
-      :while-in-view="
+      class="v2-strip"
+      :data-slug="project.slug"
+      :initial="
         prefersReducedMotion
           ? undefined
-          : { opacity: 1, y: 0, clipPath: 'inset(0 0 0% 0)' }
+          : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }
       "
-      :viewport="{ once: true, amount: 0.18 }"
-      :transition="getEntryTransition(index)"
+      :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, x: 0 }"
+      :viewport="{ once: true, amount: 0.2 }"
+      :transition="{
+        duration: 0.55,
+        delay: 0.04 + index * 0.07,
+        ease: smoothEase,
+      }"
     >
       <NuxtLink
-        class="portfolio-entry"
+        class="v2-strip-link"
         :to="
           localePath({ name: 'project-slug', params: { slug: project.slug } })
         "
-        @mouseenter="activeProject = project.slug"
-        @mouseleave="activeProject = null"
-        @focusin="activeProject = project.slug"
-        @focusout="activeProject = null"
+        @mouseenter="hoverProject = project.slug"
+        @mouseleave="hoverProject = null"
+        @focusin="hoverProject = project.slug"
+        @focusout="hoverProject = null"
       >
-        <div class="portfolio-entry-head">
-          <p class="portfolio-entry-index">
-            {{ formatProjectIndex(index) }}
-          </p>
-          <motion.div
-            class="portfolio-entry-rail"
-            :animate="
-              prefersReducedMotion
-                ? undefined
-                : isProjectActive(project.slug)
-                  ? { x: [0, 28, 0], opacity: [0.45, 1, 0.45] }
-                  : { x: 0, opacity: 0.45 }
-            "
-            :transition="
-              isProjectActive(project.slug)
-                ? {
-                    duration: 1.2,
-                    repeat: Infinity,
-                    ease: [0.22, 1, 0.36, 1],
-                  }
-                : { duration: 0.24, ease: [0.22, 1, 0.36, 1] }
-            "
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </motion.div>
-        </div>
+        <motion.div
+          class="v2-strip-bg"
+          :style="{ '--project-color': `#${project.color}` }"
+          :animate="
+            prefersReducedMotion
+              ? undefined
+              : isActive(project.slug)
+                ? { opacity: 0.07 }
+                : { opacity: 0 }
+          "
+          :transition="{ duration: 0.4, ease: smoothEase }"
+        ></motion.div>
 
-        <div
-          class="portfolio-entry-layout"
-          :class="{ reverse: index % 2 === 1 }"
-        >
-          <div class="portfolio-copy">
-            <p class="portfolio-entry-label">
-              {{ $t('PortfolioProjects.project-label') }}
-            </p>
-            <h3>{{ project.Title }}</h3>
-            <p>{{ project.Description }}</p>
-          </div>
-
-          <motion.div
-            class="portfolio-visual"
-            :animate="
-              prefersReducedMotion
-                ? undefined
-                : isProjectActive(project.slug)
-                  ? {
-                      y: -6,
-                      rotate: index % 2 === 0 ? -0.6 : 0.6,
-                    }
-                  : { y: 0, rotate: 0 }
-            "
-            :transition="visualTransition"
-          >
-            <div class="portfolio-visual-frame">
-              <motion.img
-                :src="project.image"
-                :alt="project.imageAlt"
-                :animate="
-                  prefersReducedMotion
-                    ? undefined
-                    : isProjectActive(project.slug)
-                      ? {
-                          scale: 1.05,
-                          x: index % 2 === 0 ? 12 : -12,
-                          filter: 'saturate(1.05)',
-                        }
-                      : { scale: 1, x: 0, filter: 'saturate(0.96)' }
-                "
-                :transition="imageTransition"
-              />
-            </div>
-
+        <div class="v2-strip-header">
+          <div class="v2-left">
+            <span class="v2-idx">{{ formatIdx(index) }}</span>
             <motion.span
-              class="portfolio-visual-stamp"
-              :class="{ 'is-left': index % 2 === 0 }"
+              class="v2-dot"
+              :style="{ background: `#${project.color}` }"
               :animate="
                 prefersReducedMotion
                   ? undefined
-                  : isProjectActive(project.slug)
-                    ? { rotate: [0, 6, -4, 0], y: [0, -5, 0] }
-                    : { rotate: 0, y: 0 }
+                  : isActive(project.slug)
+                    ? { scale: 1.8 }
+                    : { scale: 1 }
               "
-              :transition="
-                isProjectActive(project.slug)
-                  ? {
-                      duration: 0.85,
-                      ease: [0.22, 1, 0.36, 1],
-                    }
-                  : {
-                      duration: 0.24,
-                      ease: [0.22, 1, 0.36, 1],
-                    }
-              "
-            >
-              ↗
-            </motion.span>
-          </motion.div>
+              :transition="{ type: 'spring', stiffness: 300, damping: 18 }"
+            ></motion.span>
+            <h3>{{ project.Title }}</h3>
+          </div>
+
+          <motion.span
+            class="v2-peek-label"
+            :animate="
+              prefersReducedMotion
+                ? undefined
+                : isActive(project.slug)
+                  ? { opacity: 0, y: -6 }
+                  : { opacity: 0.5, y: 0 }
+            "
+            :transition="{ duration: 0.25, ease: smoothEase }"
+          >
+            {{ $t('PortfolioProjects.project-label') }}
+          </motion.span>
         </div>
+
+        <motion.div
+          class="v2-reveal"
+          :animate="
+            prefersReducedMotion
+              ? { height: 'auto' }
+              : isActive(project.slug)
+                ? { height: 'auto', opacity: 1 }
+                : { height: '0px', opacity: 0 }
+          "
+          :transition="{ duration: 0.45, ease: smoothEase }"
+        >
+          <div class="v2-reveal-inner">
+            <div class="v2-reveal-image">
+              <img :src="project.image" :alt="project.imageAlt" />
+            </div>
+            <div class="v2-reveal-copy">
+              <p>{{ project.Description }}</p>
+              <span class="v2-view-link">
+                View project
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M5 15L15 5M15 5H7M15 5V13"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </motion.div>
       </NuxtLink>
     </motion.article>
   </div>
@@ -136,7 +124,17 @@ const reducedMotionPreference = usePreferredReducedMotion();
 const prefersReducedMotion = computed(
   () => reducedMotionPreference.value === 'reduce',
 );
-const activeProject = ref<string | null>(null);
+const smoothEase = [0.22, 1, 0.36, 1] as const;
+
+// Hover-based activation (desktop)
+const hoverProject = ref<string | null>(null);
+// Scroll-based activation (works on mobile too)
+const scrollProject = ref<string | null>(null);
+
+// The active project is whichever source set it last — hover takes priority
+const activeProject = computed(() => hoverProject.value ?? scrollProject.value);
+
+const stripsContainer = useTemplateRef<HTMLElement>('stripsContainer');
 
 const nuxtApp = useNuxtApp();
 const { data: portfolio } = await useAsyncData('portfolio', () =>
@@ -146,251 +144,185 @@ const { data: portfolio } = await useAsyncData('portfolio', () =>
     .find(),
 );
 
-const visualTransition = {
-  type: 'spring',
-  stiffness: 220,
-  damping: 20,
-} as const;
+// Observe each strip via data-slug: when it enters the center band, auto-expand
+const stripElements = computed<HTMLElement[]>(() => {
+  const container = stripsContainer.value;
+  if (!container) return [];
+  return Array.from(container.querySelectorAll<HTMLElement>('.v2-strip[data-slug]'));
+});
 
-const imageTransition = {
-  duration: 0.42,
-  ease: [0.22, 1, 0.36, 1],
-} as const;
+useIntersectionObserver(
+  stripElements,
+  (entries) => {
+    for (const entry of entries) {
+      const slug = (entry.target as HTMLElement).dataset.slug;
+      if (!slug) continue;
 
-function getEntryTransition(index: number) {
-  return {
-    duration: 0.58,
-    delay: 0.05 + index * 0.09,
-    ease: [0.22, 1, 0.36, 1],
-  } as const;
+      if (entry.isIntersecting) {
+        scrollProject.value = slug;
+      } else if (scrollProject.value === slug) {
+        scrollProject.value = null;
+      }
+    }
+  },
+  {
+    rootMargin: '-38% 0px -38% 0px',
+    threshold: 0,
+  },
+);
+
+function formatIdx(i: number) {
+  return `${i + 1}`.padStart(2, '0');
 }
-
-function formatProjectIndex(index: number) {
-  return `${index + 1}`.padStart(2, '0');
-}
-
-function isProjectActive(slug: string) {
+function isActive(slug: string) {
   return activeProject.value === slug;
 }
 </script>
 
 <style scoped>
-.portfolio-list {
+.v2-strips {
   display: flex;
   flex-direction: column;
   margin-top: 2.5rem;
 }
 
-.portfolio-entry-shell {
+.v2-strip {
   position: relative;
-  border-top: 1px solid rgba(42, 32, 24, 0.14);
+  border-top: 1px solid rgba(42, 32, 24, 0.1);
+}
+.v2-strip:last-child {
+  border-bottom: 1px solid rgba(42, 32, 24, 0.1);
 }
 
-.portfolio-entry-shell:last-child {
-  border-bottom: 1px solid rgba(42, 32, 24, 0.14);
-}
-
-.portfolio-entry-shell.is-offset .portfolio-entry {
-  padding-left: 3rem;
-}
-
-.portfolio-entry {
+.v2-strip-link {
   display: block;
-  padding: 1.75rem 0;
+  padding: 1.5rem 0.5rem;
   color: inherit;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.portfolio-entry-head {
+.v2-strip-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--project-color);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.v2-strip-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 1.1rem;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.portfolio-entry-index {
-  margin: 0;
-  font-size: clamp(2.8rem, 7vw, 5.8rem);
-  line-height: 0.9;
-  letter-spacing: -0.08em;
-  color: rgba(42, 32, 24, 0.18);
-}
-
-.portfolio-entry-rail {
-  display: inline-flex;
+.v2-left {
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.v2-idx {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(42, 32, 24, 0.3);
+  flex-shrink: 0;
+  width: 1.8rem;
+}
+
+.v2-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
   flex-shrink: 0;
 }
 
-.portfolio-entry-rail span {
-  display: block;
-  border-radius: 999px;
-  background: rgba(57, 86, 117, 0.9);
+.v2-left h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.portfolio-entry-rail span:nth-child(1) {
-  width: 2.6rem;
-  height: 0.12rem;
-}
-
-.portfolio-entry-rail span:nth-child(2),
-.portfolio-entry-rail span:nth-child(3) {
-  width: 0.42rem;
-  height: 0.42rem;
-}
-
-.portfolio-entry-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-  align-items: center;
-  gap: 2.25rem;
-}
-
-.portfolio-entry-layout.reverse {
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
-}
-
-.portfolio-entry-layout.reverse .portfolio-copy {
-  order: 2;
-}
-
-.portfolio-entry-layout.reverse .portfolio-visual {
-  order: 1;
-}
-
-.portfolio-copy {
-  max-width: 34rem;
-}
-
-.portfolio-entry-label {
-  margin: 0 0 0.75rem;
-  font-size: 0.72rem;
+.v2-peek-label {
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(57, 86, 117, 0.85);
+  flex-shrink: 0;
 }
 
-.portfolio-copy h3 {
-  margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.7rem);
-  line-height: 1;
-  text-wrap: balance;
-}
-
-.portfolio-copy p:last-child {
-  margin: 1rem 0 0;
-  max-width: 32rem;
-  font-size: 1.02rem;
-  line-height: 1.65;
-  color: rgba(36, 28, 22, 0.72);
-}
-
-.portfolio-visual {
-  position: relative;
-  justify-self: end;
-  width: min(100%, 25rem);
-}
-
-.portfolio-visual-frame {
+.v2-reveal {
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.v2-reveal-inner {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.45fr) 1fr;
+  gap: 1.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.4rem;
+}
+
+.v2-reveal-image {
   aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 6px;
   background: linear-gradient(135deg, #eef4fb, #f8efe5);
 }
-
-img {
+.v2-reveal-image img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.portfolio-visual-stamp {
-  position: absolute;
-  right: -0.6rem;
-  bottom: -0.7rem;
+.v2-reveal-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.v2-reveal-copy p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-soft, rgba(36, 28, 22, 0.72));
+}
+
+.v2-view-link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 999px;
-  background: #f06a3b;
-  color: #fff9f3;
-  font-size: 1.2rem;
-  box-shadow: 0 14px 28px rgba(240, 106, 59, 0.22);
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(42, 32, 24, 0.6);
 }
 
-.portfolio-visual-stamp.is-left {
-  right: auto;
-  left: -0.6rem;
-}
-
-@media (max-width: 900px) {
-  .portfolio-entry-shell.is-offset .portfolio-entry {
-    padding-left: 0;
-  }
-
-  .portfolio-entry-layout,
-  .portfolio-entry-layout.reverse {
+@media (max-width: 700px) {
+  .v2-reveal-inner {
     grid-template-columns: 1fr;
-    gap: 1.4rem;
+    gap: 1rem;
   }
-
-  .portfolio-entry-layout.reverse .portfolio-copy,
-  .portfolio-entry-layout.reverse .portfolio-visual {
-    order: initial;
+  .v2-left h3 {
+    white-space: normal;
   }
-
-  .portfolio-copy,
-  .portfolio-copy p:last-child,
-  .portfolio-visual {
-    max-width: none;
-  }
-
-  .portfolio-visual {
-    justify-self: stretch;
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio-list {
+  .v2-strips {
     margin-top: 2rem;
-  }
-
-  .portfolio-entry {
-    padding: 1.4rem 0;
-  }
-
-  .portfolio-entry-head {
-    margin-bottom: 0.9rem;
-  }
-
-  .portfolio-entry-index {
-    font-size: clamp(2.3rem, 18vw, 4rem);
-  }
-
-  .portfolio-copy h3 {
-    font-size: clamp(1.45rem, 9vw, 2rem);
-  }
-
-  .portfolio-copy p:last-child {
-    font-size: 0.97rem;
-    line-height: 1.55;
-  }
-
-  .portfolio-visual-stamp {
-    width: 2.6rem;
-    height: 2.6rem;
-    right: -0.35rem;
-    bottom: -0.45rem;
-  }
-
-  .portfolio-visual-stamp.is-left {
-    left: -0.35rem;
   }
 }
 </style>
