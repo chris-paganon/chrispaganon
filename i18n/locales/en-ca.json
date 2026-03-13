@@ -109,6 +109,11 @@
       }
     }
   },
+  "CodingAgents": {
+    "heading": "On AI Coding Agents",
+    "intro": "Let's address the elephant in the room. AI coding agents are fundamentally changing how software gets built. I use them daily, with Cursor, Claude Code, and Codex, and when used right, the efficiency gains are real. At Plutaro, we've tracked 2-3x faster delivery on most features and bugs.",
+    "shift": "But it's not a silver bullet. The hard part of software was never just typing the code (although it was probably the slowest part). What agents have done is shift the bottleneck. The most valuable work now happens before and after the code is written: inferring owners' intent from their requirements, translating that into precise user stories, breaking down tasks into right-sized pieces with crystal clear instructions, and then QA, testing, and debugging."
+  },
   "PortfolioProjects": {
     "heading": "My Portfolio",
     "sub-heading": "Find out more about a few of my projects below:",

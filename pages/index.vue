@@ -12,6 +12,7 @@
       </section>
       <hr class="separator" />
       <TechStack />
+      <CodingAgents />
       <div class="background-section-wrapper portfolio-section-background">
         <PortfolioProjects />
       </div>

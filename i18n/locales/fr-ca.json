@@ -109,6 +109,11 @@
       }
     }
   },
+  "CodingAgents": {
+    "heading": "Sur l'AI et les coding agents",
+    "intro": "Parlons de \"l'elephant in the room\". L'AI a changé fondamentalement la façon de coder et construire des logiciels. Je les utilise quotidiennement, avec Cursor, Claude Code et Codex, et lorsqu'ils sont bien utilisés, les gains d'efficacité sont réels. Chez Plutaro, nous avons constaté une livraison 2 à 3 fois plus rapide sur la plupart des fonctionnalités et des bugs.",
+    "shift": "Mais ce n'est pas une solution miracle. La partie difficile du logiciel n'a jamais été seulement d'écrire du code (même si c'était probablement la partie la plus lente). Ce que les agents ont fait, c'est déplacer le goulot d'étranglement. Le travail le plus précieux se fait maintenant avant et après l'écriture du code : déduire l'intention des propriétaires à partir de leurs exigences, la traduire en user stories précises, décomposer les tâches en morceaux de taille appropriée avec des instructions claires, puis faire de l'assurance qualité, des tests et du débogage."
+  },
   "PortfolioProjects": {
     "heading": "Mon Portfolio",
     "sub-heading": "Apprenez en plus sur plusieurs de mes projets ci-dessous:",
