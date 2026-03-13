@@ -75,7 +75,7 @@
             "
             :transition="{ duration: 0.25, ease: smoothEase }"
           >
-            {{ $t('PortfolioProjects.project-label') }}
+            {{ project.startDate }}
           </motion.span>
         </div>
 
