@@ -38,4 +38,4 @@ En plus de mes contributions techniques, j'ai géré la relation client, les con
 - **Gestion de Clientèle** : Communication efficace avec les clients pour comprendre leurs besoins et fournir des mises à jour régulières.
 - **Gestion de Projet** : Planification et exécution de projets dans les délais et le périmètre convenus.
 
-Mon travail en freelance avec Batimatech démontre ma capacité à gérer des projets et des clients, faisant de moi un employé très polyvalent.
+Gérer la relation client complète—des discussions initiales de périmètre jusqu'à la livraison et la maintenance continue—m'a permis de développer mes compétences en gestion de projet et en communication avec les parties prenantes. Cette expérience en freelance a prouvé que je peux opérer de manière autonome, gérer les attentes des clients et livrer sur des objectifs business au-delà du simple fait d'écrire du code.

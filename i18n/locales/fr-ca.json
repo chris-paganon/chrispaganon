@@ -2,8 +2,8 @@
   "homepage": {
     "heading1": "Développeur Web Full-stack Senior Typescript/PHP de France & Canada",
     "intro": "Je suis passionné par la tech et j'adore apprendre de nouvelles choses.",
-    "intro2": "Je me spécialise dans les applications full-stack Typescript, l'IA (coding, llm, RAG, agents, etc.), Docker et Linux avec plus de 7 ans d'expérience.",
-    "intro3": "Avec plus de 30 projets à mon actif, j'ai mené des équipes de développement, encadré des développeurs junior et livré des plateformes allant de l'IA aux marketplaces complexes."
+    "intro2": "Je suis un ingénieur full-stack senior lead spécialisé dans les applications TypeScript, les systèmes d'IA, l'infrastructure Docker et le leadership d'équipe.",
+    "intro3": "Avec plus de 7 ans d'expérience sur plus de 30 projets en production, j'ai dirigé des équipes de développement, encadré des ingénieurs juniors et livré des plateformes allant de l'IA aux marketplaces complexes."
   },
   "NavBar": {
     "home": "Accueil",
@@ -30,7 +30,7 @@
       "vuejs": {
         "name": "VueJS",
         "time": "5 ans, 3000+ heures",
-        "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec."
+        "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec. J'apprécie comment la conception de Vue aide les développeurs (et l'IA) à tomber dans le piège du succès, contrairement à React."
       },
       "nuxt": {
         "name": "Nuxt",
@@ -50,7 +50,7 @@
       "linux": {
         "name": "Linux",
         "time": "5 ans",
-        "description": "J'utilise Linux pour déployer des applications, et c'est aussi mon système principal depuis 2 ans avec un environnement de bureau Sway entièrement personnalisé. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de paquets et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux."
+        "description": "J'utilise Linux pour déployer des applications, et c'est aussi mon système principal depuis 2 ans avec un environnement de bureau Sway entièrement personnalisé. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de paquets et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux. Il y a quelque chose de profondément satisfaisant dans un système adapté exactement à votre façon de travailler."
       },
       "tailwind": {
         "name": "Tailwind",

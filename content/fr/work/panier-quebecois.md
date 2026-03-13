@@ -38,6 +38,6 @@ Diriger une startup signifiait porter plusieurs casquettes :
 - **Opérations** : Préparation des commandes, coordination des livraisons et optimisation des processus
 - **Service client** : Support client direct et gestion de la relation client
 
-L'expérience pratique de construire et d'opérer une entreprise m'a donné une **compréhension pratique de ce dont les entreprises ont réellement besoin** de leur technologie. Cela a aussi cimenté ma décision de poursuivre le développement de logiciels à plein temps, ce qui m'a mené à Progexia et finalement à Plutaro.
+L'expérience pratique de construire et d'opérer une entreprise m'a donné une compréhension pratique de ce dont les entreprises ont réellement besoin de leur technologie, comment prioriser sous contrainte, et comment communiquer entre parties prenantes techniques et non-techniques. Cela a cimenté ma décision de poursuivre le développement de logiciels à plein temps, et l'état d'esprit entrepreneurial est resté avec moi dans chaque rôle depuis.
 
 _(Panier Québécois continue aujourd'hui en tant que service B2B. Le site Web actuel ne reflète plus les fonctionnalités de vitrine décrites ci-dessus.)_

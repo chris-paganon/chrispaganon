@@ -64,3 +64,7 @@ J'ai également travaillé sur la création et la maintenance de sites web WordP
 
 - **Nouveaux Sites Web** : Création de sites web WordPress simples à partir de zéro.
 - **Nouvelles Fonctionnalités, Maintenance et Mises à Jour**.
+
+### Croissance et Impact
+
+Pendant mon temps chez Progexia, j'ai progressé du traitement de fonctionnalités individuelles à la gestion complète de projets de manière indépendante. J'ai établi les meilleures pratiques frontend pour les applications VueJS/Express et suis devenu la ressource de référence pour les implémentations PrimeVue complexes. Cette fondation m'a préparé au rôle de leadership technique que j'occupe maintenant chez Plutaro.
