@@ -12,9 +12,11 @@
         <span class="cursor-blink" aria-hidden="true">_</span>
       </div>
 
-      <div class="agents-card">
-        <p>{{ $t('CodingAgents.intro') }}</p>
-        <p>{{ $t('CodingAgents.shift') }}</p>
+      <div class="agents-card-glow">
+        <div class="agents-card">
+          <p>{{ $t('CodingAgents.intro') }}</p>
+          <p>{{ $t('CodingAgents.shift') }}</p>
+        </div>
       </div>
     </motion.div>
   </section>
@@ -36,33 +38,37 @@ const sectionTransition = {
 
 <style scoped>
 .agents-section {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  position: relative;
-  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
-.agents-section::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: 140%;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 30% 60%, rgba(167, 139, 250, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 70% 40%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes borderSpin {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .agents-content {
   max-width: 760px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .agents-heading-row {
@@ -101,36 +107,80 @@ const sectionTransition = {
   }
 }
 
-.agents-card {
-  padding: 28px 32px;
-  border: 1px solid rgba(58, 79, 102, 0.14);
-  border-radius: 10px;
-  background: #f8fbff;
+.agents-card-glow {
+  --border-angle: 0deg;
   position: relative;
-  overflow: hidden;
+  padding: 2px;
+  border-radius: 17px;
+  background: conic-gradient(
+    from var(--border-angle),
+    #7c3aed,
+    #06b6d4,
+    #a855f7,
+    #e879f9,
+    #06b6d4,
+    #7c3aed
+  );
+  animation: borderSpin 10s linear infinite;
 }
 
-.agents-card::before {
-  content: '>';
+.agents-card-glow::before {
+  content: '';
   position: absolute;
-  top: 22px;
-  left: -6px;
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: rgba(58, 79, 102, 0.07);
-  font-family: monospace;
-  line-height: 1;
-  pointer-events: none;
+  inset: -6px;
+  border-radius: 24px;
+  background: conic-gradient(
+    from var(--border-angle),
+    #7c3aed,
+    #06b6d4,
+    #a855f7,
+    #e879f9,
+    #06b6d4,
+    #7c3aed
+  );
+  filter: blur(14px);
+  opacity: 0.65;
+  z-index: -1;
+}
+
+.agents-card {
+  position: relative;
+  padding: 28px 32px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    var(--panel-cream) 0%,
+    var(--panel-peach) 33%,
+    var(--panel-blue) 66%,
+    var(--panel-cream) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
 }
 
 .agents-card p {
   line-height: 1.7;
   margin-bottom: 1em;
   font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .agents-card p:last-child {
   margin-bottom: 0;
+}
+
+.agents-card p:first-child::before {
+  content: '>';
+  position: absolute;
+  top: -8px;
+  left: -20px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(139, 92, 246, 0.15);
+  font-family: monospace;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .agents-footnote {
@@ -148,6 +198,14 @@ const sectionTransition = {
 @media (max-width: 450px) {
   .agents-card {
     padding: 20px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agents-card-glow,
+  .agents-card-glow::before,
+  .agents-card {
+    animation: none;
   }
 }
 </style>
