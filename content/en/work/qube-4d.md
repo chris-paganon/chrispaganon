@@ -10,7 +10,7 @@ role: Mechanical Designer
 color: 3b82f6
 ---
 
-From July 2018 to April 2020, I worked at Qube 4D Ventures, a product development company collaborating directly with partner companies to bring hardware products to market.
+I studied mechanical engineering and worked in the field for a few years before transitioning into web development. From July 2018 to April 2020, I worked at Qube 4D Ventures, a product development company collaborating directly with partner companies to bring hardware products to market.
 
 My role centered on **mechanical design and prototyping**, bridging the gap between concept and production. I produced detailed mechanical designs and technical drawings using CAD software, then coordinated with manufacturers to ensure designs could be produced reliably and cost-effectively.
 
@@ -24,11 +24,11 @@ I also represented the company at trade shows, building our booth from scratch a
 
 ### From Hardware to Software
 
-The skills I developed as a mechanical designer transfer directly to my work as a developer today:
+While the fields differ, some patterns from mechanical design are still very relevant to my approach to software:
 
-- **Problem Solving**: Breaking down complex systems into manageable components, whether in a mechanical assembly or a software architecture
-- **Testing & Validation**: Prototyping is essentially testing. Every prototype taught me the value of validating assumptions early before committing to production tooling
-- **Planning & Architecture**: Good mechanical designs require thinking through assembly order, material constraints, and manufacturing limitations upfront, just as good software requires planning data models and API contracts before implementation
-- **Iterative Improvement**: Both hardware and software development benefit from rapid iteration, gathering feedback, and refining the solution based on real-world usage
+- Breaking down complex systems into manageable components
+- Testing and validating assumptions early rather than committing to production prematurely
+- Planning architecture upfront, whether assembly order or data models
+- Iterating based on real-world feedback
 
-The foundation in systematic problem-solving and rigorous testing I built at Qube 4D continues to shape how I approach software development today.
+The experience taught me the value of systematic problem-solving, though software has its own unique challenges and constraints, my diverse experiences also help approach software development from a different perspective.
