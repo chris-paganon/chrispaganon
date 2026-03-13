@@ -74,6 +74,13 @@ h2 {
   font-size: 20px;
   border-radius: 30px;
 }
+@media (max-width: 600px) {
+  .tech-stack-section.content-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (max-width: 450px) {
   .button {
     font-size: 18px;

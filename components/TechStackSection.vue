@@ -5,7 +5,7 @@
     <motion.div
       layout
       class="tech-stage"
-      :class="[ `tech-stage-${title}`, { expanded: isExpanded } ]"
+      :class="[`tech-stage-${title}`, { expanded: isExpanded }]"
       role="button"
       tabindex="0"
       :aria-expanded="isExpanded"
@@ -241,7 +241,13 @@ h3 {
   inset: 0;
   border-radius: 10px;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.045) 0, rgba(0, 0, 0, 0.045) 1px, transparent 1px, transparent 100%),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.045) 0,
+      rgba(0, 0, 0, 0.045) 1px,
+      transparent 1px,
+      transparent 100%
+    ),
     linear-gradient(var(--stage-bg), var(--stage-bg));
   background-size:
     18px 18px,
@@ -270,8 +276,7 @@ h3 {
 }
 
 .tech-stage:focus-visible {
-  box-shadow:
-    0 0 0 3px rgba(42, 32, 24, 0.08);
+  box-shadow: 0 0 0 3px rgba(42, 32, 24, 0.08);
 }
 
 .tech-stage.expanded {
@@ -479,7 +484,6 @@ h3 {
   }
 
   .tech-copy {
-    width: 100%;
     padding: 0.95rem 1rem;
   }
 }
