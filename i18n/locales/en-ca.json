@@ -1,6 +1,6 @@
 {
   "homepage": {
-    "heading1": "Full-stack Javascript/PHP web developer from France & Canada",
+    "heading1": "Full-stack Typescript/PHP web developer from France & Canada",
     "intro": "I enjoy learning by working on challenging projects. I write concise, legible & maintainable code.",
     "intro2": "I am specialized in Typescript and PHP applications, Docker and generative AI with 5+ years of experience."
   },
@@ -23,7 +23,7 @@
       },
       "typescript": {
         "name": "TypeScript & JavaScript",
-        "time": "7 years, 3000+ hours",
+        "time": "5 years, 3000+ hours",
         "description": "Typescript is my go-to language for building interactive experiences on the web. I also have experience with vanilla JS and jQuery. I prefer Typescript when possible as it makes code more maintainable, more robust, easier to debug, understand and cooperate on."
       },
       "vuejs": {
@@ -43,18 +43,18 @@
       },
       "docker": {
         "name": "Docker",
-        "time": "5 years, 500+ hours",
+        "time": "5 years, 800+ hours",
         "description": "Docker is my go-to tool for deploying applications and building reproducible development environments. I have built applications and devOps pipelines with docker-compose and custom Dockerfiles."
       },
       "linux": {
         "name": "Linux",
         "time": "5 years",
-        "description": "Using Linux to deploy applications, and it has also been my main OS for the last 2 years with a fully custom Sway desktop environment. I am comfortable with the command line, bash scripting, package managers and server management. I have experience with Ubuntu, Alpine and Arch Linux."
+        "description": "Using Linux to deploy applications, and it has also been my main OS for the last 2 years with a fully custom Sway desktop environment. I am comfortable with the command line, bash scripting, package managers, server management and some basic networking. I have experience with Ubuntu, Alpine (with docker) and Arch Linux."
       },
       "tailwind": {
         "name": "Tailwind",
-        "time": "4 years, 400+ hours",
-        "description": "Experienced with Tailwind and similar utility-class CSS frameworks like PrimeFlex and Bootstrap. Built several professional & personal projects. My favorite way to write CSS as I usually find it easier to come back to a project and understand the styles without having to go back & forth between the HTML and CSS files."
+        "time": "4 years, 3000+ hours",
+        "description": "Experienced with Tailwind and similar utility-class CSS frameworks like PrimeFlex and Bootstrap. Built 20+ professional & personal projects. My favorite way to write CSS."
       },
       "php": {
         "name": "PHP",
@@ -63,18 +63,18 @@
       },
       "nextjs": {
         "name": "Next.js",
-        "time": "3 years, 100 hours",
+        "time": "3 years, 100+ hours",
         "description": "My Nuxt experience transfers directly to Next.js for routing, server rendering patterns, data fetching and full-stack app structure. I can ramp quickly and work comfortably across the React ecosystem."
       },
       "firebase": {
         "name": "Firebase / Firestore",
-        "time": "2 years, 300+ hours",
+        "time": "2 years, 3000+ hours",
         "description": "Built and maintained apps using Firebase services with Firestore as the primary database. Comfortable with the data model, auth flows, realtime patterns and integrating it into product development workflows."
       },
       "vite": {
         "name": "ViteJS",
-        "time": "3 years, 200+ hours",
-        "description": "Experience building packages and working on bundler configuration with Vite. Comfortable with library mode, dev tooling, plugin-based workflows and adapting build pipelines to different project needs."
+        "time": "5 years, 200+ hours",
+        "description": "Experience building npm packages and working on bundler configuration with Vite. Comfortable with library mode and building simple plugins."
       },
       "golang": {
         "name": "Golang",
@@ -84,7 +84,7 @@
       "nodejs": {
         "name": "NodeJS",
         "time": "5 years",
-        "description": "Using NodeJS for VueJS, Nuxt and Express applications. Experience with npm and deploying node in docker containers."
+        "description": "Using NodeJS for VueJS, Nuxt, firebase functions and Express applications. Experience with npm, deploying node in docker containers and setting up a typescript project from scratch."
       },
       "python": {
         "name": "Python",

@@ -23,7 +23,7 @@
       },
       "typescript": {
         "name": "Typescript & Javascript",
-        "time": "7 ans, 3000+ heures",
+        "time": "5 ans, 3000+ heures",
         "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript lorsque c'est possible car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
       },
       "vuejs": {
@@ -43,7 +43,7 @@
       },
       "docker": {
         "name": "Docker",
-        "time": "5 ans, 500+ heures",
+        "time": "5 ans, 800+ heures",
         "description": "Docker est mon outil de prédilection pour déployer des applications et créer des environnements de développement reproductibles. J'ai construit des applications et des pipelines devOps avec docker-compose et des Dockerfiles personnalisés."
       },
       "linux": {
@@ -53,8 +53,8 @@
       },
       "tailwind": {
         "name": "Tailwind",
-        "time": "4 ans, 400+ heures",
-        "description": "Expérience avec Tailwind et des frameworks CSS similaires avec utility-classes comme PrimeFlex et Bootstrap. J'ai créé plusieurs projets professionnels et personnels. Ma façon préférée d'écrire du CSS car je trouve généralement plus facile de revenir sur un projet et de comprendre les styles sans avoir à faire des allers-retours entre les fichiers HTML et CSS."
+        "time": "4 ans, 3000+ heures",
+        "description": "Expérience avec Tailwind et des frameworks CSS similaires à classes utilitaires comme PrimeFlex et Bootstrap. J'ai réalisé plus de 20 projets professionnels et personnels. C'est ma façon préférée d'écrire du CSS."
       },
       "php": {
         "name": "PHP",
@@ -63,18 +63,18 @@
       },
       "nextjs": {
         "name": "Next.js",
-        "time": "3 ans, 100 heures",
+        "time": "3 ans, 100+ heures",
         "description": "Mon expérience avec Nuxt se transfère directement à Next.js pour le routing, les patterns de rendu serveur, le data fetching et la structure d'applications full-stack. Je peux monter rapidement en puissance et travailler confortablement dans l'écosystème React."
       },
       "firebase": {
         "name": "Firebase / Firestore",
-        "time": "2 ans, 300+ heures",
+        "time": "2 ans, 3000+ heures",
         "description": "J'ai développé et maintenu des applications utilisant les services Firebase avec Firestore comme base de données principale. Je suis à l'aise avec le modèle de données, l'authentification, les patterns temps réel et leur intégration dans des workflows produit."
       },
       "vite": {
         "name": "ViteJS",
-        "time": "3 ans, 200+ heures",
-        "description": "Expérience dans la création de packages et le travail sur la configuration de bundlers avec Vite. Je suis à l'aise avec le mode librairie, l'outillage de développement, les workflows à base de plugins et l'adaptation de pipelines de build à différents besoins projet."
+        "time": "5 ans, 200+ heures",
+        "description": "Expérience dans la création de packages npm et le travail sur la configuration de bundlers avec Vite. Je suis à l'aise avec le mode librairie et la création de plugins simples."
       },
       "golang": {
         "name": "Golang",
@@ -84,7 +84,7 @@
       "nodejs": {
         "name": "NodeJS",
         "time": "5 ans",
-        "description": "Utilisation de NodeJS pour les applications VueJS, Nuxt et Express. Expérience avec npm et le déploiement de node dans des conteneurs docker."
+        "description": "J'utilise NodeJS pour des applications VueJS, Nuxt, Firebase Functions et Express. J'ai de l'expérience avec npm, le déploiement de Node dans des conteneurs Docker et la mise en place d'un projet Typescript from scratch."
       },
       "python": {
         "name": "Python",

@@ -16,25 +16,25 @@
 const localePath = useLocalePath();
 
 const mainTechList = [
-  'reactjs',
-  'typescript',
   'vuejs',
   'nuxt',
+  'reactjs',
+  'tailwind',
+  'typescript',
   'sql',
   'docker',
   'linux',
-  'tailwind',
 ];
 const otherTechList = [
-  'php',
   'nextjs',
   'firebase',
   'vite',
-  'golang',
   'nodejs',
-  'python',
   'llamaindex',
+  'php',
   'wordpress',
+  'python',
+  'golang',
 ];
 </script>
 
