@@ -18,11 +18,11 @@ J'ai **construit plus de 10 applications en production** avec React, Next.js et 
 
 J'ai été un contributeur clé dans la construction d'un **outil de développement propulsé par IA** similaire à Lovable, Bolt.new et v0. Il permet aux utilisateurs de générer des applications web full-stack à travers de simples invites en langage naturel, gérant tout depuis la génération du schéma de base de données jusqu'à la création de composants frontend.
 
-### Flux de Travail Assisté par IA
+### Workflow Assisté par IA
 
-Construire des produits IA a également transformé ma façon d'écrire du code. J'ai développé un flux de travail efficace avec des agents de codage IA (Cursor, Codex et Claude Code). Depuis Opus 4.5 et GPT 5.2, les agents peuvent écrire la plupart du code avec succès, sans bugs et propre. Cependant, pour atteindre ces résultats, la clé réside dans la taille des tâches et des instructions cristallines. Cela demande un peu de pratique pour avoir une idée de ce que l'IA peut faire. Et une bonne compréhension de l'architecture, des meilleures pratiques et des limitations techniques de la stack afin de donner les meilleures instructions.
+Construire des produits IA a également transformé ma façon d'écrire du code. J'ai développé un workflow efficace avec des agents de codage IA (Cursor, Codex et Claude Code). Depuis Opus 4.5 et GPT 5.2, les agents peuvent écrire la plupart du code avec succès, sans bugs et propre. Cependant, pour atteindre ces résultats, la clé réside dans la taille des tâches et des instructions claires. Cela demande un peu de pratique pour avoir une idée de ce que l'IA peut faire. Et une bonne compréhension de l'architecture, des meilleures pratiques et des limitations techniques de la stack afin de donner les meilleures instructions.
 
-Nous avons suivi les gains d'efficacité et constaté que nous pouvons atteindre une livraison globale **2 à 3 fois plus rapide** sur la plupart des fonctionnalités et bugs. Ce flux de travail a considérablement accéléré les délais de livraison tout en maintenant une qualité de code élevée. Chez Plutaro, j'ai également aidé les ingénieurs juniors à intégrer les outils IA dans leur flux de travail de manière responsable.
+Nous avons suivi les gains d'efficacité et constaté que nous pouvons atteindre une livraison globale **2 à 3 fois plus rapide** sur la plupart des fonctionnalités et bugs. Ce workflow a considérablement accéléré les délais de livraison tout en maintenant une qualité de code élevée. Chez Plutaro, j'ai également aidé les ingénieurs juniors à intégrer les outils IA dans leur workflow de manière responsable.
 
 ### Gestion de Projet et Leadership d'Équipe
 
@@ -38,12 +38,12 @@ Au-delà du développement pratique, je dirige le cycle de vie complet des proje
 
 J'ai dirigé le développement d'une gamme diversifiée d'applications en production, incluant :
 
-- **Places de marché Stripe complexes** : Plateformes multi-vendeurs avec des équipes vendant des produits à d'autres utilisateurs via [Stripe Connect](https://stripe.com/connect){:target="_blank"}, gérant les paiements fractionnés, les flux d'intégration et les tableaux de bord vendeur
+- **Places de marché Stripe complexes** : Plateformes multi-vendeurs avec des équipes vendant des produits à d'autres utilisateurs via [Stripe Connect](https://stripe.com/connect){:target="\_blank"}, gérant les paiements fractionnés, les flux d'intégration et les tableaux de bord vendeur
 - **Agents IA d'appels téléphoniques en direct** : Systèmes de voix IA en temps réel capables de flux de conversation naturels
 - **Applications avec LLM** : Divers outils exploitant les grands modèles de langage pour la génération de contenu, l'analyse et l'automatisation
 - **Implémentations de Bases de Connaissances RAG** : Systèmes de génération augmentée par récupération pour l'interrogation intelligente de documents
 - **Intégrations Google Workspace** : Implémentations OAuth de Gmail et Calendar pour la planification et l'automatisation des courriels
-- **Applications Mobiles** : Applications multiplateformes construites avec [Expo](https://expo.dev/){:target="_blank"} et React Native
+- **Applications Mobiles** : Applications multiplateformes construites avec [Expo](https://expo.dev/){:target="\_blank"} et React Native
 - **Extensions Navigateur** : Une extension Chrome pour l'amélioration de la productivité
 
 Le rôle me maintient profondément dans les workflows de développement de produits modernes, du prototypage rapide aux systèmes à échelle de production, avec un fort accent sur les cas d'usage orientés IA et la collaboration d'équipe.
