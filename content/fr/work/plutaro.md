@@ -3,7 +3,7 @@ Title: Plutaro
 Description: Agence orientee IA avec des produits React et Firebase
 id: 10
 slug: plutaro
-url: https://www.plutaro.com/
+url: https://plutaro.com/
 startDate: 'Août 2024'
 endDate: maintenant
 role: Développeur full-stack
