@@ -121,26 +121,7 @@ const sectionTransition = {
     #06b6d4,
     #7c3aed
   );
-  animation: borderSpin 10s linear infinite;
-}
-
-.agents-card-glow::before {
-  content: '';
-  position: absolute;
-  inset: -6px;
-  border-radius: 24px;
-  background: conic-gradient(
-    from var(--border-angle),
-    #7c3aed,
-    #06b6d4,
-    #a855f7,
-    #e879f9,
-    #06b6d4,
-    #7c3aed
-  );
-  filter: blur(14px);
-  opacity: 0.65;
-  z-index: -1;
+  animation: borderSpin 22s linear infinite;
 }
 
 .agents-card {
@@ -155,7 +136,7 @@ const sectionTransition = {
     var(--panel-cream) 100%
   );
   background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
+  animation: gradientShift 8s ease infinite;
 }
 
 .agents-card p {
@@ -203,7 +184,6 @@ const sectionTransition = {
 
 @media (prefers-reduced-motion: reduce) {
   .agents-card-glow,
-  .agents-card-glow::before,
   .agents-card {
     animation: none;
   }
