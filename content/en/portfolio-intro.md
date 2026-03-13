@@ -1,10 +1,16 @@
 ---
-Title: Portoflio intro
-Description: A quick history of my web developper journey
+Title: Portfolio intro
+Description: Senior full-stack developer with a background in mechanical engineering and a passion for building the future of web and AI
 ---
 
-**A self-taught web developer since 2016**, I built my 1st project for a 3D printing university project. I have developed and managed several websites and **worked in web agencies** in Montréal. My expertise spans **frontend and backend** development: VueJS single page apps, Typescript, React, wordpress sites, PHP backends, SQL databses, generative AI, Python, GitHub/GitLab DevOps...
+I started in **mechanical engineering**, working as a designer and prototyper before transitioning into tech. In 2020, **I co-founded the first online farmer's market in Montréal**: [Panier Québécois](/work/panier-quebecois) as a web developer and overall IT manager. That experience taught me what it actually takes to build and run a business, and confirmed software development was where I wanted to focus.
 
-I also did freelance work for [Batimatech](/project/batimatech.com) until March 2023. Additionally, I develop [VueAI.tools](/project/vue-ai-tools) as a side project for fun.
+Since then, I have **built 20+ production applications** across two agencies: [Progexia](/work/progexia) where I worked with VueJS, Express, and PHP, and now [Plutaro](/work/plutaro) where I lead development on React, Next.js, and React Native apps while **managing junior engineers and coordinating complex projects**. I have delivered everything from AI-powered development tools to Stripe marketplaces, live voice agents, and mobile applications.
 
-From 2020 until April 2023, **I co-founded the first online farmer's market in Montréal**: [Panier Québécois](/project/panier-quebecois). I focused on developing and maintaining our website while managing business strategy, marketing, and operations with my co-founders. This role enhanced my **teamwork, and communication skills**, with a strong emphasis on PHP/Wordpress in my web development work.
+I thrive in **small, fast-paced environments** where I can tackle challenging problems and move quickly from idea to production.
+
+My stack spans **frontend and backend**: TypeScript, VueJS, React, Next.js, React Native, PHP, Python, SQL databases, Firebase, generative AI, and DevOps with GitHub/GitLab.
+
+I am genuinely passionate about this work. Outside of my day job, I tinker with my **Linux desktop setup**, experiment with **AI agents**, follow the latest programming and AI developments, and build side projects like [VueAI.tools](/project/vue-ai-tools). I care about open source, clean code, and building tools that actually matter.
+
+I want to help build the future of the web and AI.
