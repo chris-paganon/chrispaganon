@@ -3,7 +3,7 @@ Title: Qube 4D Ventures
 Description: Mechanical design, prototyping, and manufacturing coordination
 id: 35
 slug: qube-4d
-url: https://www.qube4dventures.com/
+url: https://www.qube-4d.com
 startDate: 'July 2018'
 endDate: 'April 2020'
 role: Mechanical Engineer
