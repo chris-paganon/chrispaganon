@@ -6,6 +6,8 @@ slug: dockiy
 githubUrl: https://github.com/chris-paganon/DockIY
 startDate: '2024'
 endDate: maintenant
+image: /images/portfolio/dockiy-logo.png
+imageAlt: Logo DockIY
 color: ef5350
 ---
 
