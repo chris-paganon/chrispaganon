@@ -478,8 +478,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5.75rem;
-  height: 5.75rem;
+  width: 5rem;
+  height: 5rem;
   padding: 0.45rem;
   border-radius: 8px;
   background: var(--entry-bg);
