@@ -318,6 +318,111 @@ h3 {
   flex-shrink: 0;
 }
 
+/* Badge: morphs shape and glows subtly, like it's alive */
+.tech-stage:not(.expanded) .tech-stage-badge {
+  animation: badge-morph 4s cubic-bezier(0.4, 0, 0.2, 1) 2s infinite;
+}
+
+/* Icons: sequential domino sway — each icon rocks in turn */
+.tech-stage:not(.expanded) .tech-entry {
+  animation: icon-domino 6s ease-in-out infinite;
+}
+
+.tech-stage:not(.expanded) .tech-entry:nth-child(1) {
+  animation-delay: 0s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(2) {
+  animation-delay: 0.35s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(4) {
+  animation-delay: 1.05s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(5) {
+  animation-delay: 1.4s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(6) {
+  animation-delay: 1.75s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(7) {
+  animation-delay: 2.1s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(8) {
+  animation-delay: 2.45s;
+}
+.tech-stage:not(.expanded) .tech-entry:nth-child(9) {
+  animation-delay: 2.8s;
+}
+
+/* Light sweep across the stage surface */
+.tech-stage:not(.expanded)::after {
+  animation: stage-shimmer 5s ease-in-out 3s infinite;
+}
+
+@keyframes badge-morph {
+  0%,
+  100% {
+    border-radius: 8px;
+    box-shadow: 0 0 0 0 rgba(52, 42, 34, 0);
+    transform: scale(1);
+  }
+  25% {
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px rgba(52, 42, 34, 0.08);
+    transform: scale(1.06);
+  }
+  50% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 0 0 rgba(52, 42, 34, 0);
+    transform: scale(1.02);
+  }
+  75% {
+    border-radius: 50%;
+    box-shadow: 0 0 6px 1px rgba(52, 42, 34, 0.06);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes icon-domino {
+  0%,
+  12%,
+  100% {
+    transform: translateY(0) rotate(var(--base-rotate, 0deg));
+  }
+  4% {
+    transform: translateY(-5px) rotate(calc(var(--base-rotate, 0deg) + 3deg));
+  }
+  8% {
+    transform: translateY(1px) rotate(calc(var(--base-rotate, 0deg) - 1deg));
+  }
+}
+
+@keyframes stage-shimmer {
+  0%,
+  100% {
+    opacity: 0.35;
+    background-position:
+      -100% 0,
+      0 0;
+  }
+  50% {
+    opacity: 0.5;
+    background-position:
+      200% 0,
+      0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-stage:not(.expanded) .tech-stage-badge,
+  .tech-stage:not(.expanded) .tech-entry,
+  .tech-stage:not(.expanded)::after {
+    animation: none;
+  }
+}
+
 .tech-constellation {
   position: relative;
   z-index: 1;
