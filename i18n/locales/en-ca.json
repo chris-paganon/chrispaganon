@@ -113,6 +113,10 @@
     "intro": "My work experience in web development agencies, entrepreneurship and mechanical engineering.",
     "learnMore": "See details"
   },
+  "Education": {
+    "heading": "Education",
+    "footnote": "Turns out thermodynamics wasn't enough excitement — so I switched to debugging CSS. Same energy, fewer explosions."
+  },
   "ContactMe": {
     "heading": "Hire Me",
     "form-sub-heading": "Fill up the form",

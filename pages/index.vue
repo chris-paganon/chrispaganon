@@ -16,6 +16,7 @@
       </div>
       <div class="background-section-wrapper work-section-background">
         <WorkExperience />
+        <Education />
       </div>
       <ContactMe />
     </div>
