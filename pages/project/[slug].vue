@@ -12,7 +12,7 @@
           {{ $t('ProjectPage.date-from') }} {{ projectContent.startDate }}
         </li>
         <li>{{ $t('ProjectPage.date-to') }} {{ projectContent.endDate }}</li>
-        <li>
+        <li v-if="projectContent.url">
           <a :href="projectContent.url" target="_blank">{{
             $t('ProjectPage.visit')
           }}</a>
