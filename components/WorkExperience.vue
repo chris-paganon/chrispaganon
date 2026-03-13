@@ -16,6 +16,7 @@
         v-for="(job, index) in jobs"
         :key="job.slug"
         class="work-card"
+        :class="{ 'work-card-link': job.slug }"
         :initial="
           prefersReducedMotion ? undefined : { opacity: 0, y: 36, scale: 0.98 }
         "
@@ -24,6 +25,7 @@
         "
         :viewport="{ once: true, amount: 0.25 }"
         :transition="getCardTransition(index)"
+        @click="job.slug && navigateToJob(job.slug)"
       >
         <div class="work-card-header">
           <div>
@@ -33,13 +35,9 @@
           <p class="work-dates">{{ job.startDate }} - {{ job.endDate }}</p>
         </div>
         <p class="work-description">{{ job.Description }}</p>
-        <NuxtLink
-          v-if="job.slug"
-          class="work-link"
-          :to="localePath({ name: 'work-slug', params: { slug: job.slug } })"
-        >
+        <span v-if="job.slug" class="work-link">
           {{ $t('WorkExperience.learnMore') }}
-        </NuxtLink>
+        </span>
       </motion.article>
     </div>
   </section>
@@ -62,6 +60,10 @@ const sectionTransition = {
   duration: 0.5,
   ease: [0.22, 1, 0.36, 1],
 } as const;
+
+function navigateToJob(slug: string) {
+  navigateTo(localePath({ name: 'work-slug', params: { slug } }));
+}
 
 function getCardTransition(index: number) {
   return {
@@ -104,6 +106,24 @@ function getCardTransition(index: number) {
   border-radius: 10px;
   background: #fffaf3;
   box-shadow: none;
+  display: block;
+}
+
+.work-card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-out, border-color 200ms ease-out;
+}
+
+.work-card-link:hover {
+  border-color: rgba(42, 32, 24, 0.28);
+  box-shadow: 0 2px 12px rgba(42, 32, 24, 0.08);
+}
+
+.work-card-link:hover .work-link {
+  transform: translateX(3px);
+  opacity: 0.75;
 }
 
 .work-card-header {
@@ -131,16 +151,10 @@ function getCardTransition(index: number) {
 
 .work-link {
   display: inline-block;
-  text-decoration: none;
   font-weight: 700;
   transition:
     transform 200ms ease-out,
     opacity 200ms ease-out;
-}
-
-.work-link:hover {
-  transform: translateX(3px);
-  opacity: 0.75;
 }
 
 @media (max-width: 800px) {
