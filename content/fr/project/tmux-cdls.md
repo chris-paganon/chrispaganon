@@ -1,7 +1,7 @@
 ---
 Title: tmux-cdls
 Description: Un plugin tmux qui affiche le contenu de votre répertoire dans un panneau mis à jour en temps réel
-id: 10
+id: 15
 slug: tmux-cdls
 githubUrl: https://github.com/chris-paganon/tmux-cdls
 startDate: '2025'

@@ -1,7 +1,7 @@
 ---
 Title: Batimatech
 Description: Freelance for a construction non-for-profit
-id: 25
+id: 40
 slug: batimatech
 url: https://jebatimatech.com/
 githubUrl: https://github.com/chris-paganon/jebatimatech

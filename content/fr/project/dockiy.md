@@ -1,7 +1,7 @@
 ---
 Title: DockIY
 Description: Un setup Docker DIY minimal et open source pour déployer des apps web
-id: 15
+id: 10
 slug: dockiy
 githubUrl: https://github.com/chris-paganon/DockIY
 startDate: '2024'
@@ -11,7 +11,7 @@ color: ef5350
 
 DockIY est un setup Docker DIY minimal et open source conçu pour déployer plusieurs applications web sur un seul serveur. Vous possédez 100% du code — pas de magie noire, entièrement extensible et personnalisable.
 
-La philosophie est simple : *« La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer. »*
+La philosophie est simple : _« La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer. »_
 
 Le setup inclut :
 

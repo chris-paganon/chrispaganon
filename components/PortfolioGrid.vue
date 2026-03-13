@@ -137,18 +137,20 @@ const activeProject = computed(() => hoverProject.value ?? scrollProject.value);
 const stripsContainer = useTemplateRef<HTMLElement>('stripsContainer');
 
 const nuxtApp = useNuxtApp();
-const { data: portfolio } = await useAsyncData('portfolio', () =>
-  queryContent(nuxtApp.$i18n.locale.value, 'project')
+const { data: portfolio } = await useAsyncData('portfolio', async () => {
+  const items = await queryContent(nuxtApp.$i18n.locale.value, 'project')
     .where({ slug: { $ne: 'progexia' } })
-    .sort({ id: 1 })
-    .find(),
-);
+    .find();
+  return items.sort((a, b) => Number(a.id ?? 0) - Number(b.id ?? 0));
+});
 
 // Observe each strip via data-slug: when it enters the center band, auto-expand
 const stripElements = computed<HTMLElement[]>(() => {
   const container = stripsContainer.value;
   if (!container) return [];
-  return Array.from(container.querySelectorAll<HTMLElement>('.v2-strip[data-slug]'));
+  return Array.from(
+    container.querySelectorAll<HTMLElement>('.v2-strip[data-slug]'),
+  );
 });
 
 useIntersectionObserver(
