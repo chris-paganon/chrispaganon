@@ -167,17 +167,29 @@ p a:hover {
   align-items: center;
   min-height: 500px;
   background-color: #c9e5f9;
-  padding: 0 20%;
+  padding: 0 46px;
+}
+.hero-banner h1 {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 @media (max-width: 925px) {
   .hero-banner {
-    padding: 0 10%;
+    padding: 0 40px;
+  }
+  .hero-banner h1 {
+    max-width: none;
   }
 }
 @media (max-width: 450px) {
   .hero-banner {
-    padding: 0 5%;
+    padding: 0 24px;
     text-align: center;
+    justify-content: center;
+  }
+  .hero-banner h1 {
+    max-width: none;
   }
   .button {
     font-size: 14px;
