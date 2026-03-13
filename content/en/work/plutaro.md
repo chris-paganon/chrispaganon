@@ -20,7 +20,9 @@ I have been a core contributor building an internal **AI-powered development too
 
 ### AI-Assisted Development Workflow
 
-Building AI products has also transformed how I write code. I have developed an efficient workflow with AI coding agents—using them as thought partners for architecture decisions, rapid prototyping, and boilerplate generation while maintaining strict quality standards through careful review and testing. We have been tracking efficiency gains and found we can achieve **2-3x faster overall delivery** on most features and bugs. This workflow has significantly accelerated delivery timelines while keeping code quality high. At Plutaro, I have also helped junior engineers integrate AI tools into their workflow responsibly, establishing patterns that augment rather than replace solid engineering fundamentals.
+Building AI products has also transformed how I write code. I have developed an efficient workflow with AI coding agents (Cursor, Codex and Claude Code). Since Opus 4.5 and GPT 5.2, agents can successfully write most of the code, bug-free and clean. However, to achieve these results, the key is in giving the right sized tasks with crystal clear instructions. This takes a bit of practice to get a feel for what the AI can do. And a good understanding of architecture, best practices and technical limitations of the stack in order to give the best instructions.
+
+We have been tracking efficiency gains and found we can achieve **2-3x faster overall delivery** on most features and bugs. This workflow has significantly accelerated delivery timelines while keeping code quality high. At Plutaro, I have also helped junior engineers integrate AI tools into their workflow responsibly.
 
 ### Project Management & Team Leadership
 
