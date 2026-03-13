@@ -2,7 +2,8 @@
   "homepage": {
     "heading1": "Développeur Web Full-stack Senior Typescript/PHP de France & Canada",
     "intro": "Je suis passionné par la tech et j'adore apprendre de nouvelles choses.",
-    "intro2": "Je me spécialise dans les applications full-stack Typescript, l'IA (coding, llm, RAG, agents, etc.), Docker et Linux avec plus de 7 ans d'expérience et plus de 30 projets à mon actif."
+    "intro2": "Je me spécialise dans les applications full-stack Typescript, l'IA (coding, llm, RAG, agents, etc.), Docker et Linux avec plus de 7 ans d'expérience.",
+    "intro3": "Avec plus de 30 projets à mon actif, j'ai mené des équipes de développement, encadré des développeurs junior et livré des plateformes allant de l'IA aux marketplaces complexes."
   },
   "NavBar": {
     "home": "Accueil",

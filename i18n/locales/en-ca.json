@@ -2,7 +2,8 @@
   "homepage": {
     "heading1": "Full-Stack Senior Typescript/PHP web developer from France & Canada",
     "intro": "I am passionate about tech and I love learning new things.",
-    "intro2": "I am a senior lead full-stack engineer specialized in TypeScript applications, AI systems, Docker infrastructure, and team leadership. With 7+ years of experience across 30+ production projects, I have led development teams, mentored junior engineers, and delivered everything from AI-powered platforms to complex marketplaces."
+    "intro2": "I am a senior lead full-stack engineer specialized in TypeScript applications, AI systems, Docker infrastructure, and team leadership.",
+    "intro3": "With 7+ years of experience across 30+ production projects, I have led development teams, mentored junior engineers, and delivered everything from AI-powered platforms to complex marketplaces."
   },
   "NavBar": {
     "home": "Home",

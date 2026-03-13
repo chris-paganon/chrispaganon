@@ -8,6 +8,7 @@
         <img src="/images/me.jpg" alt="me" />
         <p>{{ $t('homepage.intro') }}</p>
         <p>{{ $t('homepage.intro2') }}</p>
+        <p class="intro-secondary">{{ $t('homepage.intro3') }}</p>
       </section>
       <hr class="separator" />
       <TechStack />
@@ -54,12 +55,16 @@
 }
 
 .introduction p {
-  font-size: 2em;
+  font-size: 1.85em;
   margin-right: 170px;
   margin-bottom: 1em;
 }
 .introduction p:last-child {
   margin-bottom: 0;
+}
+.intro-secondary {
+  font-size: 1.5em;
+  opacity: 0.85;
 }
 img {
   position: absolute;
@@ -102,9 +107,12 @@ img:hover {
     padding: 140px 40px 90px 40px;
   }
   .introduction p {
-    font-size: 1.8em;
+    font-size: 1.7em;
     margin-right: 0;
     text-align: center;
+  }
+  .intro-secondary {
+    font-size: 1.4em;
   }
   .introduction::before {
     inset: 12px -12px -12px 12px;
@@ -135,8 +143,11 @@ img:hover {
     inset: 10px -10px -10px 10px;
   }
   .introduction p {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin: 30px 0 10px 0;
+  }
+  .intro-secondary {
+    font-size: 1.2em;
   }
   img {
     width: 150px;
