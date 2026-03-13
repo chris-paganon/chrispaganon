@@ -38,4 +38,4 @@ In addition to my technical contributions, I managed the client relationship, co
 - **Client Management**: Effectively communicating with clients to understand their needs and provide regular updates.
 - **Project Management**: Planning and executing projects within the agreed-upon timelines and scope.
 
-My freelance work with Batimatech demonstrates my capacity for project and client management, making me a very versatile employee.
+Managing the full client relationship—from initial scope discussions through delivery and ongoing maintenance—developed my project management and stakeholder communication skills. This freelance experience proved I can operate autonomously, manage client expectations, and deliver on business objectives beyond just writing code.

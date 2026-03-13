@@ -7,7 +7,7 @@ I started in **mechanical engineering**, working as a designer and prototyper be
 
 Since then, I have **built 20+ production applications** across two agencies: [Progexia](/work/progexia) where I worked with VueJS, Express, and PHP, and now [Plutaro](/work/plutaro) where I lead development on React, Next.js, and React Native apps while **managing junior engineers and coordinating complex projects**. I have delivered everything from AI-powered development tools to Stripe marketplaces, live voice agents, and mobile applications.
 
-I thrive in **small, fast-paced environments** where I can tackle challenging problems and move quickly from idea to production.
+I thrive in environments where I can wear multiple hats—whether that means architecting a system, managing project timelines, mentoring junior developers, or jumping into DevOps when needed. Having founded and operated a startup, I understand how technical decisions impact business outcomes.
 
 My stack spans **frontend and backend**: TypeScript, VueJS, React, Next.js, React Native, PHP, Python, SQL databases, Firebase, generative AI, and DevOps with GitHub/GitLab.
 

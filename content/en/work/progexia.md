@@ -64,3 +64,7 @@ I also worked on creating and maintaining WordPress websites for multiple client
 
 - **New websites**: Built simple WordPress websites from scratch.
 - **New features, Maintenance and Updates**.
+
+### Growth & Impact
+
+During my time at Progexia, I progressed from handling individual features to owning complete projects independently. I established frontend best practices for VueJS/Express applications and became the go-to resource for complex PrimeVue implementations. This foundation prepared me for the technical leadership role I now hold at Plutaro.

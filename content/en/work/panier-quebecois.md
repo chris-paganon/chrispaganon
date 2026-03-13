@@ -38,6 +38,6 @@ Running a startup meant wearing many hats:
 - **Operations**: Order preparation, delivery coordination, and process optimization
 - **Customer Service**: Direct customer support and relationship management
 
-The hands-on experience of building and operating a business gave me a **practical understanding of what companies actually need** from their technology. It also cemented my decision to pursue software development full-time, which led me to Progexia and eventually Plutaro.
+The hands-on experience of building and operating a business gave me practical understanding of what companies actually need from technology, how to prioritize under constraint, and how to communicate across technical and non-technical stakeholders. It cemented my decision to pursue software development full-time, and the entrepreneurial mindset has stayed with me in every role since.
 
 _(Panier Québécois continues today as a B2B service. The current website no longer reflects the storefront features described above.)_

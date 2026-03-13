@@ -10,22 +10,27 @@ role: Lead Full-stack Developer
 color: e7ddd0
 ---
 
-Since August 2024, I have been working at Plutaro, an agency focused on web apps, AI projects and mobile.
+Since August 2024, I have led development at Plutaro, an agency focused on web apps, AI projects and mobile.
 
-My role has grown to encompass **building 10+ production applications** across React, Next.js, and React Native, while also **managing junior engineers and coordinating complex projects**. I work on a mix of client deliverables and internal AI tooling products.
+I have **built 10+ production applications** across React, Next.js, and React Native, while **managing junior engineers and coordinating complex projects**. I work on a mix of client deliverables and internal AI tooling products.
 
 ### Internal AI Products
 
-I have been a core contributor building an internal **AI-powered development tool** similar to Lovable, Bolt.new, and v0. It enable users to generate full-stack web applications through simple natural language prompts, handling everything from database schema generation to frontend component creation.
+I have been a core contributor building an internal **AI-powered development tool** similar to Lovable, Bolt.new, and v0. It enables users to generate full-stack web applications through simple natural language prompts, handling everything from database schema generation to frontend component creation.
+
+### AI-Assisted Development Workflow
+
+Building AI products has also transformed how I write code. I have developed an efficient workflow with AI coding agents—using them as thought partners for architecture decisions, rapid prototyping, and boilerplate generation while maintaining strict quality standards through careful review and testing. We have been tracking efficiency gains and found we can achieve **2-3x faster overall delivery** on most features and bugs. This workflow has significantly accelerated delivery timelines while keeping code quality high. At Plutaro, I have also helped junior engineers integrate AI tools into their workflow responsibly, establishing patterns that augment rather than replace solid engineering fundamentals.
 
 ### Project Management & Team Leadership
 
-Beyond hands-on development, I manage the full lifecycle of complex projects:
+Beyond hands-on development, I lead the full lifecycle of complex projects:
 
 - **Timeline & Planning**: Breaking down requirements into actionable milestones and deliverables
 - **Quality Assurance**: Establishing testing protocols and reviewing code quality
 - **Deployment Strategy**: Coordinating release schedules and production rollouts
-- **Team Coordination**: Mentoring junior engineers, reviewing requirements, and unblocking technical challenges
+- **Team Management**: Mentoring 2-3 junior engineers, conducting code reviews, and establishing development standards
+- **Team Coordination**: Reviewing requirements, and unblocking technical challenges
 
 ### Client Projects
 
