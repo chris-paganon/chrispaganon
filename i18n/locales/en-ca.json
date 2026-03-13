@@ -100,6 +100,11 @@
         "name": "Wordpress",
         "time": "7 years, 5000+ hours",
         "description": "Started my web development career with Wordpress and PHP. From simple static websites to a full-fledged online grocery platform I co-founded (Panier Québécois) with over 800 weekly customers at its peak. I also built Wordpress websites as a freelancer and at the agency I worked at in the last 2 years."
+      },
+      "stripe": {
+        "name": "Stripe",
+        "time": "3 years, 1000+ hours",
+        "description": "Built and maintained multiple complex marketplace implementations using Stripe Connect, handling multi-vendor payments, split transactions, seller onboarding flows, and seller dashboards. Experienced with both Stripe Checkout and custom payment flows."
       }
     }
   },

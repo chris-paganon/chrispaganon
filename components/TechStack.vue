@@ -22,6 +22,7 @@ const mainTechList = [
   'tailwind',
   'typescript',
   'sql',
+  'stripe',
   'docker',
   'linux',
 ];
