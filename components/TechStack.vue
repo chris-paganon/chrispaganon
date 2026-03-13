@@ -27,9 +27,9 @@ const mainTechList = [
 ];
 const otherTechList = [
   'nextjs',
-  'firebase',
-  'vite',
   'nodejs',
+  'vite',
+  'firebase',
   'llamaindex',
   'php',
   'wordpress',
