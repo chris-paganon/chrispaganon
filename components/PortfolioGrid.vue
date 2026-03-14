@@ -64,19 +64,9 @@
             <h3>{{ project.Title }}</h3>
           </div>
 
-          <motion.span
-            class="v2-peek-label"
-            :animate="
-              prefersReducedMotion
-                ? undefined
-                : isActive(project.slug)
-                  ? { opacity: 0, y: -6 }
-                  : { opacity: 0.5, y: 0 }
-            "
-            :transition="{ duration: 0.25, ease: smoothEase }"
-          >
+          <span class="v2-peek-label">
             {{ project.startDate }}
-          </motion.span>
+          </span>
         </div>
 
         <motion.div
