@@ -7,6 +7,11 @@ REMOTE_SSH="nuxter@77.37.87.199"
 MAIN_DOCKER_COMPOSE_FILE="docker-compose.yml"
 MAIN_FILES="${MAIN_DOCKER_COMPOSE_FILE} Dockerfile nuxter-start.sh"
 
+build() {
+  pnpm typecheck
+  pnpm build
+}
+
 deploy_environment() {
   local env=$1
   local project_name="${PROJECT_NAME}-${env}"
@@ -33,6 +38,8 @@ deploy_environment() {
   
   ssh ${REMOTE_SSH} "cd ${REMOTE_PATH} && ./nuxter-start.sh --${env}"
 }
+
+build
 
 if [[ "$*" == *"--production"* ]]; then
   deploy_environment "production"
