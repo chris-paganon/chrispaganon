@@ -11,6 +11,9 @@
       <motion.div
         ref="introStageRef"
         class="portfolio-intro-stage"
+        :class="{
+          'is-nudging': !prefersReducedMotion && shouldNudgeArrow,
+        }"
         role="button"
         tabindex="0"
         :aria-expanded="viewMoreOn"
@@ -108,16 +111,16 @@ const shouldNudgeArrow = computed(
 
 const arrowAnimation = computed(() =>
   shouldNudgeArrow.value
-    ? { y: [0, 3, 0], scale: [1, 1.05, 1] }
+    ? { y: [0, 5, 0], scale: [1, 1.15, 1] }
     : { y: 0, scale: 1 },
 );
 
 const arrowTransition = computed(() =>
   shouldNudgeArrow.value
     ? {
-        duration: 1.75,
+        duration: 1.4,
         repeat: Infinity,
-        repeatDelay: 0.2,
+        repeatDelay: 0.35,
         ease: smoothEase,
       }
     : {
@@ -176,7 +179,7 @@ useIntersectionObserver(
   position: relative;
   z-index: 1;
   overflow: hidden;
-  min-height: 11.5rem;
+  min-height: 15rem;
   border: 1px solid rgba(58, 79, 102, 0.12);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.72);
@@ -193,8 +196,6 @@ useIntersectionObserver(
 
 .portfolio-intro-copy.collapsed {
   display: -webkit-box;
-  line-clamp: 5;
-  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -209,6 +210,22 @@ useIntersectionObserver(
   );
   z-index: 2;
   pointer-events: none;
+}
+
+.portfolio-intro-stage.is-nudging {
+  animation: nudge-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes nudge-glow {
+  0%,
+  100% {
+    border-color: rgba(58, 79, 102, 0.12);
+    box-shadow: 0 1px 4px rgba(58, 79, 102, 0.04);
+  }
+  50% {
+    border-color: rgba(58, 79, 102, 0.38);
+    box-shadow: 0 4px 20px rgba(58, 79, 102, 0.14);
+  }
 }
 
 .portfolio-intro-stage:focus-visible {
