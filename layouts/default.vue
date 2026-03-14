@@ -196,4 +196,8 @@ p a:hover {
     padding: 13px 18px;
   }
 }
+
+.content-section[id] {
+  scroll-margin-top: 32px;
+}
 </style>
