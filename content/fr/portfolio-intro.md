@@ -3,7 +3,7 @@ Title: Portfolio intro
 Description: Développeur full-stack senior avec une formation en génie mécanique et une passion pour construire le futur du web et de l'IA
 ---
 
-J'ai commencé en **génie mécanique**, travaillant comme concepteur et prototypiste avant de complètement transitionner vers le logiciel. En 2020, **j'ai co-fondé le premier marché fermier en ligne de Montréal** : [Panier Québécois](/work/panier-quebecois) en tant que développeur web et responsable IT global. Cette expérience m'a appris ce qu'il faut réellement pour construire et diriger une entreprise, et a confirmé que le développement de logiciels était là où je voulais me concentrer.
+J'ai commencé en **génie mécanique**, travaillant comme concepteur et prototypiste avant de complètement transitionner vers le logiciel. En 2020, **j'ai co-fondé le premier marché fermier en ligne de Montréal** : Panier Québécois en tant que développeur web et responsable IT global. Cette expérience m'a appris ce qu'il faut réellement pour construire et diriger une entreprise, et a confirmé que le développement de logiciels était là où je voulais me concentrer.
 
 Depuis, j'ai **construit plus de 25 applications en production** dans deux agences : [Progexia](/work/progexia) où j'ai travaillé avec VueJS, Express et PHP, et maintenant [Plutaro](/work/plutaro) où je dirige le développement d'applications React, Next.js et React Native tout en **gérant des ingénieurs juniors et coordonnant des projets complexes**. J'ai livré des outils de développement propulsés par l'IA, des marketplaces Stripe Connect, des agents vocaux en temps réel et des applications mobiles.
 

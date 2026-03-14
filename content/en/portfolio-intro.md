@@ -3,7 +3,7 @@ Title: Portfolio intro
 Description: Senior full-stack developer with a background in mechanical engineering and a passion for building the future of web and AI
 ---
 
-I started in **mechanical engineering**, working as a designer and prototyper before fully transitioning into software. In 2020, **I co-founded the first online farmer's market in Montréal**: [Panier Québécois](/work/panier-quebecois) as a web developer and overall IT manager. That experience taught me what it actually takes to build and run a business, and confirmed software development was where I wanted to focus.
+I started in **mechanical engineering**, working as a designer and prototyper before fully transitioning into software. In 2020, **I co-founded the first online farmer's market in Montréal**: Panier Québécois as a web developer and overall IT manager. That experience taught me what it actually takes to build and run a business, and confirmed software development was where I wanted to focus.
 
 Since then, I have **built 25+ production applications** across two agencies: [Progexia](/work/progexia) where I worked with VueJS, Express, and PHP, and now [Plutaro](/work/plutaro) where I lead development on React, Next.js, and React Native apps while **managing junior engineers and coordinating complex projects**. I have delivered everything from AI-powered development tools to Stripe Connect marketplaces, live voice agents, and mobile applications.
 
