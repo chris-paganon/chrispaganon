@@ -55,7 +55,10 @@ p {
 }
 
 .hero-banner {
-  min-height: 300px;
+  min-height: 190px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 40px;
 }
 
 ul.project-info {

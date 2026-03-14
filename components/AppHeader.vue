@@ -22,4 +22,14 @@ header {
     padding: 14px 16px 0 16px;
   }
 }
+@media (max-width: 420px) {
+  header {
+    padding: 10px 5px 0 5px;
+  }
+}
+@media (max-width: 375px) {
+  header {
+    padding: 0;
+  }
+}
 </style>

@@ -140,12 +140,17 @@ svg:hover {
     margin-left: 0;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   nav {
     padding: 10px 12px;
   }
   a {
     letter-spacing: 0px;
+  }
+}
+@media (max-width: 375px) {
+  nav {
+    border-radius: 0;
   }
 }
 </style>

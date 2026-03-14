@@ -138,7 +138,7 @@ img:hover {
     padding: 50px 20px;
   }
   .introduction {
-    padding: 120px 24px 56px 24px;
+    padding: 60px 24px 56px 24px;
   }
   .introduction::before {
     inset: 10px -10px -10px 10px;
