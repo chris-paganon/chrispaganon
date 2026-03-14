@@ -6,15 +6,17 @@ slug: vue-ai-tools
 url: https://vueai.tools/
 githubUrl: https://github.com/chris-paganon/vue-ai-tools
 startDate: 'Août 2023'
-endDate: maintenant
+endDate: '2025'
 image: /images/portfolio/vue-ai-tools-thumbnail.jpg
 imageAlt: thumbnail VueAI.tools
 color: 5fbb65d1
 ---
 
-VueAI.tools est un projet que j'ai construit pour le fun. C'est un outil d'assistant AI spécifiquement conçu pour VueJS. Le site web propose un chatbot AI classique une **implémentation RAG personnalisée avec [LlamaIndex](https://www.llamaindex.ai/){:target="\_blank"}**. Il comprend également un générateur de composants en pseudo-code JSON pour améliorer la fiabilité de l'assistant :
+VueAI.tools est un projet que j'ai commencé avant que Cursor et Claude Code n'existent vraiment. C'est un outil d'assistant AI spécifiquement conçu pour VueJS. Le site web propose un chatbot AI classique une **implémentation RAG personnalisée avec [LlamaIndex](https://www.llamaindex.ai/){:target="\_blank"}**. Il comprend également un générateur de composants en pseudo-code JSON pour améliorer la fiabilité de l'assistant :
 
 ![Capture d'écran du générateur de composants VueAI.tools](/images/portfolio/component-builder-screenshot.png)
+
+Aujourd'hui, le projet est en grande partie rendu obsolète par les progrès des outils d'agents de code, des modèles et des fenêtres de contexte. Je le considère davantage comme une démo technique.
 
 Le site web combine de nombreux outils et connaissances que j'ai acquis au fil des ans dans une application hébergée sur une instance VPS unique. L'application est codée en **TypeScript** et fonctionne avec Nuxt via Docker. Elle comprend un modèle d'IA RAG personnalisé, une base de données, l'authentification, des déploiements automatisés, des self-hosted analytics...
 

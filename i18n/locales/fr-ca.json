@@ -3,7 +3,7 @@
     "heading1": "Développeur Web Full-stack Senior Typescript/PHP de France & Canada",
     "intro": "Je suis passionné par la tech et j'adore apprendre de nouvelles choses.",
     "intro2": "Je suis un ingénieur full-stack senior lead spécialisé dans les applications TypeScript, les systèmes d'IA, l'infrastructure Docker et le leadership d'équipe.",
-    "intro3": "Avec plus de 7 ans d'expérience sur plus de 30 projets en production, j'ai dirigé des équipes de développement, encadré des ingénieurs juniors et livré des plateformes allant de l'IA aux marketplaces complexes."
+    "intro3": "Avec plus de 7 ans d'expérience sur plus de 25 projets en production, j'ai dirigé des équipes de développement, encadré des ingénieurs juniors et livré des plateformes allant de l'IA aux marketplaces complexes."
   },
   "NavBar": {
     "home": "Accueil",
@@ -20,27 +20,27 @@
       "reactjs": {
         "name": "React",
         "time": "3 ans, 3000+ heures",
-        "description": "J'ai développé des applications React dans des contextes d'agence et de produit. Le framework est désormais naturel pour moi, de l'architecture des composants et la gestion d'état jusqu'à l'intégration d'API et la livraison de fonctionnalités en production."
+        "description": "J'ai développé des applications React dans des contextes d'agence et de produit. J'ai commencé avec VueJS et je me sens maintenant aussi parfaitement à l'aise avec React."
       },
       "typescript": {
         "name": "Typescript & Javascript",
         "time": "5 ans, 3000+ heures",
-        "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript lorsque c'est possible car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
+        "description": "Typescript est mon langage de prédilection pour créer des expériences interactives sur le web. J'ai également de l'expérience avec vanilla JS et jQuery. Je préfère Typescript car il rend le code plus maintenable, plus robuste, plus facile à déboguer, à comprendre et pour y travailler en équipe."
       },
       "vuejs": {
         "name": "VueJS",
         "time": "5 ans, 3000+ heures",
-        "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je développe également un chatbot IA open source pour répondre aux questions sur VueJS. Je connais parfaitement le framework et j'adore travailler avec. J'apprécie comment la conception de Vue aide les développeurs (et l'IA) à tomber dans le piège du succès, contrairement à React."
+        "description": "Développement d'applications VueJS pour des projets professionnels et personnels. Je connais parfaitement le framework et j'adore travailler avec. J'apprécie comment le design de Vue aide les développeurs (et l'IA) à tomber dans le \"pit of success\", contrairement à React."
       },
       "nuxt": {
         "name": "Nuxt",
         "time": "5 ans, 800+ heures",
-        "description": "J'ai créé tous mes projets personnels récents avec Nuxt, que ce soit pour le SEO ou pour une intégration plus facile de Typescript entre le frontend et le backend. Mon projet le plus récent (VueAI.tools) comprend une authentification self-hosted, une base de données, un ORM, un modèle d'IA RAG et plus encore. J'ai également construit un ensemble d'outils principalement basé sur Docker pour déployer facilement plusieurs applications Nuxt sur un VPS unique, avec reverse-proxy, DevOps et web analytics intégrés."
+        "description": "J'ai créé tous mes projets personnels récents avec Nuxt, que ce soit pour le SEO ou pour une intégration plus facile de Typescript entre le frontend et le backend. VueAI.tools comprend une authentification self-hosted, une base de données, un ORM, un modèle d'IA RAG et plus encore. J'ai également construit un ensemble d'outils principalement basé sur Docker pour déployer facilement plusieurs applications Nuxt sur un VPS unique, avec reverse-proxy, DevOps et web analytics intégrés."
       },
       "sql": {
         "name": "SQL",
         "time": "7 ans",
-        "description": "J'ai travaillé avec MySQL, SQLite et PostgreSQL soit via PHP, des fonctions Wordpress, ExpressJS, Drizzle ORM ou directement dans une interface visuelle SQL. J'ai de l'expérience dans la structuration de bases de données, l'écriture de queries, les transactions, la gestion des migrations et des backups."
+        "description": "J'ai travaillé avec MySQL, SQLite et PostgreSQL soit via PHP, des fonctions Wordpress, ExpressJS, Drizzle ORM ou directement dans une interface visuelle SQL. J'ai de l'expérience dans la structuration de bases de données, l'écriture de queries, les transactions, la gestion des migrations, des déploiements et des backups."
       },
       "docker": {
         "name": "Docker",
@@ -50,7 +50,7 @@
       "linux": {
         "name": "Linux",
         "time": "5 ans",
-        "description": "J'utilise Linux pour déployer des applications, et c'est aussi mon système principal depuis 2 ans avec un environnement de bureau Sway entièrement personnalisé. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de paquets et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux. Il y a quelque chose de profondément satisfaisant dans un système adapté exactement à votre façon de travailler."
+        "description": "J'utilise Linux pour déployer des applications, et c'est aussi mon système principal depuis 2 ans avec un environnement de bureau Sway entièrement personnalisé. Je suis à l'aise avec la ligne de commande, les scripts bash, les gestionnaires de paquets et la gestion de serveurs. J'ai de l'expérience avec Ubuntu, Alpine et Arch Linux. Il y a quelque chose de satisfaisant pour moi d'avoir un système adapté exactement à ma façon de travailler."
       },
       "tailwind": {
         "name": "Tailwind",
@@ -60,17 +60,17 @@
       "php": {
         "name": "PHP",
         "time": "7 ans, 5000+ heures",
-        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
+        "description": "J'ai commencé ma carrière de développeur web avec Wordpress et PHP. De simples sites web statiques à une plateforme de courses alimentaires en ligne complète que j'ai cofondée (Panier Québécois) avec plus de 800 clients hebdomadaires à son apogée. J'ai également créé des sites Wordpress en tant que freelance et dans l'agence où j'ai travaillé ces deux dernières années."
       },
       "nextjs": {
         "name": "Next.js",
-        "time": "3 ans, 100+ heures",
-        "description": "Mon expérience avec Nuxt se transfère directement à Next.js pour le routing, les patterns de rendu serveur, le data fetching et la structure d'applications full-stack. Je peux monter rapidement en puissance et travailler confortablement dans l'écosystème React."
+        "time": "3 ans, 50+ heures",
+        "description": "Mon expérience avec Nuxt se transfère directement à Next.js pour le routing, les patterns de rendu serveur, le data fetching et la structure d'applications full-stack. Je peux rapidement m'adapter et travailler confortablement dans l'écosystème."
       },
       "firebase": {
         "name": "Firebase / Firestore",
         "time": "2 ans, 3000+ heures",
-        "description": "J'ai développé et maintenu des applications utilisant les services Firebase avec Firestore comme base de données principale. Je suis à l'aise avec le modèle de données, l'authentification, les patterns temps réel et leur intégration dans des workflows produit."
+        "description": "J'ai développé et maintenu des applications utilisant les services Firebase avec Firestore comme base de données principale. Je suis à l'aise avec les fonctions et Firestore rules, Firebase Auth, Hosting, Storage et Analytics. J'ai également un peu d'expérience avec l'infrastructure et l'administration sous-jacentes de Google Cloud Platform."
       },
       "vite": {
         "name": "ViteJS",
@@ -90,12 +90,12 @@
       "python": {
         "name": "Python",
         "time": "2 ans, 50 heures",
-        "description": "J'ai utilisé Python pour quelques petits scripts locaux vibe codés. C'est amusant à apprendre un peu et pratique quand j'ai besoin d'automatiser rapidement de petites tâches."
+        "description": "J'ai utilisé Python pour quelques petits scripts locaux vibe codés. C'est divertissant à apprendre un peu et pratique quand j'ai besoin d'automatiser rapidement de petites tâches."
       },
       "llamaindex": {
         "name": "LlamaIndex",
-        "time": "3 ans",
-        "description": "LlamaIndex est une bibliothèque TS & Python pour construire des modèles RAG (Retrieval Augmented Generation) d'IA pour répondre aux questions en interrogeant une base de données de documents afin de fournir des réponses plus précises et pertinentes. Mon modèle d'IA pour VueAI.tools est principalement basé sur LlamaIndex."
+        "time": "50+ heures",
+        "description": "LlamaIndex est une bibliothèque TS & Python pour construire des modèles RAG d'IA pour répondre aux questions en interrogeant une base de données de documents afin de fournir des réponses plus précises et pertinentes. Mon modèle d'IA pour VueAI.tools est principalement basé sur LlamaIndex."
       },
       "wordpress": {
         "name": "Wordpress",
@@ -105,7 +105,7 @@
       "stripe": {
         "name": "Stripe",
         "time": "3 ans, 1000+ heures",
-        "description": "J'ai développé et maintenu plusieurs implémentations complexes de marketplace avec Stripe Connect, gérant les paiements multi-vendeurs, les transactions fractionnées, les flux d'intégration vendeur et les tableaux de bord vendeur. Expérimenté avec Stripe Checkout et les flux de paiement personnalisés."
+        "description": "J'ai réalisé plus de 10 projets avec Stripe. Cela inclut plusieurs implémentations complexes de marketplace avec Stripe Connect, gérant les paiements multi-vendeurs, les transactions fractionnées, le onboarding des vendeurs et leurs dashboards. Expérimenté avec Stripe Checkout et les workflows de paiement personnalisés."
       }
     }
   },
@@ -116,8 +116,7 @@
   },
   "PortfolioProjects": {
     "heading": "Mon Portfolio",
-    "sub-heading": "Apprenez en plus sur plusieurs de mes projets ci-dessous:",
-    "project-label": "Projet choisi"
+    "sub-heading": "Apprenez en plus sur plusieurs de mes projets personnels ci-dessous:"
   },
   "WorkExperience": {
     "heading": "Expérience Professionnelle",

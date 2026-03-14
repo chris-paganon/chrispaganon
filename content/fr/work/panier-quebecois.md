@@ -13,7 +13,7 @@ imageAlt: thumbnail Panier Québécois
 color: 5fbb65d1
 ---
 
-Panier Québécois a été ma transition du génie mécanique vers la tech. J'ai co-fondé le **premier marché fermier en ligne à Montréal** avec trois partenaires en avril 2020. Ce qui a commencé comme un projet pour aider les marchés fermiers locaux pendant la COVID est devenu une entreprise traitant plus de **800 commandes chaque mois**.
+Panier Québécois a été ma transition du génie mécanique vers le logiciel. J'ai co-fondé le **premier marché fermier en ligne à Montréal** avec trois partenaires en avril 2020. Ce qui a commencé comme un projet pour aider les marchés fermiers locaux pendant la COVID est devenu une entreprise traitant plus de **800 commandes chaque mois**.
 
 Cela a été mon **occupation à plein temps d'avril 2020 à octobre 2022**. En tant que co-fondateur technique, j'étais impliqué dans bien plus que l'écriture de code. J'ai construit et maintenu l'ensemble de la plateforme e-commerce tout en gérant la stratégie marketing, le service client, les opérations et la logistique.
 

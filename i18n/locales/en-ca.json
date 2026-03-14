@@ -116,8 +116,7 @@
   },
   "PortfolioProjects": {
     "heading": "My Portfolio",
-    "sub-heading": "Find out more about a few of my projects below:",
-    "project-label": "Selected project"
+    "sub-heading": "Find out more about a few of my personal projects below:"
   },
   "WorkExperience": {
     "heading": "Work Experience",
@@ -126,7 +125,7 @@
   },
   "Education": {
     "heading": "Education",
-    "footnote": "Turns out thermodynamics wasn't enough excitement — so I switched to debugging CSS. Same energy, fewer explosions."
+    "footnote": "I enjoyed mechanical engineering, but software won me over: faster feedback loops, endless things to learn, and the freedom to build from almost anywhere."
   },
   "ContactMe": {
     "heading": "Hire Me",

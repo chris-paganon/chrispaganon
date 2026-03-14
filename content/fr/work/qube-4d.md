@@ -32,3 +32,5 @@ Bien que les domaines diffèrent, certains patterns de la conception mécanique 
 - Itérer basé sur les retours du monde réel
 
 L'expérience m'a appris la valeur de la résolution systématique de problèmes, bien que le logiciel ait ses propres défis et contraintes uniques, mes expériences diverses m'aident également à aborder le développement logiciel sous un angle différent.
+
+Même si j'ai apprécié le génie mécanique, je préfère le développement logiciel parce qu'il permet des itérations et des boucles de feedback beaucoup plus rapides. J'apprécie aussi le fait qu'il y ait toujours de nouvelles choses à apprendre. Enfin, cela me permet également de travailler en remote.

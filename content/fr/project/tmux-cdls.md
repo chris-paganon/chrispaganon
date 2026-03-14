@@ -4,7 +4,7 @@ Description: Un plugin tmux qui affiche le contenu de votre répertoire dans un 
 id: 15
 slug: tmux-cdls
 githubUrl: https://github.com/chris-paganon/tmux-cdls
-startDate: '2025'
+startDate: '2026'
 endDate: maintenant
 image: /images/portfolio/tmux-cdls-screenshot.png
 imageAlt: Capture d'écran tmux-cdls montrant le panneau de listing de répertoire

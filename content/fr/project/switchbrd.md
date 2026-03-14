@@ -4,7 +4,7 @@ Description: Un switchboard de développement local pour exécuter plusieurs app
 id: 5
 slug: switchbrd
 githubUrl: https://github.com/chris-paganon/switchbrd
-startDate: '2025'
+startDate: '2026'
 endDate: maintenant
 image: /images/portfolio/switchbrd-screenshot.png
 imageAlt: Interface TUI de switchbrd montrant le statut des apps et le formulaire d'enregistrement
