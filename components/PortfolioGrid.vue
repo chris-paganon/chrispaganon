@@ -16,6 +16,7 @@
           ? undefined
           : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }
       "
+      :animate="prefersReducedMotion ? { opacity: 1, x: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, x: 0 }"
       :viewport="{ once: true, amount: 0.2 }"
       :transition="{

@@ -3,6 +3,7 @@
     <motion.div
       class="education-content"
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 24 }"
+      :animate="prefersReducedMotion ? { opacity: 1, y: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.3 }"
       :transition="{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }"

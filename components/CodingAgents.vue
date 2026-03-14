@@ -3,6 +3,7 @@
     <motion.div
       class="agents-content"
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 28 }"
+      :animate="prefersReducedMotion ? { opacity: 1, y: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.2 }"
       :transition="sectionTransition"

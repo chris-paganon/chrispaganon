@@ -3,6 +3,7 @@
     <motion.div
       class="portfolio-intro-block"
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 28 }"
+      :animate="prefersReducedMotion ? { opacity: 1, y: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.15 }"
       :transition="introTransition"
@@ -56,6 +57,7 @@
     </motion.div>
     <motion.div
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 36 }"
+      :animate="prefersReducedMotion ? { opacity: 1, y: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.1 }"
       :transition="gridTransition"

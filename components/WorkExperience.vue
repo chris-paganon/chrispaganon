@@ -3,6 +3,7 @@
     <motion.div
       class="work-section-intro"
       :initial="prefersReducedMotion ? undefined : { opacity: 0, y: 32 }"
+      :animate="prefersReducedMotion ? { opacity: 1, y: 0 } : undefined"
       :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, y: 0 }"
       :viewport="{ once: true, amount: 0.2 }"
       :transition="sectionTransition"
@@ -19,6 +20,9 @@
         :class="{ 'work-card-link': job.slug }"
         :initial="
           prefersReducedMotion ? undefined : { opacity: 0, y: 36, scale: 0.98 }
+        "
+        :animate="
+          prefersReducedMotion ? { opacity: 1, y: 0, scale: 1 } : undefined
         "
         :while-in-view="
           prefersReducedMotion ? undefined : { opacity: 1, y: 0, scale: 1 }
