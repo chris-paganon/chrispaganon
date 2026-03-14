@@ -32,11 +32,9 @@
         <motion.span
           class="tech-stage-badge"
           :animate="
-            prefersReducedMotion
-              ? undefined
-              : isExpanded
-                ? { rotate: 45, scale: 1.02 }
-                : { rotate: 0, scale: 1 }
+            isExpanded
+              ? { rotate: 45, scale: 1.02 }
+              : { rotate: 0, scale: 1 }
           "
           :transition="badgeTransition"
         >
@@ -56,7 +54,7 @@
           layout
           class="tech-entry"
           :class="{ expanded: isExpanded }"
-          :animate="prefersReducedMotion ? undefined : getEntryAnimation(index)"
+          :animate="getEntryAnimation(index)"
           :transition="getEntryTransition(index)"
         >
           <motion.div layout class="tech-card">
@@ -111,23 +109,35 @@ const prefersReducedMotion = computed(
   () => reducedMotionPreference.value === 'reduce',
 );
 
-const layoutTransition = {
-  type: 'spring',
-  stiffness: 190,
-  damping: 26,
-  mass: 1.05,
-} as const;
+const layoutTransition = computed(() =>
+  prefersReducedMotion.value
+    ? { duration: 0 }
+    : {
+        type: 'spring' as const,
+        stiffness: 190,
+        damping: 26,
+        mass: 1.05,
+      },
+);
 
-const copyTransition = {
-  duration: 0.48,
-  ease: [0.22, 1, 0.36, 1],
-} as const;
+const copyTransition = computed(() =>
+  prefersReducedMotion.value
+    ? { duration: 0 }
+    : {
+        duration: 0.48,
+        ease: [0.22, 1, 0.36, 1] as const,
+      },
+);
 
-const badgeTransition = {
-  type: 'spring',
-  stiffness: 320,
-  damping: 20,
-} as const;
+const badgeTransition = computed(() =>
+  prefersReducedMotion.value
+    ? { duration: 0 }
+    : {
+        type: 'spring' as const,
+        stiffness: 320,
+        damping: 20,
+      },
+);
 
 const hoverTransition = {
   type: 'spring',
@@ -172,6 +182,10 @@ function getEntryAnimation(index: number) {
 }
 
 function getEntryTransition(index: number) {
+  if (prefersReducedMotion.value) {
+    return { duration: 0 } as const;
+  }
+
   const isOpening = isExpanded.value;
 
   return {
