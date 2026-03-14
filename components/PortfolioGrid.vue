@@ -12,13 +12,11 @@
       :data-slug="project.slug"
       :style="{ '--project-color': `#${project.color}` }"
       :initial="
-        prefersReducedMotion || isMobile
+        prefersReducedMotion
           ? undefined
           : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }
       "
-      :while-in-view="
-        prefersReducedMotion || isMobile ? undefined : { opacity: 1, x: 0 }
-      "
+      :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, x: 0 }"
       :viewport="{ once: true, amount: 0.2 }"
       :transition="{
         duration: 0.55,
@@ -39,7 +37,7 @@
         <motion.div
           class="v2-strip-bg"
           :animate="
-            prefersReducedMotion || isMobile
+            prefersReducedMotion
               ? undefined
               : isActive(project.slug)
                 ? { opacity: 0.07 }
@@ -55,7 +53,7 @@
               class="v2-dot"
               :style="{ background: `#${project.color}` }"
               :animate="
-                prefersReducedMotion || isMobile
+                prefersReducedMotion
                   ? undefined
                   : isActive(project.slug)
                     ? { scale: 1.8 }
@@ -74,13 +72,11 @@
         <motion.div
           class="v2-reveal"
           :animate="
-            isMobile
-              ? { height: 'auto', opacity: 1 }
-              : prefersReducedMotion
-                ? { height: 'auto' }
-                : isActive(project.slug)
-                  ? { height: 'auto', opacity: 1 }
-                  : { height: '0px', opacity: 0 }
+            prefersReducedMotion
+              ? { height: 'auto' }
+              : isActive(project.slug)
+                ? { height: 'auto', opacity: 1 }
+                : { height: '0px', opacity: 0 }
           "
           :transition="{ duration: 0.45, ease: smoothEase }"
         >
@@ -325,6 +321,8 @@ function isActive(slug: string) {
     border-left: 3px solid var(--project-color);
     border-radius: 8px;
     background: color-mix(in srgb, var(--project-color) 5%, transparent);
+    opacity: 1 !important;
+    transform: none !important;
   }
   .v2-strip:last-child {
     border-bottom: none;
