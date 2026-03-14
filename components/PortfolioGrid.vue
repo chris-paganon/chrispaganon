@@ -37,14 +37,11 @@
       >
         <motion.div
           class="v2-strip-bg"
-          :animate="
-            prefersReducedMotion
-              ? undefined
-              : isActive(project.slug)
-                ? { opacity: 0.07 }
-                : { opacity: 0 }
-          "
-          :transition="{ duration: 0.4, ease: smoothEase }"
+          :animate="isActive(project.slug) ? { opacity: 0.07 } : { opacity: 0 }"
+          :transition="{
+            duration: prefersReducedMotion ? 0 : 0.4,
+            ease: smoothEase,
+          }"
         ></motion.div>
 
         <div class="v2-strip-header">

@@ -51,7 +51,11 @@
               <ContentRendererMarkdown :value="portfolioIntro" />
             </ContentRenderer>
           </div>
-          <div v-if="!viewMoreOn" class="view-more-overlay"></div>
+          <div
+            v-if="!viewMoreOn"
+            class="view-more-overlay"
+            :style="{ opacity: prefersReducedMotion ? 0 : 1 }"
+          ></div>
         </motion.div>
       </motion.div>
     </motion.div>
