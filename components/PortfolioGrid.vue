@@ -188,7 +188,7 @@ function isActive(slug: string) {
 
 .v2-strip-link {
   display: block;
-  padding: 1.5rem 0.5rem;
+  padding: 2.2rem 0.5rem;
   color: inherit;
   text-decoration: none;
   position: relative;
@@ -238,7 +238,7 @@ function isActive(slug: string) {
 
 .v2-left h3 {
   margin: 0;
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-size: clamp(2rem, 3.5vw, 2.2rem);
   line-height: 1.1;
   white-space: nowrap;
   overflow: hidden;
