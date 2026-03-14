@@ -140,9 +140,9 @@ const sectionTransition = {
 }
 
 .agents-card p {
-  line-height: 1.7;
-  margin-bottom: 1em;
-  font-size: 1.2rem;
+  font-size: 20px;
+  line-height: 1.45;
+  margin-bottom: 20px;
   position: relative;
   z-index: 1;
 }
@@ -173,6 +173,9 @@ const sectionTransition = {
 @media (max-width: 600px) {
   .agents-card {
     padding: 24px 20px;
+  }
+  .agents-card p {
+    font-size: 19px;
   }
 }
 

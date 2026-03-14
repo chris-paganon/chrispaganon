@@ -184,6 +184,11 @@ useIntersectionObserver(
 
 .portfolio-intro-copy {
   padding: 1.1rem 1.1rem 1.2rem;
+  line-height: 1.45;
+}
+
+.portfolio-intro-copy :deep(p) {
+  line-height: 1.45;
 }
 
 .portfolio-intro-copy.collapsed {
