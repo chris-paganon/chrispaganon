@@ -7,7 +7,8 @@
   },
   "NavBar": {
     "home": "Home",
-    "portfolio": "Portfolio",
+    "work-experience": "Work",
+    "portfolio": "Projects",
     "contact-me": "Hire Me"
   },
   "TechStack": {

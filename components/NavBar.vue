@@ -36,6 +36,11 @@
         }}</NuxtLink>
       </li>
       <li>
+        <NuxtLink :to="localePath({ path: '/', hash: '#work-experience' })">{{
+          $t('NavBar.work-experience')
+        }}</NuxtLink>
+      </li>
+      <li>
         <NuxtLink
           :to="localePath({ path: '/', hash: '#contact-me' })"
           class="contact-me-btn button"
