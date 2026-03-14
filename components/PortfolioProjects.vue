@@ -291,6 +291,13 @@ useIntersectionObserver(
 
   .portfolio-intro-wrapper {
     min-height: 13.5rem;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .portfolio-intro-copy {
+    padding: 0.5rem 0;
   }
 
   .portfolio-intro-copy.collapsed {
@@ -302,10 +309,6 @@ useIntersectionObserver(
 @media (max-width: 450px) {
   .portfolio-intro-hint {
     letter-spacing: 0.14em;
-  }
-
-  .portfolio-intro-copy {
-    padding: 1rem;
   }
 }
 </style>
