@@ -6,15 +6,17 @@ slug: vue-ai-tools
 url: https://vueai.tools/
 githubUrl: https://github.com/chris-paganon/vue-ai-tools
 startDate: 'August 2023'
-endDate: now
+endDate: '2025'
 image: /images/portfolio/vue-ai-tools-thumbnail.jpg
 imageAlt: thumbnail VueAI.tools
 color: 5fbb65d1
 ---
 
-VueAI.tools is a project I have been building for fun. It is an AI assistant tool specifically tailored for VueJS. The website features a classic AI chatbot using **a custom RAG implementation with [LlamaIndex](https://www.llamaindex.ai/){:target="\_blank"}**. It also comes with a JSON pseudo-code component builder to improve the assistant's reliability:
+VueAI.tools is a project I started building before Cursor and Claude Code was really a thing. It is an AI assistant tool specifically tailored for VueJS. The website features a classic AI chatbot using **a custom RAG implementation with [LlamaIndex](https://www.llamaindex.ai/){:target="\_blank"}**. It also comes with a JSON pseudo-code component builder to improve the assistant's reliability:
 
 ![VueAI.tools component builder screenshot](/images/portfolio/component-builder-screenshot.png)
+
+Mostly rendered useless by improvements in coding agents tooling, models and context windows, consider it more like a tech demo.
 
 The website combines a lot of the tools and knowledge I have acquired over the years into an app hosted on a single VPS instance. The app is coded in **TypeScript** and runs Nuxt via Docker. It features a custom AI RAG model, a database, authentication, automated deployments, self-hosted analytics...
 

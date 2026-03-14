@@ -4,7 +4,7 @@ Description: A tmux plugin that shows your directory contents in a live-updating
 id: 15
 slug: tmux-cdls
 githubUrl: https://github.com/chris-paganon/tmux-cdls
-startDate: '2025'
+startDate: '2026'
 endDate: now
 image: /images/portfolio/tmux-cdls-screenshot.png
 imageAlt: tmux-cdls screenshot showing directory listing pane

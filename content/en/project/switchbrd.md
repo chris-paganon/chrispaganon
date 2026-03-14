@@ -4,7 +4,7 @@ Description: A local dev switchboard for running multiple apps on one URL
 id: 5
 slug: switchbrd
 githubUrl: https://github.com/chris-paganon/switchbrd
-startDate: '2025'
+startDate: '2026'
 endDate: now
 image: /images/portfolio/switchbrd-screenshot.png
 imageAlt: switchbrd terminal UI showing app status and registration

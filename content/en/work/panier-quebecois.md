@@ -13,7 +13,7 @@ imageAlt: thumbnail Panier Québécois
 color: 5fbb65d1
 ---
 
-Panier Québécois was my transition from mechanical engineering into tech. I co-founded the **first online farmer's market in Montréal** with three partners in April 2020. What started as a project to help local farmers markets during COVID grew into a business handling over **800 orders every month**.
+Panier Québécois was my transition from mechanical engineering into software. I co-founded the **first online farmer's market in Montréal** with three partners in April 2020. What started as a project to help local farmers markets during COVID grew into a business handling over **800 orders every month**.
 
 This was my **full-time occupation from April 2020 to October 2022**. As a technical co-founder, I was involved in far more than just writing code. I built and maintained the entire e-commerce platform while also managing marketing strategy, customer service, operations, and logistics.
 

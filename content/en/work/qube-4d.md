@@ -32,3 +32,5 @@ While the fields differ, some patterns from mechanical design are still very rel
 - Iterating based on real-world feedback
 
 The experience taught me the value of systematic problem-solving, though software has its own unique challenges and constraints, my diverse experiences also help approach software development from a different perspective.
+
+Although I did enjoy mechanical engineering, I prefer software development because it allows for faster iteration and feedback loops. I also enjoy the never-ending depth of things to learn. Finally, it also enables me to work remotely.
