@@ -10,12 +10,15 @@
       :key="project.id"
       class="v2-strip"
       :data-slug="project.slug"
+      :style="{ '--project-color': `#${project.color}` }"
       :initial="
-        prefersReducedMotion
+        prefersReducedMotion || isMobile
           ? undefined
           : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }
       "
-      :while-in-view="prefersReducedMotion ? undefined : { opacity: 1, x: 0 }"
+      :while-in-view="
+        prefersReducedMotion || isMobile ? undefined : { opacity: 1, x: 0 }
+      "
       :viewport="{ once: true, amount: 0.2 }"
       :transition="{
         duration: 0.55,
@@ -35,9 +38,8 @@
       >
         <motion.div
           class="v2-strip-bg"
-          :style="{ '--project-color': `#${project.color}` }"
           :animate="
-            prefersReducedMotion
+            prefersReducedMotion || isMobile
               ? undefined
               : isActive(project.slug)
                 ? { opacity: 0.07 }
@@ -53,7 +55,7 @@
               class="v2-dot"
               :style="{ background: `#${project.color}` }"
               :animate="
-                prefersReducedMotion
+                prefersReducedMotion || isMobile
                   ? undefined
                   : isActive(project.slug)
                     ? { scale: 1.8 }
@@ -72,11 +74,13 @@
         <motion.div
           class="v2-reveal"
           :animate="
-            prefersReducedMotion
-              ? { height: 'auto' }
-              : isActive(project.slug)
-                ? { height: 'auto', opacity: 1 }
-                : { height: '0px', opacity: 0 }
+            isMobile
+              ? { height: 'auto', opacity: 1 }
+              : prefersReducedMotion
+                ? { height: 'auto' }
+                : isActive(project.slug)
+                  ? { height: 'auto', opacity: 1 }
+                  : { height: '0px', opacity: 0 }
           "
           :transition="{ duration: 0.45, ease: smoothEase }"
         >
@@ -116,9 +120,11 @@ const prefersReducedMotion = computed(
 );
 const smoothEase = [0.22, 1, 0.36, 1] as const;
 
+const isMobile = useMediaQuery('(max-width: 700px)');
+
 // Hover-based activation (desktop)
 const hoverProject = ref<string | null>(null);
-// Scroll-based activation (works on mobile too)
+// Scroll-based activation (desktop only)
 const scrollProject = ref<string | null>(null);
 
 // The active project is whichever source set it last — hover takes priority
@@ -135,7 +141,9 @@ const { data: portfolio } = await useAsyncData('portfolio', async () => {
 });
 
 // Observe each strip via data-slug: when it enters the center band, auto-expand
+// Only active on desktop — mobile shows all items expanded
 const stripElements = computed<HTMLElement[]>(() => {
+  if (isMobile.value) return [];
   const container = stripsContainer.value;
   if (!container) return [];
   return Array.from(
@@ -167,6 +175,7 @@ function formatIdx(i: number) {
   return `${i + 1}`.padStart(2, '0');
 }
 function isActive(slug: string) {
+  if (isMobile.value) return true;
   return activeProject.value === slug;
 }
 </script>
@@ -306,15 +315,57 @@ function isActive(slug: string) {
 }
 
 @media (max-width: 700px) {
-  .v2-reveal-inner {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .v2-left h3 {
-    white-space: normal;
-  }
   .v2-strips {
     margin-top: 2rem;
+    gap: 1.2rem;
+  }
+
+  .v2-strip {
+    border-top: none;
+    border-left: 3px solid var(--project-color);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--project-color) 5%, transparent);
+  }
+  .v2-strip:last-child {
+    border-bottom: none;
+  }
+
+  .v2-strip-link {
+    padding: 1.2rem 1rem;
+  }
+
+  .v2-strip-bg {
+    opacity: 0 !important;
+  }
+
+  .v2-left h3 {
+    white-space: normal;
+    font-size: 1.25rem;
+  }
+
+  .v2-reveal {
+    height: auto !important;
+    opacity: 1 !important;
+  }
+
+  .v2-reveal-inner {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0;
+  }
+
+  .v2-reveal-image {
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+  }
+
+  .v2-reveal-copy p {
+    font-size: 0.9rem;
+  }
+
+  .v2-view-link {
+    color: var(--project-color);
   }
 }
 </style>
