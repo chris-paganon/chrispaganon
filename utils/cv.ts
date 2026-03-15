@@ -231,14 +231,14 @@ function drawExperienceEntry(
     x,
     y: y - 11,
     font: regular,
-    size: 7.95,
+    size: 8.5,
     color: MUTED,
   });
 
   let nextY = y - 22;
 
   for (const bullet of experience.bullets) {
-    nextY = drawBulletText(ctx, bullet, x + 2, nextY, width - 4, 8, 9.55);
+    nextY = drawBulletText(ctx, bullet, x + 2, nextY, width - 4, 8.6, 9.8);
   }
 
   return nextY - 8;
@@ -372,8 +372,8 @@ function drawRatedItems(
 
   for (const item of items) {
     const label = item.detail ? `${item.label} - ${item.detail}` : item.label;
-    const font = item.detail ? regular : bold;
-    const fontSize = item.detail ? 7.95 : 8.05;
+    const font = regular;
+    const fontSize = 7.95;
 
     page.drawText(label, {
       x,
