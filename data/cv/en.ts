@@ -119,7 +119,7 @@ export const englishCv: CvDocument = {
       location: 'Open source',
       bullets: [
         'tmux plugin that keeps a live directory listing visible in a dedicated pane.',
-        'simple bash script to help manage files and directories in the terminal.',
+        'bash script to help manage files and directories in the terminal.',
         'A small utility project for my day-to-day terminal usage.',
       ],
     },
