@@ -134,6 +134,11 @@
     "contact-sub-heading": "Ou contactez-moi ici",
     "email-address": "Par courriel:",
     "phone-number": "Au téléphone:",
+    "cv": {
+      "button": "Telecharger mon CV",
+      "generating": "Generation du PDF...",
+      "failure": "Le CV ne peut pas etre genere pour le moment. Reessayez plus tard."
+    },
     "form": {
       "name": "Nom:",
       "email": "Courriel:",

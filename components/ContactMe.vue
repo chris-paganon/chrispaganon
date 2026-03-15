@@ -23,7 +23,9 @@
             autocomplete="email"
             required
           />
-          <label for="description">{{ $t('ContactMe.form.description') }}</label>
+          <label for="description">{{
+            $t('ContactMe.form.description')
+          }}</label>
           <textarea
             id="description"
             v-model="description"
@@ -47,16 +49,38 @@
             <a href="mailto:info@chrispaganon.com">info@chrispaganon.com</a>
           </li>
         </ul>
+        <div class="cv-download-card">
+          <button
+            class="button cv-download-button"
+            type="button"
+            :disabled="isDownloadingCv"
+            @click="handleCvDownload"
+          >
+            {{
+              isDownloadingCv
+                ? $t('ContactMe.cv.generating')
+                : $t('ContactMe.cv.button')
+            }}
+          </button>
+          <p v-if="cvResponse" class="cv-response">
+            {{ cvResponse }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { downloadCv } from '~/utils/cv';
+
+const { locale, t } = useI18n();
 const name = ref('');
 const email = ref('');
 const description = ref('');
 const formResponse = ref('');
+const cvResponse = ref('');
+const isDownloadingCv = ref(false);
 
 async function handleSubmit() {
   try {
@@ -69,14 +93,31 @@ async function handleSubmit() {
         description: description.value,
       },
     });
-    formResponse.value = 'Your message has been sent. Thank you!';
+    formResponse.value = t('ContactMe.form.response.success');
   } catch (error) {
-    formResponse.value = 'An error occurred. Please try again later.';
+    formResponse.value = t('ContactMe.form.response.failure');
     return;
   } finally {
     name.value = '';
     email.value = '';
     description.value = '';
+  }
+}
+
+async function handleCvDownload() {
+  if (import.meta.server || isDownloadingCv.value) {
+    return;
+  }
+
+  isDownloadingCv.value = true;
+  cvResponse.value = '';
+
+  try {
+    await downloadCv(locale.value === 'fr' ? 'fr' : 'en');
+  } catch (error) {
+    cvResponse.value = t('ContactMe.cv.failure');
+  } finally {
+    isDownloadingCv.value = false;
   }
 }
 </script>
@@ -131,6 +172,21 @@ textarea {
   margin: 15px 0;
 }
 
+.cv-download-card {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(42, 32, 24, 0.12);
+}
+
+.cv-download-copy,
+.cv-response {
+  margin: 0 0 16px 0;
+}
+
+.cv-download-button {
+  width: 100%;
+}
+
 @media (max-width: 850px) {
   h2,
   h3 {
@@ -144,6 +200,9 @@ textarea {
   }
   .contact-info {
     font-size: 20px;
+    text-align: center;
+  }
+  .cv-download-card {
     text-align: center;
   }
 }
