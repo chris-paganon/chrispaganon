@@ -38,10 +38,11 @@ Beyond hands-on development, I lead the full lifecycle of complex projects:
 
 I have led development on a diverse range of production applications, including:
 
-- **Complex Stripe Marketplaces**: Multi-vendor platforms with teams selling products to other users via [Stripe Connect](https://stripe.com/connect){:target="\_blank"}, handling split payments, onboarding flows, and seller dashboards
+- **Complex Stripe Connect Marketplaces**: Multi-vendor platforms with teams selling products to other users via [Stripe Connect](https://stripe.com/connect){:target="\_blank"}, handling split payments, onboarding flows, and seller dashboards
 - **Live Phone Call AI Agents**: Real-time voice AI systems capable of natural conversation flows
 - **LLM-Enabled Applications**: Various tools leveraging large language models for content generation, analysis, and automation
 - **RAG Knowledge Base Implementations**: Retrieval-augmented generation systems for intelligent document querying
+- **Cloudflare Live Stream**: Live video streaming solutions using [Cloudflare Stream](https://www.cloudflare.com/products/cloudflare-stream/){:target="\_blank"}
 - **Google Workspace Integrations**: Gmail and Calendar OAuth implementations for scheduling and email automation
 - **Mobile Applications**: Cross-platform apps built with [Expo](https://expo.dev/){:target="\_blank"} and React Native
 - **Browser Extensions**: A Chrome extension for productivity enhancements

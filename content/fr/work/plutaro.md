@@ -38,10 +38,11 @@ Au-delà du développement pratique, je dirige le cycle de vie complet des proje
 
 J'ai dirigé le développement d'une gamme diversifiée d'applications en production, incluant :
 
-- **Places de marché Stripe complexes** : Plateformes multi-vendeurs avec des équipes vendant des produits à d'autres utilisateurs via [Stripe Connect](https://stripe.com/connect){:target="\_blank"}, gérant les paiements fractionnés, les flux d'intégration et les tableaux de bord vendeur
+- **Stripe COnnect marketplaces complexes** : Plateformes multi-vendeurs avec des équipes vendant des produits à d'autres utilisateurs via [Stripe Connect](https://stripe.com/connect){:target="\_blank"}, gérant les paiements fractionnés, les flux d'intégration et les tableaux de bord vendeur
 - **Agents IA d'appels téléphoniques en direct** : Systèmes de voix IA en temps réel capables de flux de conversation naturels
 - **Applications avec LLM** : Divers outils exploitant les grands modèles de langage pour la génération de contenu, l'analyse et l'automatisation
 - **Implémentations de Bases de Connaissances RAG** : Systèmes de génération augmentée par récupération pour l'interrogation intelligente de documents
+- **Cloudflare Live Stream** : Solutions de diffusion vidéo en direct avec [Cloudflare Stream](https://www.cloudflare.com/products/cloudflare-stream/){:target="\_blank"}
 - **Intégrations Google Workspace** : Implémentations OAuth de Gmail et Calendar pour la planification et l'automatisation des courriels
 - **Applications Mobiles** : Applications multiplateformes construites avec [Expo](https://expo.dev/){:target="\_blank"} et React Native
 - **Extensions Navigateur** : Une extension Chrome pour l'amélioration de la productivité
