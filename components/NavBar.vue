@@ -71,16 +71,23 @@ function switchLocalePathWithoutHash(locale: 'en' | 'fr') {
 
 <style scoped>
 nav {
-  padding: 12px 24px;
-  border: 1px solid rgba(42, 32, 24, 0.1);
-  border-radius: 10px;
-  background: rgba(255, 250, 243, 0.92);
-  backdrop-filter: blur(8px);
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 ul {
   display: flex;
   align-items: center;
+  border: 1px solid rgba(42, 32, 24, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 250, 243, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 12px 24px;
   margin-right: 0;
   margin-bottom: 0;
 }
@@ -127,10 +134,10 @@ svg:hover {
   nav {
     width: 100%;
     box-sizing: border-box;
-    padding: 12px 14px;
   }
 
   ul {
+    padding: 12px 14px;
     width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -141,7 +148,7 @@ svg:hover {
   }
 }
 @media (max-width: 420px) {
-  nav {
+  ul {
     padding: 10px 12px;
   }
   a {
@@ -149,7 +156,7 @@ svg:hover {
   }
 }
 @media (max-width: 375px) {
-  nav {
+  ul {
     border-radius: 0;
   }
 }
